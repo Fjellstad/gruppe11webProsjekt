@@ -1,7 +1,26 @@
 <?php 
 
-?>
+$port = 8889;
+$username = 'root';
+$password = 'root';
+$name = 'events';
 
+$connection = new PDO("mysql:host=localhost;dbname={name};port={port};", $username, $password);
+
+$statement = $connection->prepare('SELECT * FROM events');
+$statement->execute();
+
+
+while($row = $statement->fetch(PDO::FETCH_ASSOC)){
+    $events[] = $row;
+};
+
+echo '<pre>';
+print_r($events);
+die();
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
