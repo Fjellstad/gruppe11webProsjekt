@@ -1,0 +1,39 @@
+html, body{
+    height: 100%;
+    margin: auto;
+    background-image: url(bilder/Png_Background_For_Web_Opacity.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#background{
+    position: absolute;
+    width: 850px;
+    bottom: 0px;
+}
+#header{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    top: 0px;
+    box-shadow: 0px 1px 8px 2px #1f1f1f;
+
+}
+
+#footer{
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    bottom: 0px;
+    box-shadow: 0px 1px 8px 2px #1f1f1f;
+}
