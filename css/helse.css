@@ -71,13 +71,13 @@ html, body {
         #Trening{
             width: 420px;
             height: 420px;
-
             float: right;
             background-color: black;
             color: white;
             padding: 5px;
             left: 15px;
             text-align: center;
+
            
         }
         #kartHelse{
