@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Database Driver - sarmad16.2016.tek.westerdals.no" uuid="3d773e84-7819-4340-9adc-d9d92e35310a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>sarmad16</user-name>
+    </data-source>
+  </component>
+</project>

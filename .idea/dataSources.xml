@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Database Driver - sarmad16.2016.tek.westerdals.no" uuid="3d773e84-7819-4340-9adc-d9d92e35310a">
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>java.sql.Driver</jdbc-driver>
+      <jdbc-url>sarmad16.2016.tek.westerdals.no</jdbc-url>
+    </data-source>
+  </component>
+</project>
