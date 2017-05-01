@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +37,27 @@
                 <p>  Er den legevakten nærmest Vulkan og befinner seg i Storgata 40</p>
          </ul>
       </div>
+        <div id="kartHelse" >
+          <script>
+              function initMap() {
+                  var uluru = {lat: 59.922336, lng: 10.751484};
+                  var map = new google.maps.Map(document.getElementById('kartHelse'), {
+                      zoom: 15,
+                      center: uluru
+                  });
+                  var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map
+                  });
+              }
+
+          </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBywTFmLABBq-v9e2L5SJF0VKGJ9Ia3pxQ&callback=initMap">
+            </script>
+
+
+                </div>
 
         <div id="Apotek">
             <h1>Apotek</h1>
