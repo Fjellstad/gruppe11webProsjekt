@@ -1,7 +1,7 @@
 html, body{
     height: 100%;
     margin: auto;
-    background-image: url(bilder/Png_Background_For_Web_Opacity.png);
+    background-image: url(/bilder/backgroundpic.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -9,7 +9,7 @@ html, body{
 
 #container{
     position: relative;
-    width: 100%;
+    width: 1170px;
     height: 100%;
     margin: auto;
 }
