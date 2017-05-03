@@ -242,6 +242,42 @@ h2{
 }
 
 
+#eventbox {
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    background-color: blue;
+    top: 250px;
+    left:0;
+    right: 0;
+    margin:0 auto;
+}
+
+#eventMain {
+    position: relative;
+    height: 550px;
+    width: 1000px;
+    left:200px;
+    background-color: brown
+}
+
+#eventTits {
+    position: relative;
+    height: 50px;
+    width: 1000px;
+    left:200px;
+    background-color: aqua;
+}
+
+#eventCritera {
+    position: relative;
+    width:200px;
+    height: 600px;
+    top: -600px;
+    background-color: burlywood
+}
+=======
+
 a:link, a:visited, a:active, a:hover {
     color: white;
     text-decoration: underline;
@@ -255,3 +291,4 @@ a:link, a:visited, a:active, a:hover {
 
 
 
+>>>>>>> 870566938f88ee62c0fc19040afaaf7323b56035
