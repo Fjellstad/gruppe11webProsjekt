@@ -27,7 +27,7 @@
             <a href="www.twitter.com"><img id="twitter" src="bilder/twitter.png"></a>
             <a href="www.instagram.com"><img id="instagram" src="bilder/instagram.png"></a>
             <div id="menu" class="menuText">
-                <a href="www.vg.no"><p id="bolig">ett eller annet</p> </a>
+                <a href="www.vg.no"><p id="bolig">Bolig</p> </a>
                 <a href="www.facebook.no"><p id="kart">Kart</p> </a>
                 <a href="www.vg.no"><p id="transport">Transport</p> </a>
                 <a href="index.html"><p id="mat">Mat og drikke</p> </a>
@@ -36,10 +36,31 @@
             </div>
             <div id="headerLogo">
                 <a href="index.html"><img id="wLogo" src="bilder/gul-westerdalslogo.png"></a>
-                   </div>    
+                   </div>
+            
+            
+            
             
     
         </div>
+        
+    <div id="eventbox">
+        
+        <div id="eventTits">
+        
+        </div>
+        
+        
+        <div id="eventMain">
+        
+        </div>
+        
+        <div id="eventCritera">
+        
+        </div>
+    </div>
+    
+    
     
     <div id="footer"></div>
 </div>
