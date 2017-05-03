@@ -1,7 +1,7 @@
 html, body{
     height: 1400px;
     margin: auto;
-    background-image: url(/bilder/backgroundpic.png);
+    background-image: url(../bilder/backgroundpic.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -85,8 +85,9 @@ h2{
 }
 
 #tickets{
-    
-    left:410px;
+    right:0px;
+    left:0px;
+    margin: 0 auto;
 }
 
 #closeststops{
