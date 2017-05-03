@@ -68,6 +68,9 @@ p, .menuText{
 #kart{
     position: absolute;
     left: 250px;
+
+    width: 300px;
+    height: 200px;
 }
 
 #transport{

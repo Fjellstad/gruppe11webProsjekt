@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -63,7 +64,23 @@
         </div>
         
         <div id="mapContainer">
-        <img src="css/bilder/midlertidigKart.png">
+            <script>
+                function initMap() {
+                    var uluru = {lat: 59.922336, lng: 10.751484};
+                    var map = new google.maps.Map(document.getElementById('mapContainer'), {
+                        zoom: 15,
+                        center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                }
+
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBywTFmLABBq-v9e2L5SJF0VKGJ9Ia3pxQ&callback=initMap">
+            </script>
         
         </div>
 
