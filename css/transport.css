@@ -1,24 +1,25 @@
 html, body{
-    height: 100%;
+    height: 1400px;
     margin: auto;
     background-image: url(/bilder/backgroundpic.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 #container{
     position: relative;
     width: 1170px;
     height: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
-#background{
-    position: absolute;
-    width: 850px;
-    bottom: 0px;
-}
+
 #header{
     position: absolute;
     height: 200px;
@@ -30,8 +31,8 @@ html, body{
 }
 
 #footer{
-    position: absolute;
-    height: 75px;
+    position: relative;
+    height: 50px;
     width: 100%;
     background-color: rgb(42, 42, 42);
     bottom: 0px;
@@ -40,17 +41,20 @@ html, body{
 #ruter{
     position: absolute;
     height: 54%;
-    width: 30%;
+    width: 27%;
     background-color: rgb(42, 42, 42);
     bottom: 100px;
     left:4%;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
+    background-color: rgba(0,0,0,0.8);
+   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
 }
 
 #tickets{
     position: absolute;
     height: 54%;
-    width: 30%;
+    width: 27%;
     background-color: rgb(42, 42, 42);
     bottom: 100px;
     left:35%;
@@ -60,7 +64,7 @@ html, body{
 #closeststops{
     position: absolute;
     height: 54%;
-    width: 30%;
+    width: 27%;
     background-color: rgb(42, 42, 42);
     bottom: 100px;
     right:4%;
@@ -161,4 +165,7 @@ p, .menuText{
     right: 150px;
     height: 32px;
     width: 32px;
+}
+#holdeplasspic{
+    position: absolute;
 }
