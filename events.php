@@ -47,7 +47,9 @@
     <div id="eventbox">
         
         <div id="eventTits">
-        
+            <p id="tid">Tid</p>
+            <p id="tittel">Tittel</p>
+            <p id="gratis">Gratis</p>
         </div>
         
         

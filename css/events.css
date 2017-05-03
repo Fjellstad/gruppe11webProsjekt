@@ -247,8 +247,7 @@ h2{
     position: absolute;
     width: 1200px;
     height: 600px;
-    background-color: blue;
-    top: 250px;
+    top: 220px;
     left:0;
     right: 0;
     margin:0 auto;
@@ -285,11 +284,17 @@ a:link, a:visited, a:active, a:hover {
 }
 
 
+#tittel {
+    position: absolute;
+    left: 550px;
+}
 
+#tid {
+    position: absolute;
+    left: 225px;
+}
 
-
-
-
-
-
->>>>>>> 870566938f88ee62c0fc19040afaaf7323b56035
+#gratis {
+    position: absolute;
+    left: 900px;
+}
