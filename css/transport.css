@@ -39,35 +39,45 @@ html, body{
 }
 #ruter{
     position: absolute;
-    height: 380px;
-    width: 400px;
+    height: 54%;
+    width: 30%;
     background-color: rgb(42, 42, 42);
     bottom: 100px;
-    left:50px;
+    left:4%;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
 #tickets{
     position: absolute;
-    height: 380px;
-    width: 400px;
+    height: 54%;
+    width: 30%;
     background-color: rgb(42, 42, 42);
     bottom: 100px;
-    left:560px;
+    left:35%;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
 #closeststops{
     position: absolute;
-    height: 380px;
-    width: 400px;
+    height: 54%;
+    width: 30%;
     background-color: rgb(42, 42, 42);
     bottom: 100px;
-    right:50px;
+    right:4%;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
-h3, .ruter{
+h3{
+    color: #FFF;
+    font-family: sans-serif;
+    text-align: center;
+}
+h5{
+    color: #FFF;
+    font-family: sans-serif;
+    text-align: center;
+}
+li{
     color: #FFF;
     font-family: sans-serif;
     text-align: center;
