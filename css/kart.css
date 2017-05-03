@@ -1,0 +1,279 @@
+html, body{
+    height: 1400px;
+    margin: auto;
+    background-image: url(../bilder/navig.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover; 
+    -o-background-size: cover;
+
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 1170px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#header{
+    position: relative;
+    height: 200px;  
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    top: 0px;
+    box-shadow: 0px 1px 8px 2px #1f1f1f;
+}
+
+#footer{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    bottom: 0px;
+    box-shadow: 0px 1px 8px 2px #1f1f1f;
+}
+
+#headerLogo{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
+}
+
+#menu{
+    position: absolute;
+    width: 1200px;
+    height: 50px;
+    top: 75px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+p, .menuText{
+    color: #FFF;
+    font-family: sans-serif;
+}
+
+#bolig{
+    position: absolute;
+    left: 125px;
+}
+
+#kart{
+    position: absolute;
+    left: 250px;
+}
+
+#transport{
+    position: absolute;
+    left: 375px;
+}
+
+#eventer{
+    position: absolute;
+    right: 125px;
+}
+
+#helse{
+    position: absolute;
+    right: 260px;
+}
+#mat{
+    position: absolute;
+    right: 375px;
+}
+
+#facebook{
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    height: 25px;
+    width: 25px;
+}
+
+#instagram{
+    position: absolute;
+    top: 15px;
+    right: 105px;
+    height: 25px;
+    width: 25px;
+}
+
+#twitter{
+    position: absolute;
+    top: 11px;
+    right: 150px;
+    height: 32px;
+    width: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Utseende på overskrifter */
+h1{
+    color: white;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+/* Utseende på mindre overskrifter */
+h2{ 
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+/* En div som lager en horisontal hvit linje med tekst i */
+#velkommenWrapper{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    top: 0px;
+    border-bottom: white solid 1px;
+}
+
+#textWrapper{
+    position: absolute;
+    width: 100%px;
+    height: 150px;
+    top: 30px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+/* Undertekst til velkommenText */
+#KartInfo{
+    top: 50px;
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+
+
+
+#navigatorContainer{
+    position: absolute;
+    height: 400px;
+    width: 250px;
+    left: 0px;
+    top: 300px;
+    background-color: rgb(42, 42, 42);
+   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    border: solid black 0.1px;
+}
+
+#mapContainer{
+    position: absolute;
+    height: 850px;
+    width: 850px;
+    right: 0px;
+    top: 300px;
+    border: solid black 2px;
+   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+}
+
+.button{
+    position: absolute;
+    width: 250px;
+    height: 80px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: solid black 0.1px;
+
+}
+
+#buttonBolig{
+    top: 0px;
+}
+
+#buttonTransport{
+    top: 80px;
+}
+
+#buttonMat{
+    top: 160px;
+}
+#buttonHelse{
+    top: 240px;
+}
+
+#buttonEvent{
+    top: 320px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button:hover {
+    background-color: rgb(21,21,21);
+}
+
+
+
+
+
+
+
+
+
+
+.pics{
+    position: absolute;
+    width: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+a:link, a:visited, a:active, a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
