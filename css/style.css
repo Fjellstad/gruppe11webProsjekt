@@ -57,38 +57,35 @@ html, body{
 }
 
 p, .menuText{
-
-    
     color: #FFF;
     font-family: sans-serif;
-    
 }
 
-#bolig, #menu, .menuText{
+#bolig{
     position: absolute;
     left: 125px;
 }
 
-#kart, #menu, .menuText{
+#kart{
     position: absolute;
     left: 250px;
 }
 
-#transport, #menu, .menuText{
+#transport{
     position: absolute;
-    left: 375px;
+    left: 385px;
 }
 
-#eventer, #menu, .menuText{
+#eventer{
     position: absolute;
     right: 125px;
 }
 
-#helse, #menu, .menuText{
+#helse{
     position: absolute;
     right: 260px;
 }
-#mat, #menu, .menuText{
+#mat{
     position: absolute;
     right: 375px;
 }
