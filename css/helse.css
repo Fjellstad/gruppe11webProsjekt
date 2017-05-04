@@ -1,36 +1,43 @@
-html, body {
-    height: 100%;
+html, body{
+    height: 1400px;
     margin: auto;
     background-color: white;
     background-image: url(../bilder/backgroundpic.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
-a{
-    text-decoration: none;
-    color: darkgoldenrod;
-}
-
-#container{
+.container{
     position: relative;
-    width: 1170px;
     height: 100%;
+    width: 1170px;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 #header{
-    position: absolute;
-    height: 200px;
+    position: relative;
+    height: 200px;  
     width: 100%;
     background-color: rgb(42, 42, 42);
-    color: #FFFFFF;
-    text-align: left;
     top: 0px;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
-#logo{
+#footer{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    bottom: 0px;
+    box-shadow: 0px 1px 8px 2px #1f1f1f;
+}
+
+#headerLogo{
     position: absolute;
     height: 150px;
     width: 150px;
@@ -40,81 +47,281 @@ a{
     top: 0;
 }
 
-#content{
+
+
+
+
+
+
+
+
+
+
+/* Utseende på overskrifter */
+h1{
+    color: white;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+/* Utseende på mindre overskrifter */
+h2{ 
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+h3{
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+#velkommenWrapper{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    top: 0px;
+    border-bottom: white solid 1px;
+}
+
+#textWrapper{
     position: absolute;
-    padding: 10px;
-    top:200px;
-}
-
-#Apotek{
-    width:30%;
-    float: left;
-    padding: 5px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    margin-left: 30px;
-}
-
-#Legevakt{
-    width: 30%;
-    width: 420px;
-    float: right;
-    background-color: black;
-    padding: 5px;
-    color: white;
-    text-align: center;
-    margin-left: 30px;
-}
-
-#Trening{
-    width: 420px;
-    height: 420px;
-    float: right;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    left: 15px;
-    text-align: center;
-
-           
-        }
-        
-        #footer{
-            position: absolute;
-            height: 75px;
-            width: 100%;
-            background-color: rgb(42, 42, 42);
-            bottom: 0px;
-            box-shadow: 0px 1px 8px 2px #1f1f1f;
-        }
-        #facebook{
-            position: absolute;
-            top: 15px;
-            right: 50px;
-            height: 25px;
-            width: 25px;
-        }
-
-        #instagram{
-            position: absolute;
-            top: 15px;
-            right: 105px;
-            height: 25px;
-            width: 25px;
-        }
-
-        #twitter{
-            position: absolute;
-            top: 11px;
-            right: 150px;
-            height: 32px;
-            width: 32px;
-        }
-#wLogo {
+    width: 100%px;
     height: 150px;
-    width: 150px;
+    top: 30px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
+
+/* Undertekst til velkommenText */
+#helseInfo{
+    top: 50px;
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+
+
+/* Klasse - Boks for informasjon */
+
+
+.title{
+    position: absolute;
+    top: 45px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.smallerTitle{
+     position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+.pics{
+    position: absolute;
+    width: 350px;
+    top:120px;
+}
+
+
+
+
+/* Klasse for utseende på innholdstekst */
+.contentText{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: left;
+    margin-left: 50px;
+    width: 260px;
+    top: 320px; 
+}
+
+.contentBox{
+    position: absolute;
+    top: 300px;
+    width: 350px;
+    background-color: rgba(0,0,0,0.8);
+   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    height: 800px;   
+}
+
+
+#vitus{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    margin-left: 50px;
+    width: 260px;
+    top: 320px;
+}
+
+#lokka{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    margin-left: 50px;
+    width: 260px;
+    top: 450px;
+}
+
+
+
+#apotekLegevakt{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    margin-left: 50px;
+    width: 260px;
+    top: 580px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#apotekBox{
+    position: absolute;
+    left: 0;    
+}
+
+#legevaktBox{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#treningBox{
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+#facebook{
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    height: 25px;
+    width: 25px;
+}
+
+#instagram{
+    position: absolute;
+    top: 15px;
+    right: 105px;
+    height: 25px;
+    width: 25px;
+}
+
+#twitter{
+    position: absolute;
+    top: 11px;
+    right: 150px;
+    height: 32px;
+    width: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #menu {
     position: absolute;
@@ -124,42 +331,43 @@ a{
     left: 0;
     right: 0;
     margin: 0 auto;
-
 }
 
 p, .menuText{
-
-    
     color: #FFF;
-    font-family: sans-serif;
-    
+    font-family: sans-serif; 
 }
 
-#bolig, #menu, .menuText{
+#bolig{
     position: absolute;
     left: 125px;
 }
 
-#kart, #menu, .menuText{
+#kart{
     position: absolute;
     left: 250px;
 }
 
-#transport, #menu, .menuText{
+#transport{
     position: absolute;
     left: 375px;
 }
 
-#eventer, #menu, .menuText{
+#eventer{
     position: absolute;
     right: 125px;
 }
 
-#helse, #menu, .menuText{
+#helse{
     position: absolute;
     right: 260px;
 }
-#mat, #menu, .menuText{
+#mat{
     position: absolute;
     right: 375px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }

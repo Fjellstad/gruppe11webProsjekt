@@ -1,92 +1,166 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
 
-    <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
         <link href="css/helse.css" type="text/css" rel="stylesheet">
-            <title>Helse</title>
+        <title>Helse</title>
 
     <script>
 
 
     </script>
-</head>
+        
+    </head>
+    
 <body>
-
-
-<div id="container">
-  <div id="header">
-      <a href="https://www.facebook.com"><img id="facebook" src="bilder/facebook.png"></a>
-      <a href="https://www.twitter.com"><img id="twitter" src="bilder/twitter.png"></a>
-      <a href="https://www.instagram.com"><img id="instagram" src="bilder/instagram.png"></a>
-      <div id="menu" class="menuText">
-                <a href="www.vg.no"><p id="bolig">Bolig</p> </a>
-                <a href="www.facebook.no"><p id="kart">Kart</p> </a>
-                <a href="www.vg.no"><p id="transport">Transport</p> </a>
-                <a href="index.html"><p id="mat">Mat og drikke</p> </a>
-                <a href="helse.html"><p id="helse">Helse</p> </a>
-                <a href="events.html"><p id="eventer">Eventer</p> </a>
-            </div>
-      <div id="logo">
-          <img src="bilder/Logo150px.png"/>
-      </div>
-
-  </div>
-    <div id="content">
-
-        <div id="Legevakt">
-         <h1>Legevakt</h1>
-            <p>Dette er den nærmeste legevakten fra Vulkan </p>
-         <ul>
-          <li><a href="https://www.oslo.kommune.no/dognapne-vakttjenester/legevakt-oslo/"> Legevakt nærmest Vulkan.</a></li>
-                <p>  Er den legevakten nærmest Vulkan og befinner seg i Storgata 40</p>
-         </ul>
-      </div>
-
-        <div id="Apotek">
-            <h1>Apotek</h1>
-            <p>Disse er de tre nærmeste apotekene fra Vulkan</p>
-            <ul>
-                <li><a href="https://www.vitusapotek.no/apotek"> Vituapotek Vulkan</a></li>
-                    <p> Maridalsveien 21. Det nærmeste apoteket fra Vulkan.</p>
-                <li><a href="https://www.apotek1.no/vaare-apotek/oslo/grunerlokka-144"> Apotek 1 Grünerløkka</a></li>
-                    <p> Grüners gate 8. Ligger et lite stykke fra Vulkan, men fortsatt i veldig nærme Vulkan.</p>
-                <li><a href="https://www.apotek1.no/vaare-apotek/oslo/legevakten-671"> Apotek 1 Legevakten</a></li>
-                    <p> Apoteket som er der hvor legevakten er, for adresse sjekk "Legevakt".</p>
-            </ul>
-
+    
+        <div id="header"> <!-- Header start -->
+        <a href="https://www.facebook.com">
+            <img id="facebook" src="bilder/facebook.png">
+        </a>
+        <a href="https://www.twitter.com">
+            <img id="twitter" src="bilder/twitter.png">
+        </a>
+        <a href="https://www.instagram.com">
+            <img id="instagram" src="bilder/instagram.png">
+        </a>
+      
+        <div id="menu" class="menuText">
+            <a href="www.vg.no">
+                <p id="bolig">Bolig</p>
+            </a>
+            <a href="www.facebook.no">
+                <p id="kart">Kart</p> 
+            </a>
+            <a href="www.vg.no">
+                <p id="transport">Transport</p> 
+            </a>
+            <a href="index.html">
+                <p id="mat">Mat og drikke</p> 
+            </a>
+            <a href="helse.html">
+                <p id="helse">Helse</p> 
+            </a>
+            <a href="events.html">
+                <p id="eventer">Eventer</p> 
+            </a>
         </div>
-
-        <div id="Trening">
-           <h1>Trening</h1>
-            <ul>  <p>Disse er de fire nærmeste treningssenterene fra Vulkan</p>
-                <li><a href="https://www.sio.no/trening/vare-treningssentre/athletica-vulkan"> SiO Athletica Vulkan.</a></li>
-                    <p> Vulkan 15. Ligger rett rundt hjørnet fra skolen, sånn at du kan ta deg en god treningsøkt i mellom eksamens og forelesnings kjøret.</p>
-                <li><a href="https://no.fitness24seven.com/vare-sentre/her-er-vi/oslo-grunerlokka/"> Fitness24Seven</a></li>
-                    <p> Markveien 35. Er lokalisert på Grünerløkka.</p>
-                <li><a href="https://evofitness.no/"> EVO Grünerløkka</a> </li>
-                    <p>Thorvald Meyers gate 72.</p>
-                <li> <a href="https://www.satselixia.no/treningssentre/oslo/schous-plass-sats/"> SATS Schous plass.</a> </li>
-                    <p> Trondheimsveien 2D.</p>
-            </ul>
-
-
-        </div>
-
+        <div id="headerLogo">
+            <img src="bilder/Logo150px.png"/>
     </div>
-    <div id="footer">
+
+  </div><!-- Header end -->
+
+
+<div class="container"> <!-- Container start -->
+    
+    <div id="velkommenWrapper"> <!-- VekomstWrapper start -->
+        <div id="textWrapper">
+            <h1>HELSE
+            </h1>
+                <h2 id="helseInfo">Dersom du liker å trene, trenger noe på apoteket eller noe skulle skje
+                <br>ligger Campus Vulkan nær både treningssenter, apotek og lege. 
+                </h2>
+        </div>
+    </div> <!-- VekomstWrapper end -->
+    
+
+
+    <div id="legevaktBox" class="contentBox"> <!-- legevaktBox start -->
+        <h2 class="title">Legevakt
+        </h2>
+        <img class="pics" src="bilder/emergancy.png">
+            <p id="legevaktText" class="contentText">
+                Dersom du har behov for legevakt, ligger legevakten 5-10 minutter unna ved en spasertur. Den nærmeste legevakten
+                befinner seg i Storgata 40 og du kan besøke siden dems 
+                <a href="https://www.oslo.kommune.no/dognapne-vakttjenester/legevakt-oslo/">her
+                   
+                </a>
+            </p>
+
+    </div> <!-- legevaktBox end -->
+
+    <div id="apotekBox" class="contentBox"> <!-- apotekBox start -->
+        <h2 class="title">Apoteker
+        </h2>
+        
+        <img class="pics" src="bilder/apotek.png">
+
+        <div id="vitus"> <!-- vitus start -->
+            <h3>Vituapotek Vulkan
+            </h3>
+                <p>
+                    Det nærmeste apoteket fra Vulkan.
+                    Maridalsveien 21. 
+                    <a href="https://www.vitusapotek.no/apotek">www.vitusapotek.no/apotek
+                    </a>
+                </p>
+            
+        </div> <!-- vitus end -->
+        
+        
+        
+        
+        
+        
+        <div id="lokka"> <!-- lokka start -->
+            <h3>Apotek 1 Grünerløkka
+            </h3>
+                <p>
+                Grüners gate 8 ligger et lite stykke unna, men fortsatt i veldig nærme.
+                <br><a href="https://www.apotek1.no/vaare-apotek/oslo/grunerlokka-144">www.apotek1.no
+                    </a>
+                </p>
+
+            
+        </div><!-- lokka start -->
+        
+        <div id="apotekLegevakt">
+            <h3>Apotek 1 Legevakten
+            </h3>
+                <p>
+                Apoteket som ligger ved legevakten. Se adresse  i "Legevakt"
+                <br><a href="https://www.apotek1.no/vaare-apotek/oslo/legevakten-671">www.apotek1.no
+                    </a>
+                </p>
+        
+        
+        
+        </div>
+        
+        
+        
+        
+        </div><!-- apotekBox end -->
+                
+                
+            
+
+    
+
+    <div id="treningBox" class="contentBox">
+           <h2 class="title">Trening</h2>
+        
+            
+    </div>
+
+
+
+
+
+
+
+</div> <!-- Container end -->
+    
+<div id="footer"> <!-- Footer start -->
         Copyright &copy; 2017 Gruppe 11, Mads Kolkin Sarastuen.
-    </div>
-
-
-
-
-
-</div>
+</div> <!-- Footer end -->
+    
 </body>
 </html>
