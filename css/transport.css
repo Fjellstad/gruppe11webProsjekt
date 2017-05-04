@@ -1,6 +1,7 @@
 html, body{
     height: 1400px;
     margin: auto;
+    background-color: white;
     background-image: url(../bilder/backgroundpic.png);
     background-repeat: no-repeat;
     background-position: center;

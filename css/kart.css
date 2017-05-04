@@ -1,6 +1,7 @@
-html, body{
+﻿html, body{
     height: 1400px;
     margin: auto;
+    background-color: white;
     background-image: url(../bilder/navig.png);
     background-repeat: no-repeat;
     -webkit-background-size: cover;

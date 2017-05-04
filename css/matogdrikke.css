@@ -1,6 +1,7 @@
-html, body{
+﻿html, body{
     height: 1400px;
     margin: auto;
+    background-color: white;
     background-image: url(../bilder/3.png);
     background-repeat: no-repeat;
     background-position: center;
