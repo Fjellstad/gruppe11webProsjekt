@@ -1,7 +1,12 @@
 html, body{
     height: 1400px;
     margin: auto;
+<<<<<<< HEAD
     background-image: url(../bilder/bus.jpg);
+=======
+    background-color: white;
+    background-image: url(../bilder/backgroundpic.png);
+>>>>>>> 9acd8774e13129ad6b1e28eef4b86afbcf78bcd3
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

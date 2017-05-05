@@ -1,105 +1,98 @@
-#boligcontainer{
-    position: absolute;
-    background-color: black;
-    bottom:80px;
-    width: 100%;
-    height: 600px;
-    margin:auto;
-    background-color: #ffcc66;
+html, body {
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
 }
 
-/*     #bkimg{
-    position:absolute;
-    right:10%;
-    height:300px;
-    width:300px;
-    bottom: 0px;
-    opacity: 0.2;
-        } */
+#boligcontainer{
+    position: relative;
+    width: 1170px;
+    height: 100%;
+    margin:auto;
+    background-color: lightgrey;
+}
 
-#info{
+#Ankerbox{
     position: absolute;
-    height:10%;
-    color: crimson;
-    font-size: 18px;
-    margin: auto;
-    text-align: center;
+    left:5px;
+}
 
+#Blindernbox{
+    position: absolute;
+    left:34%;
+}
+
+#Siobox{
+    position: absolute;
+    right:5px;
 }
 
 span{
-    color:crimson;
+    color:#ffe066;
+    text-align: center;
 }
 
 #nettsidelink{
-    color:deepskyblue;
+    color:powderblue;
     text-decoration: underline;
+}
+
+.boligtitle{
+    position: absolute;
+    color:whitesmoke;
+    width:100%;
+    font-size: 1.5em;
+    bottom:800px;
+    text-align: center;
 }
 
 
 .boliginfo {
-    color: #ffcc66;
-    font-size:18px;
-    bottom: 400px;
+    position: absolute;
+    color: whitesmoke;
+    font-size:1em;
     text-align: center;
-    }
+    font-family: sans-serif;
+    padding:15px;
+    bottom:700px;
+ }
 
 .kontaktinfo {
     position:absolute;
-    text-align:left;
-    color:#ffcc66;
-    font-size: 16px;
-    bottom: 0;
+    text-align:center;
+    color:whitesmoke;
+    font-size: 1em;
+    font-family: sans-serif;
+    padding:40px;
+    bottom: 70px;
+    
 }
 
 .boxes{
     position: absolute;
-    height:85%;
-    width:30%;
+    height:100%;
+    width:32%;
     background-color: black;
-    bottom:45px;
+    bottom:0;
 }
 
-#Ankerbox{
-    left:10px;
+.boligimages{
+    position: absolute;
+    width:100%;
+    height:200px;
+    bottom:500px;
+}
+
+
+
+
+
+
+
     
-}
-
-#Ankerimg{
-    position:absolute;
-    left:12%;
-    height:200px;
-    bottom:200px;
-}
-
-
-#Blindernbox{
-    left:35%;
-}
-
-
-#Blindernimg{
-    position: absolute;
-    left:18%;
-    height:200px;
-    bottom:200px;
-}
-
-
-#Siobox{
-   right:10px;
-}
-
-
-#Sioimg{
-    position: absolute;
-    left:20%;
-    height:200px;
-    bottom:200px;
-}
-
-
-
-
 
 
