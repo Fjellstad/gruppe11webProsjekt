@@ -1,9 +1,9 @@
 <?php
-$host = "tek.westerdals.no";
-$username = "sarmad16";
-$password = "Kolkin123";
-$dbname = "sarmad16_MapAndEvents";
-$port = 3306;
+//$host = "tek.westerdals.no";
+$username = "root";
+$password = "root";
+$dbname = "map";
+$port = 8889;
 
 try{
     $connection = new PDO("mysql:host={$host};dbname={$dbname};port={$port};", $username, $password);

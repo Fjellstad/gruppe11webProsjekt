@@ -1,8 +1,16 @@
 html, body{
     height: 1400px;
     margin: auto;
+<<<<<<< HEAD
+    background-image: url(../bilder/bus.jpg);
+=======
     background-color: white;
+<<<<<<< HEAD
     background-image: url(../bilder/4.png);
+=======
+    background-image: url(../bilder/backgroundpic.png);
+>>>>>>> 9acd8774e13129ad6b1e28eef4b86afbcf78bcd3
+>>>>>>> origin/master
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
