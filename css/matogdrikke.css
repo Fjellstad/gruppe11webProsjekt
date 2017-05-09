@@ -2,7 +2,7 @@ html, body{
     height: 1400px;
     margin: auto;
     background-color: white;
-    background-image: url(../bilder/3.png);
+    background-image: url(../bilder/4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -167,7 +167,7 @@ h2{
 
 #list{
     position: absolute;
-    bottom: 230px;
+    bottom: 100px;
     margin-left: 25px;
     font-family: sans-serif;
     color: white;
@@ -188,7 +188,7 @@ h2{
     background-color: rgba(0,0,0,0.8);
    -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
-    border: black solid 1px;
+    border-radius: 7px;
     height: 750px;
     
 }
@@ -202,7 +202,7 @@ h2{
     text-align: left;
     margin-left: 50px;
     width: 260px;
-    top: 120px; 
+    top: 280px; 
 }
 
 /* Boksen for alt innhold i mathallen */
@@ -235,7 +235,7 @@ h2{
 .pics{
     position: absolute;
     width: 350px;
-    bottom: 0;
+    top: 100px;
     left: 0;
     right: 0;
     margin: 0 auto;
