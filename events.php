@@ -55,31 +55,32 @@ include("config.php");
         
         <div id="eventMain">
             <?php 
-            $query = "SELECT name, starts_at, is_free FROM events ORDER BY starts_at";
-            $result = mysqli_query($connection,$query);
+            $sql = "SELECT name, starts_at, is_free FROM events ORDER BY starts_at";
+            $result = mysqli_query($connection,$sql);
             
             if(mysqli_num_rows($results) > 0){
                 while($row = mysqli_fetch_array($results)){
                         
                 
-               ?>
-            <?php 
-            //foreach($results as $result) {
+               
+            
+            foreach($results as $result) {
             ?>
             <div id="eventobject">
                <!-- <p id="eventTime">
-                <?php echo $row['starts_at'];    ?>
+                <?php 
+                echo $row['starts_at']." ". $row['name']." ". $row['is_free']; 
+                ?>
                 </p>
-                <p id="eventName"> 
-                <?php echo $row['name'];        ?>
+                <p id="eventName">
                 </p>
                 <p id="eventFree">
-                <?php echo $row['is_free']; ?>
+                
                 </p> -->
                 
                 
             </div>
-            <?php } }
+            <?php } } }
             mysqli_close($connection);
             ?>
         
