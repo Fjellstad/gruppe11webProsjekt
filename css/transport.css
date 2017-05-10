@@ -1,16 +1,8 @@
 html, body{
-    height: 1400px;
+    height: 1550px;
     margin: auto;
-<<<<<<< HEAD
-    background-image: url(../bilder/bus.jpg);
-=======
+    background-image: url(../bilder/busSign2.png);
     background-color: white;
-<<<<<<< HEAD
-    background-image: url(../bilder/4.png);
-=======
-    background-image: url(../bilder/backgroundpic.png);
->>>>>>> 9acd8774e13129ad6b1e28eef4b86afbcf78bcd3
->>>>>>> origin/master
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -18,15 +10,15 @@ html, body{
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-
-.container{
+/* Container */
+#container{
     position: relative;
     height: 100%;
     width: 1170px;
     margin-left:auto;
     margin-right: auto;
 }
-
+/* Header */
 #header{
     position: relative;
     height: 200px;  
@@ -35,7 +27,7 @@ html, body{
     top: 0px;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
-
+/* Footer */
 #footer{
     position: fixed;
     height: 50px;
@@ -44,7 +36,7 @@ html, body{
     bottom: 0px;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
-
+/* Westerdalslogoen */
 #headerLogo{
     position: absolute;
     height: 150px;
@@ -124,14 +116,20 @@ p, .menuText{
 }
 
 
+/* En div som lager en horisontal hvit linje med tekst i rett under menyen*/
+#welcomeWrapper{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    top: 30px;
+    border-bottom: white solid 1px;
+}
 
-
-
-
-
-
-
-
+/* Undertekst til velkommenText */
+#welcomeInfo{
+    top: 50px;
+    font-size: 1.3em;
+}
 
 /* Utseende på overskrifter */
 h1{
@@ -140,7 +138,6 @@ h1{
     font-size: 2em;
 }
 
-/* Utseende på mindre overskrifter */
 h2{ 
     font-family: sans-serif;
     font-size: 1.5em;
@@ -153,9 +150,67 @@ h3{
     color: white;
 }
 
+/* Klasse for hvordan titlene skal se ut */
+.title{
+    position: absolute;
+    top: 45px;
+    left: 50px;
+}
 
+/* Klasse for hvor bildene/ikonene skal plasseres */
+.pics{
+    position: absolute;
+    width: 350px;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
 
+/* Klasse - Utseende på infoboks*/
+.contentBox{
+    position: absolute;
+    top: 300px;
+    width: 350px;
+    background-color: rgba(0,0,0,0.8);
+   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    height: 1050px;
+    
+}
 
+/* Klasse for utseende på innholdstekst */
+.contentText{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: left;
+    margin-left: 50px;
+    width: 260px;
+    top: 280px; 
+}
+
+/* ID på klasseboksene(contentBox) */
+#ruterBox{
+    position: absolute;
+    left: 0;    
+}
+
+#billettOgStraffBox{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#holdeplassBox{
+    position: absolute;
+    right: 0;
+}
+
+/* Tekstdiver */
 #ruterBillett{
     position: absolute;
     text-align: left;
@@ -197,130 +252,8 @@ h3{
     top: 750px; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* En div som lager en horisontal hvit linje med tekst i */
-#velkommenWrapper{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    top: 0px;
-    border-bottom: white solid 1px;
-}
-
-#textWrapper{
-    position: absolute;
-    width: 100%px;
-    height: 150px;
-    top: 30px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-}
-
-/* Undertekst til velkommenText */
-#transportInfo{
-    top: 50px;
-    font-size: 1.3em;
-}
-
-
-
-
-
-
-
-/* Klasse - Boks for informasjon */
-.contentBox{
-    position: absolute;
-    top: 300px;
-    width: 350px;
-    background-color: rgba(0,0,0,0.8);
-   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
-    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
-    border-radius: 7px;
-    height: 1000px;
-    
-}
-
-/* Klasse for utseende på innholdstekst */
-.contentText{
-    position: absolute;
-    font-family: sans-serif;
-    font-size: 1em;
-    color: white;
-    text-align: left;
-    margin-left: 50px;
-    width: 260px;
-    top: 280px; 
-}
-
-/* Boksen for alt innhold i mathallen */
-#ruterBox{
-    position: absolute;
-    left: 0;    
-}
-
-#billettOgStraffBox{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-#holdeplassBox{
-    position: absolute;
-    right: 0;
-}
-
-.title{
-    position: absolute;
-    top: 45px;
-    left: 50px;
-}
-
-
-.pics{
-    position: absolute;
-    width: 350px;
-    top: 100px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-
+/* Hvordan linkene skal oppføre seg */
 a:link, a:visited, a:active, a:hover {
     color: white;
     text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-

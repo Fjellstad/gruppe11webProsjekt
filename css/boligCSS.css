@@ -1,8 +1,8 @@
-﻿html, body{
+html, body{
     height: 1400px;
     margin: auto;
     background-color: white;
-    background-image: url(../bilder/house.png);
+    background-image: url(../bilder/house.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
