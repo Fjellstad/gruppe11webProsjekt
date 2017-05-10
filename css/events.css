@@ -1,4 +1,4 @@
-﻿html, body{
+html, body{
     height: 1600px;
     margin: auto;
     background-color: white;
@@ -295,6 +295,29 @@ a:link, a:visited, a:active, a:hover {
 }
 
 #gratis {
+    position: absolute;
+    left: 900px;
+}
+
+#eventobject {
+    position: relative;
+    background-color: yellow;
+    width: 100%;
+    height: 75px;
+}
+
+#eventName {
+    position: relative;
+    left: 550px;
+    
+}
+
+#eventTime {
+    position: absolute;
+    left: 225px;
+}
+
+#eventFree {
     position: absolute;
     left: 900px;
 }

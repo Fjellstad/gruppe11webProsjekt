@@ -2,7 +2,8 @@
 //$host = "tek.westerdals.no";
 $username = "root";
 $password = "root";
-$dbname = "map";
+$dbname = "events";
+//$dbname = "maps";
 $port = 8889;
 
 try{
