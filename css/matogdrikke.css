@@ -11,7 +11,8 @@ html, body{
     -o-background-size: cover;
 }
 
-.container{
+/* Container */
+#container{
     position: relative;
     height: 100%;
     width: 1170px;
@@ -19,6 +20,7 @@ html, body{
     margin-right: auto;
 }
 
+/* Header */
 #header{
     position: relative;
     height: 200px;  
@@ -28,15 +30,7 @@ html, body{
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
-#footer{
-    position: fixed;
-    height: 50px;
-    width: 100%;
-    background-color: rgb(42, 42, 42);
-    bottom: 0px;
-    box-shadow: 0px 1px 8px 2px #1f1f1f;
-}
-
+/* Headerlogo */
 #headerLogo{
     position: absolute;
     height: 150px;
@@ -46,6 +40,17 @@ html, body{
     margin: 0 auto;
     top: 0;
 }
+
+/* Footer */
+#footer{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    bottom: 0px;
+    box-shadow: 0px 1px 8px 2px #1f1f1f;
+}
+
 
 #menu{
     position: absolute;
@@ -90,7 +95,7 @@ p, .menuText{
     position: absolute;
     right: 375px;
 }
-
+/* Linker/bilder til sosiale medier */
 #facebook{
     position: absolute;
     top: 15px;
@@ -115,16 +120,6 @@ p, .menuText{
     width: 32px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Utseende på overskrifter */
 h1{
     color: white;
@@ -139,48 +134,14 @@ h2{
     color: white;
 }
 
-
-/* En div som lager en horisontal hvit linje med tekst i */
-#velkommenWrapper{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    top: 0px;
-    border-bottom: white solid 1px;
-}
-
-#textWrapper{
+/* Klasse for hvordan titlene skal se ut */
+.title{
     position: absolute;
-    width: 100%px;
-    height: 150px;
-    top: 30px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+    top: 45px;
+    left: 50px;
 }
 
-/* Undertekst til velkommenText */
-#vulkanInfo{
-    top: 50px;
-    font-size: 1.3em;
-}
-
-#list{
-    position: absolute;
-    bottom: 100px;
-    margin-left: 25px;
-    font-family: sans-serif;
-    color: white;
-    font-size: 1em;
-}
-
-
-
-
-
-
-
-/* Klasse - Boks for informasjon */
+/* Klasse for hvordan boksene med informasjon skal se ut */
 .contentBox{
     position: absolute;
     top: 300px;
@@ -190,7 +151,6 @@ h2{
     box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     border-radius: 7px;
     height: 750px;
-    
 }
 
 /* Klasse for utseende på innholdstekst */
@@ -203,6 +163,31 @@ h2{
     margin-left: 50px;
     width: 260px;
     top: 280px; 
+}
+
+/* Klasse for hvor bildene/ikonen skal plasseres */
+.pics{
+    position: absolute;
+    width: 350px;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* En div som lager en horisontal hvit linje med tekst i */
+#welcomeWrapper{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    top: 30px;
+    border-bottom: white solid 1px;
+}
+
+/* Div til teksten i welcomeWrapper */
+#welcomeInfo{
+    top: 50px;
+    font-size: 1.3em;
 }
 
 /* Boksen for alt innhold i mathallen */
@@ -222,26 +207,17 @@ h2{
     position: absolute;
     right: 0;
 }
-
-.title{
+/* Listen til åpningstidene i dagligvareboksen */
+#list{ 
     position: absolute;
-    top: 45px;
-    left: 50px;
+    bottom: 100px;
+    margin-left: 25px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 1em;
 }
 
-/* Mathallen overskrift */
-
-
-.pics{
-    position: absolute;
-    width: 350px;
-    top: 100px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-
+/* Hvordan linkene skal oppføre seg */
 a:link, a:visited, a:active, a:hover {
     color: white;
     text-decoration: underline;
