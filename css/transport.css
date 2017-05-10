@@ -192,7 +192,7 @@ h3{
     top: 280px; 
 }
 
-/* ID på klasseboksene(contentBox) */
+/* ID på klasseboksene(contentBox) /m separat plassering */
 #ruterBox{
     position: absolute;
     left: 0;    

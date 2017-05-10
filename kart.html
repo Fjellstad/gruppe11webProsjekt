@@ -4,7 +4,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,43 +11,40 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content=""Mads Kolkin Sarastuen(PHP og html/css) og Vilde Martine Ersdal(endret litt på html/css)> <!-- Author -->
         <link href="css/kart.css" type="text/css" rel="stylesheet">
-
+            
             <title>Kart - Westerdals</title>
 
     </head>
 <body>
     
-            <div id="header">
-            <div id="headerLogo">
-                <a href="index.html"><img id="wLogo" src="css/bilder/Logo150px.png"></a>
-            </div>
-            <a href="www.facebook.com"><img id="facebook" src="css/bilder/facebook.png"></a>
-            <a href="www.twitter.com"><img id="twitter" src="css/bilder/twitter.png"></a>
-            <a href="www.instagram.com"><img id="instagram" src="css/bilder/instagram.png"></a>
-            <div id="menu" class="menuText">
-                <a href="www.vg.no"><p id="bolig">Bolig</p> </a>
-                <a href="www.facebook.no"><p id="kart">Kart</p> </a>
-                <a href="www.vg.no"><p id="transport">Transport</p> </a>
-                <a href="www.vg.no"><p id="mat">Mat og drikke</p> </a>
-                <a href="www.vg.no"><p id="helse">Helse</p> </a>
-                <a href="www.vg.no"><p id="eventer">Eventer</p> </a>
-            </div>
+    <div id="header"> <!-- HEADER START-->
+        <div id="headerLogo">
+            <a href="index.html"><img id="wLogo" src="bilder/Logo150px.png"></a>
         </div>
+        <a href="www.facebook.com"><img id="facebook" src="bilder/facebook.png"></a>
+        <a href="www.twitter.com"><img id="twitter" src="bilder/twitter.png"></a>
+        <a href="www.instagram.com"><img id="instagram" src="bilder/instagram.png"></a>
+        <div id="menu" class="menuText">
+            <a href="www.vg.no"><p id="bolig">Bolig</p> </a>
+            <a href="www.facebook.no"><p id="kart">Kart</p> </a>
+            <a href="www.vg.no"><p id="transport">Transport</p> </a>
+            <a href="www.vg.no"><p id="mat">Mat og drikke</p> </a>
+            <a href="www.vg.no"><p id="helse">Helse</p> </a>
+            <a href="www.vg.no"><p id="eventer">Eventer</p> </a> 
+            </div>
+    </div> <!-- HEADER END-->
 
-    <!-- Container -->
-    <div class="container">
+    <div id="container"> <!-- CONTAINER START -->
 
-        <div id="velkommenWrapper">
-            <div id="textWrapper">
-                <h1 id="kartTitle">KART - FÅ FULL OVERSIKT</h1>
-                <h2 id="kartInfo">
+        <div id="welcomeWrapper"> <!-- WECLOMEWRAPPER START -->
+                <h1>KART - FÅ FULL OVERSIKT</h1>
+                <h2 id="welcomeInfo">
                 Tykk på knappene på siden for å finne steder.</h2>
-            </div>
-        </div>
+        </div> <!-- WECLOMEWRAPPER SEND -->
         
-        <div id="navigatorContainer">
+        <div id="navigatorContainer"> <!-- NAVIGATORCONTAINER START --> <!-- Meny til kartet med knapper -->
             <a href="">
                 <div id="buttonBolig" class="button"><p>Bolig</p></div>
             </a>
@@ -64,10 +60,8 @@
             <a href="">
                 <div id="buttonEvent" class="button"><p>Events</p></div>
             </a>
-            
-        
-        
-        </div>
+  
+        </div> <!-- NAVIGATORCONTAINER END -->
         
         <div id="mapContainer">
             <script>

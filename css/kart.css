@@ -10,7 +10,8 @@ html, body{
 
 }
 
-.container{
+/* Container */
+#container{
     position: relative;
     height: 100%;
     width: 1170px;
@@ -18,6 +19,7 @@ html, body{
     margin-right: auto;
 }
 
+/* Header */
 #header{
     position: relative;
     height: 200px;  
@@ -27,6 +29,7 @@ html, body{
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
+/* Footer */
 #footer{
     position: fixed;
     height: 50px;
@@ -36,6 +39,7 @@ html, body{
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
+/* Headerlogo */
 #headerLogo{
     position: absolute;
     height: 150px;
@@ -93,6 +97,7 @@ p, .menuText{
     right: 375px;
 }
 
+/* Linker/bilder til sosiale medier */
 #facebook{
     position: absolute;
     top: 15px;
@@ -117,16 +122,6 @@ p, .menuText{
     width: 32px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Utseende på overskrifter */
 h1{
     color: white;
@@ -141,40 +136,22 @@ h2{
     color: white;
 }
 
-
 /* En div som lager en horisontal hvit linje med tekst i */
-#velkommenWrapper{
+#welcomeWrapper{
     position: relative;
     width: 100%;
-    height: 200px;
-    top: 0px;
+    height: 150px;
+    top: 30px;
     border-bottom: white solid 1px;
 }
 
-#textWrapper{
-    position: absolute;
-    width: 100%px;
-    height: 150px;
-    top: 30px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-}
-
-/* Undertekst til velkommenText */
-#KartInfo{
+/* Div til teksten i welcomeWrapper */
+#welcomeInfo{
     top: 50px;
     font-size: 1.3em;
 }
 
-
-
-
-
-
-
-
-
+/* Div som lager en meny til knapper relatert til kartet */
 #navigatorContainer{
     position: absolute;
     height: 400px;
@@ -188,6 +165,7 @@ h2{
     border-radius: 7px;
 }
 
+/* Div for kart */
 #mapContainer{
     position: absolute;
     height: 850px;
@@ -199,7 +177,7 @@ h2{
    -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
 }
-
+/* Klasse for hvordan knappene */
 .button{
     position: absolute;
     width: 250px;
@@ -210,9 +188,9 @@ h2{
     text-align: center;
     line-height: 50px;
     border-bottom: solid black 0.1px;
-
 }
 
+/* Knappene som er brukt i menyen med plassering fra top */
 #buttonBolig{
     top: 0px;
 }
@@ -232,44 +210,12 @@ h2{
     top: 320px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Klasse for hvordan knappene skal oppføre seg når man holder over dem */
 .button:hover {
     background-color: rgb(21,21,21);
 }
 
-
-
-
-
-
-
-
-
-
-.pics{
-    position: absolute;
-    width: 350px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-
+/* Klasse for hvordan linkene skal oppføre seg */
 a:link, a:visited, a:active, a:hover {
     color: white;
     text-decoration: underline;

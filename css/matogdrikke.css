@@ -95,6 +95,7 @@ p, .menuText{
     position: absolute;
     right: 375px;
 }
+
 /* Linker/bilder til sosiale medier */
 #facebook{
     position: absolute;
@@ -190,7 +191,7 @@ h2{
     font-size: 1.3em;
 }
 
-/* Boksen for alt innhold i mathallen */
+/* ID på klasseboksene(contentBox) /m separat plassering */
 #mathallenBox{
     position: absolute;
     left: 0;    
