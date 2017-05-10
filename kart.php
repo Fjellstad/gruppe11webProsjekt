@@ -1,5 +1,7 @@
 <?php
-include("config.php");
+include ("search.php");
+include ("JSvariabler.php");
+
 
 function parseToXML($htmlStr)
 {
@@ -12,40 +14,23 @@ function parseToXML($htmlStr)
 }
 
 
-// Set the active MySQL database
-/*$db_selected = PDO::query  ($dbname,$connection);
-if (!$db_selected) {
-    die ('Can\'t use db : ' . mysql_error());
-}*/
+//Loading the XML file
+function downloadUrl( ) {
 
 
+    /*new ActiveXObject('Microsoft.XMLHTTP') :
+    new XMLHttpRequest;
+
+ request.onreadystatechange = function() {
+     if (request.readyState == 4) {
+         request.onreadystatechange = doNothing;
+         callback(request, request.status);
+     }
 
 
-//$result =  PDO::query ( $query);
-
-if (!$result) {
-//    die('Invalid query: ' . mysql_error());
+*/
 }
-
-// Start XML file, echo parent node
-echo '<kart_webprosjekt>';
-
-// Iterate through the rows, printing XML nodes for each
-/*while ($row = @mysql_fetch_assoc($result)){
-    // Add to XML document node
-    echo '<marker ';
-    echo 'id="' . $ind . '" ';
-    echo 'name="' . parseToXML($row['name']) . '" ';
-    echo 'address="' . parseToXML($row['address']) . '" ';
-    echo 'lat="' . $row['lat'] . '" ';
-    echo 'lng="' . $row['lng'] . '" ';
-    echo 'type="' . $row['type'] . '" ';
-    echo '/>';
-}
-
-// End XML file
-echo '</kart_webprosjekt>';*/
-
+$user = "jay";
 
 ?>
 
@@ -64,7 +49,13 @@ echo '</kart_webprosjekt>';*/
 
 </head>
 <body>
-
+<script>
+function test() {
+var user = "<?php echo $user;?>"
+alert("welcome " + user)
+}
+window.addEventListener('load', test);
+</script>
 <div id="header">
     <div id="headerLogo">
     <a href="index.html"><img id="wLogo" src="css/bilder/Logo150px.png"></a>
@@ -95,7 +86,7 @@ echo '</kart_webprosjekt>';*/
 
     <form id="navigatorContainer">
         <a href="">
-            <div id="buttonBolig" class="button"><p onclick="type()">Bolig</p> </div>
+            <div id="buttonBolig" class="button"><p onclick="Clicked()">Bolig</p> </div>
         </a>
         <a href="">
             <div id="buttonTransport" class="button"><p onclick="type()">Transport</p></div>
@@ -104,7 +95,9 @@ echo '</kart_webprosjekt>';*/
             <div id="buttonMat" class="button"><p onclick="type()">Mat</p></div>
         </a>
         <a href="">
+
             <div id="buttonHelse" class="button"><p onclick="type()">Helse</p></div>
+
         </a>
         <a href="">
             <div id="buttonEvent" class="button"><p onclick="type()">Event</p></div>
@@ -123,9 +116,10 @@ echo '</kart_webprosjekt>';*/
                 var marker = new google.maps.Marker({
                     position: uluru,
                     map: map
-
-
                 });
+
+
+
             }
 
         </script>

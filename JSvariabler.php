@@ -1,14 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mads-power
- * Date: 04.05.2017
- * Time: 16.05
- */
+
 ?>
 <script>
+
     //sender til kart.php filen
-    (function (window,google) {
+    (function (window,google.kart) {
 
     //skal lage en listener for click knapper
     google.maps.event.addListener(map.gMap,'click', function (e) {
@@ -16,23 +12,27 @@
     })
 
    //fun
-   var clicked = (function type(){
-        function clicked() {
+   var Clicked = (function type(){
+                function Clicked(element, opts) {
+                    this.gMap = new google.Map(element, opts);
 
 
-
-        document . getElementById("buttonBolig");
+        document.getElementById("buttonBolig");
         document . getElementById("buttonTransport");
         document . getElementById("buttonMat");
         document . getElementById("buttonHelse");
         document . getElementById("buttonEvent");
         }
-        return clicked();
+        Clicked.prototype = {
+
+        }
+        return Clicked();
    }());
 
-    clicked.create = function () {
-        return new clicked();
-    };
 
+    Clicked.create = function () {
+        return new Clicked();
+    };
+        window.Clicked = Clicked;
     }(window, window.kart))
 </script>
