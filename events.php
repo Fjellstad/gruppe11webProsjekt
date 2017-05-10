@@ -58,13 +58,12 @@ include("config.php");
             $query = "SELECT * FROM events ORDER BY starts_at";
             $result = mysql_query($query);
             
-            $num= mysql_num_rows($results);
+            $num= mysql_num_rows($results); 
             if($num > 0){
-                while($row = mysql_fetch_assoc($result)){
+                while($row = mysql_fetch_assoc($results)){
                     $row['id'], $row['name'], $row['description'] $row['starts_at'], $row['place_id'], $row['is_free']
                 }
             }   ?>
-        
             <?php 
             foreach($result as $results) {
             ?>
@@ -83,8 +82,10 @@ include("config.php");
                 }?>
                 </p>
                 
-                <?php } ?>
+                
             </div>
+            <?php } ?>
+        
         </div>
         
         <div id="eventCritera">
