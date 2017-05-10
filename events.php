@@ -1,5 +1,5 @@
 <?php
-
+include("config.php");
 ?>
 
 
@@ -54,7 +54,37 @@
         
         
         <div id="eventMain">
+            <?php 
+            $query = "SELECT * FROM events ORDER BY starts_at";
+            $result = mysql_query($query);
+            
+            $num= mysql_num_rows($results);
+            if($num > 0){
+                while($row = mysql_fetch_assoc($result)){
+                    $row['id'], $row['name'], $row['description'] $row['starts_at'], $row['place_id'], $row['is_free']
+                }
+            }   ?>
         
+            <?php 
+            foreach($result as $results) {
+            ?>
+            <div id="eventobject">
+                <p id="eventTime">
+                <?php echo $row['starts_at']    ?>
+                </p>
+                <p id="eventName"> 
+                <?php echo $row['name'];        ?>
+                </p>
+                <p id="eventFree">
+                <?php if($row['is_free'] == 'true'){
+                   echo "ja"; 
+                    }   else{
+                    echo "nei";
+                }?>
+                </p>
+                
+                <?php } ?>
+            </div>
         </div>
         
         <div id="eventCritera">
