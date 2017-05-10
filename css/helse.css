@@ -11,7 +11,8 @@ html, body{
     -o-background-size: cover;
 }
 
-.container{
+/* Container */
+#container{
     position: relative;
     height: 100%;
     width: 1170px;
@@ -19,6 +20,7 @@ html, body{
     margin-right: auto;
 }
 
+/* Header */
 #header{
     position: relative;
     height: 200px;  
@@ -28,15 +30,7 @@ html, body{
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
 
-#footer{
-    position: fixed;
-    height: 50px;
-    width: 100%;
-    background-color: rgb(42, 42, 42);
-    bottom: 0px;
-    box-shadow: 0px 1px 8px 2px #1f1f1f;
-}
-
+/* Headerlogo */
 #headerLogo{
     position: absolute;
     height: 150px;
@@ -47,15 +41,84 @@ html, body{
     top: 0;
 }
 
+/* Footer */
+#footer{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    bottom: 0px;
+    box-shadow: 0px 1px 8px 2px #1f1f1f;
+}
 
+#menu {
+    position: absolute;
+    width: 1200px;
+    height: 75px;
+    top: 75px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
 
+p, .menuText{
+    color: #FFF;
+    font-family: sans-serif; 
+}
 
+#bolig{
+    position: absolute;
+    left: 125px;
+}
 
+#kart{
+    position: absolute;
+    left: 250px;
+}
 
+#transport{
+    position: absolute;
+    left: 375px;
+}
 
+#eventer{
+    position: absolute;
+    right: 125px;
+}
 
+#helse{
+    position: absolute;
+    right: 260px;
+}
+#mat{
+    position: absolute;
+    right: 375px;
+}
 
+/* Linker/bilder til sosiale medier */
+#facebook{
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    height: 25px;
+    width: 25px;
+}
 
+#instagram{
+    position: absolute;
+    top: 15px;
+    right: 105px;
+    height: 25px;
+    width: 25px;
+}
+
+#twitter{
+    position: absolute;
+    top: 11px;
+    right: 150px;
+    height: 32px;
+    width: 32px;
+}
 
 /* Utseende på overskrifter */
 h1{
@@ -64,7 +127,6 @@ h1{
     font-size: 2em;
 }
 
-/* Utseende på mindre overskrifter */
 h2{ 
     font-family: sans-serif;
     font-size: 1.5em;
@@ -77,50 +139,7 @@ h3{
     color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-#velkommenWrapper{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    top: 0px;
-    border-bottom: white solid 1px;
-}
-
-#textWrapper{
-    position: absolute;
-    width: 100%px;
-    height: 150px;
-    top: 30px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-}
-
-/* Undertekst til velkommenText */
-#helseInfo{
-    top: 50px;
-    font-size: 1.3em;
-}
-
-
-
-
-
-
-
-
-/* Klasse - Boks for informasjon */
-
-
+/* Klasse for hvordan titlene skal se ut */
 .title{
     position: absolute;
     top: 45px;
@@ -130,12 +149,7 @@ h3{
     margin: 0 auto;
 }
 
-.smallerTitle{
-    position: absolute;
-    top: 120px;
-    left: 50px;
-}
-
+/* Klasse for hvor bildene/ikonen skal plasseres */
 .pics{
     position: absolute;
     width: 200px;
@@ -144,9 +158,6 @@ h3{
     right: 0;
     margin: 0 auto;
 }
-
-
-
 
 /* Klasse for utseende på innholdstekst */
 .contentText{
@@ -160,6 +171,7 @@ h3{
     top: 250px; 
 }
 
+/* Klasse for hvordan boksene med informasjon skal se ut */
 .contentBox{
     position: absolute;
     border-radius: 7px;
@@ -171,7 +183,40 @@ h3{
     height: 820px;   
 }
 
+/* En div som lager en horisontal hvit linje med tekst i */
+#welcomeWrapper{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    top: 30px;
+    border-bottom: white solid 1px;
+}
 
+/* Div til teksten i welcomeWrapper */
+#welcomeInfo{
+    top: 50px;
+    font-size: 1.3em;
+}
+
+/* ID på klasseboksene(contentBox) /m separat plassering */
+#apotekBox{
+    position: absolute;
+    left: 0;    
+}
+
+#legevaktBox{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#treningBox{
+    position: absolute;
+    right: 0;
+}
+
+/* Tekstdiver */
 #vitus{
     position: absolute;
     font-family: sans-serif;
@@ -193,8 +238,6 @@ h3{
     width: 260px;
     top: 390px;
 }
-
-
 
 #apotekLegevakt{
     position: absolute;
@@ -249,172 +292,9 @@ h3{
     margin-left: 50px;
     width: 260px;
     top: 670px; 
-    
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#apotekBox{
-    position: absolute;
-    left: 0;    
-}
-
-#legevaktBox{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-#treningBox{
-    position: absolute;
-    right: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-#facebook{
-    position: absolute;
-    top: 15px;
-    right: 50px;
-    height: 25px;
-    width: 25px;
-}
-
-#instagram{
-    position: absolute;
-    top: 15px;
-    right: 105px;
-    height: 25px;
-    width: 25px;
-}
-
-#twitter{
-    position: absolute;
-    top: 11px;
-    right: 150px;
-    height: 32px;
-    width: 32px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#menu {
-    position: absolute;
-    width: 1200px;
-    height: 75px;
-    top: 75px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-p, .menuText{
-    color: #FFF;
-    font-family: sans-serif; 
-}
-
-#bolig{
-    position: absolute;
-    left: 125px;
-}
-
-#kart{
-    position: absolute;
-    left: 250px;
-}
-
-#transport{
-    position: absolute;
-    left: 375px;
-}
-
-#eventer{
-    position: absolute;
-    right: 125px;
-}
-
-#helse{
-    position: absolute;
-    right: 260px;
-}
-#mat{
-    position: absolute;
-    right: 375px;
-}
-
+/* Hvordan linkene skal oppføre seg */
 a{
     text-decoration: none;
     color: white;
