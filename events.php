@@ -35,7 +35,7 @@ include("config.php");
                 <a href="events.html"><p id="eventer">Eventer</p> </a>
             </div>
             <div id="headerLogo">
-                <a href="index.html"><img id="wLogo" src="bilder/gul-westerdalslogo.png"></a>
+                <a href="index.html"><img id="wLogo" src="bilder/Logo150px.png"></a>
                    </div>
             
             
@@ -55,36 +55,33 @@ include("config.php");
         
         <div id="eventMain">
             <?php 
-            $query = "SELECT * FROM events ORDER BY starts_at";
-            $result = mysql_query($query);
+            $query = "SELECT name, starts_at, is_free FROM events ORDER BY starts_at";
+            $result = mysqli_query($connection,$query);
             
-            $num= mysql_num_rows($results); 
-            if($num > 0){
-                while($row = mysql_fetch_assoc($results)){
-                    $row['id'], $row['name'], $row['description'] $row['starts_at'], $row['place_id'], $row['is_free']
-                }
-            }   ?>
+            if(mysqli_num_rows($results) > 0){
+                while($row = mysqli_fetch_array($results)){
+                        
+                
+               ?>
             <?php 
-            foreach($result as $results) {
+            //foreach($results as $result) {
             ?>
             <div id="eventobject">
-                <p id="eventTime">
-                <?php echo $row['starts_at']    ?>
+               <!-- <p id="eventTime">
+                <?php echo $row['starts_at'];    ?>
                 </p>
                 <p id="eventName"> 
                 <?php echo $row['name'];        ?>
                 </p>
                 <p id="eventFree">
-                <?php if($row['is_free'] == 'true'){
-                   echo "ja"; 
-                    }   else{
-                    echo "nei";
-                }?>
-                </p>
+                <?php echo $row['is_free']; ?>
+                </p> -->
                 
                 
             </div>
-            <?php } ?>
+            <?php } }
+            mysqli_close($connection);
+            ?>
         
         </div>
         
