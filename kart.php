@@ -123,6 +123,8 @@ echo '</kart_webprosjekt>';*/
                 var marker = new google.maps.Marker({
                     position: uluru,
                     map: map
+
+
                 });
             }
 

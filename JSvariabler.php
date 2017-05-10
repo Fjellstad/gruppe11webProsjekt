@@ -7,7 +7,7 @@
  */
 ?>
 <script>
-var type =
+    var helse = ;
 
     function type()
     {
