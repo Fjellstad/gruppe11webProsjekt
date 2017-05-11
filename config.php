@@ -1,5 +1,6 @@
 <?php
 //$host = "tek.westerdals.no";
+$host = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "events";

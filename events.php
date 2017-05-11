@@ -27,9 +27,9 @@ include("config.php");
             <a href="www.twitter.com"><img id="twitter" src="bilder/twitter.png"></a>
             <a href="www.instagram.com"><img id="instagram" src="bilder/instagram.png"></a>
             <div id="menu" class="menuText">
-                <a href="www.vg.no"><p id="bolig">Bolig</p> </a>
-                <a href="www.facebook.no"><p id="kart">Kart</p> </a>
-                <a href="www.vg.no"><p id="transport">Transport</p> </a>
+                <a href="boligproject.html"><p id="bolig">Bolig</p> </a>
+                <a href="kart.php"><p id="kart">Kart</p> </a>
+                <a href="transport.html"><p id="transport">Transport</p> </a>
                 <a href="index.html"><p id="mat">Mat og drikke</p> </a>
                 <a href="helse.html"><p id="helse">Helse</p> </a>
                 <a href="events.html"><p id="eventer">Eventer</p> </a>
@@ -59,28 +59,16 @@ include("config.php");
             $result = mysqli_query($connection,$sql);
             
             if(mysqli_num_rows($results) > 0){
-                while($row = mysqli_fetch_array($results)){
-                        
-                
+                while($row = mysqli_fetch_row($result)){
+                        foreach($result as $results) {
+            
                
             
-            foreach($result as $results) {
-            ?>
-            <div id="eventobject">
-               <!-- <p id="eventTime">
-                <?php 
                 echo $row['starts_at']." ". $row['name']." ". $row['is_free']; 
-                ?>
-                </p>
-                <p id="eventName">
-                </p>
-                <p id="eventFree">
-                
-                </p> -->
                 
                 
-            </div>
-            <?php } } }
+                } } }
+            
             mysqli_close($connection);
             ?>
         
