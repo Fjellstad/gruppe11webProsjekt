@@ -3,34 +3,9 @@ include ("search.php");
 include ("JSvariabler.php");
 
 
-function parseToXML($htmlStr)
-{
-    $xmlStr = str_replace('<', '&lt;', $htmlStr);
-    $xmlStr = str_replace('>', '&gt;', $xmlStr);
-    $xmlStr = str_replace('"', '&quot;', $xmlStr);
-    $xmlStr = str_replace("'", '&#39;', $xmlStr);
-    $xmlStr = str_replace("&", '&amp;', $xmlStr);
-    return $xmlStr;
-}
 
 
-//Loading the XML file
-function downloadUrl( ) {
 
-
-    /*new ActiveXObject('Microsoft.XMLHTTP') :
-    new XMLHttpRequest;
-
- request.onreadystatechange = function() {
-     if (request.readyState == 4) {
-         request.onreadystatechange = doNothing;
-         callback(request, request.status);
-     }
-
-
-*/
-}
-$user = "jay";
 
 ?>
 
@@ -50,6 +25,25 @@ $user = "jay";
 </head>
 <body>
 <script>
+
+    function downloadUrl(search.php,callback) {
+        var request = window.ActiveXObject ?
+            new ActiveXObject('Microsoft.XMLHTTP') :
+            new XMLHttpRequest;
+
+        request.onreadystatechange = function() {
+            if (request.readyState == 4) {
+                request.onreadystatechange = doNothing;
+                callback(request, request.status);
+            }
+        };
+
+        request.open('GET', url, true);
+        request.send(null);
+    }
+
+</script>
+<script>
 function test() {
 var user = "<?php echo $user;?>"
 alert("welcome " + user)
@@ -60,7 +54,7 @@ window.addEventListener('load', test);
     <div id="headerLogo">
     <a href="index.html"><img id="wLogo" src="css/bilder/Logo150px.png"></a>
 </div>
-<a href="www.facebook.com"><img id="facebook" src="css/bilder/facebook.png"></a>
+<a href="www.facebook.com"><img id="facebook" src="bilder/facebook.png"></a>
 <a href="www.twitter.com"><img id="twitter" src="css/bilder/twitter.png"></a>
 <a href="www.instagram.com"><img id="instagram" src="css/bilder/instagram.png"></a>
 <div id="menu" class="menuText">
