@@ -64,7 +64,7 @@ include("config.php");
                 
                
             
-            foreach($results as $result) {
+            foreach($result as $results) {
             ?>
             <div id="eventobject">
                <!-- <p id="eventTime">
