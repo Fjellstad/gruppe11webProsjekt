@@ -1,5 +1,14 @@
 <?php
+/*<<<<<<< HEAD
 //$host =  'localhost';
+=======
+//$host = "tek.westerdals.no";
+$host = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "events";
+//$dbname = "maps";
+>>>>>>> origin/master*/
 $port = 8889;
 $username = 'root';
 $password = 'root';

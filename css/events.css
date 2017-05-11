@@ -258,6 +258,7 @@ h2{
     height: 550px;
     width: 1000px;
     left:200px;
+    background-color: brown;
 }
 
 #eventTits {
@@ -265,6 +266,7 @@ h2{
     height: 50px;
     width: 1000px;
     left:200px;
+    background-color: grey;
 }
 
 #eventCritera {
@@ -272,7 +274,7 @@ h2{
     width:200px;
     height: 600px;
     top: -600px;
-    background-color: burlywood
+    background-color: burlywood;
 }
 =======
 
