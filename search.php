@@ -20,23 +20,13 @@ function parseToXML($htmlStr)
     return $xmlStr;
 }
 
-// Opens a connection to a MySQL server
-$connection=mysql_connect ('localhost', $username, $password);
-if (!$connection) {
-    die('Not connected : ' . mysql_error());
-}
 
-// Set the active MySQL database
-$db_selected = mysql_select_db($database, $connection);
-if (!$db_selected) {
-    die ('Can\'t use db : ' . mysql_error());
-}
 
-// Select all the rows in the markers table
+// Select all the rows in the kart_webprosjekt table
 $query = "SELECT * FROM kart_webprosjekt WHERE 1";
-$result = mysql_query($query);
+$result = PDO->query($query);
 if (!$result) {
-    die('Invalid query: ' . mysql_error());
+    die('Invalid query: '.PDO::ATTR_ERRMODE());
 }
 
 header("Content-type: text/xml");
@@ -45,7 +35,7 @@ header("Content-type: text/xml");
 echo '<kart_webprosjekt>';
 
 // Iterate through the rows, printing XML nodes for each
-while ($row = @mysql_fetch_assoc($result)){
+while ($row = PDO::FETCH_ASSOC($result)){
     // Add to XML document node
     echo '<marker ';
     echo 'id="' . $ind . '" ';

@@ -7,5 +7,19 @@
       <jdbc-driver>java.sql.Driver</jdbc-driver>
       <jdbc-url>sarmad16.2016.tek.westerdals.no</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="map@127.0.0.1" uuid="a16b36df-7590-4e66-881f-727a99d496e0">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:8889/map</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

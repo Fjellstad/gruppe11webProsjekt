@@ -1,6 +1,7 @@
 <?php
 include ("search.php");
-include ("JSvariabler.php");
+//include ("JSvariabler.php");
+require("phpsqlajax_dbinfo.php");
 
 
 
@@ -25,13 +26,6 @@ include ("JSvariabler.php");
 </head>
 <body>
 
-<script>
-/*function test() {
-var user = "
-alert("welcome " + user)
-}
-window.addEventListener('load', test);*/
-</script>
 
 <div id="header">
     <div id="headerLogo">
@@ -84,6 +78,16 @@ window.addEventListener('load', test);*/
 
     <div id="mapContainer">
         <script>
+            var customLabel = {
+                restaurant: {
+                    label: 'R'
+                },
+                bar: {
+                    label: 'B'
+                }
+            };
+
+
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('mapContainer'), {
                     center: new google.maps.LatLng(-33.863276, 151.207977),
@@ -94,7 +98,7 @@ window.addEventListener('load', test);*/
                 // Change this depending on the name of your PHP or XML file
                 downloadUrl('search.php', function(data) {
                     var xml = data.responseXML;
-                    var markers = xml.documentElement.getElementsByTagName('kart_webprosjekt');
+                    var markers = xml.documentElement.getElementsByTagName('marker');
                     Array.prototype.forEach.call(markers, function(markerElem) {
                         var id = markerElem.getAttribute('id');
                         var name = markerElem.getAttribute('name');
@@ -114,6 +118,7 @@ window.addEventListener('load', test);*/
                         text.textContent = address
                         infowincontent.appendChild(text);
                         var icon = customLabel[type] || {};
+
                         var marker = new google.maps.Marker({
                             map: map,
                             position: point,
