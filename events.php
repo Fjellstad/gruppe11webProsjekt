@@ -2,8 +2,6 @@
 include("config.php");
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,10 +75,7 @@ include("config.php");
         <div id="eventMain">
             <div class="eventMainBoxSize eventPos1" id="box1">
                 <?php
-                /*for($i = 0; $i < count($event); $i++ ){
-                  echo nl2br( $row['starts_at']."\n");
-                }
-                */
+                
                 foreach ($event as $item)
                 {
                     echo nl2br($item['starts_at']."\n");
