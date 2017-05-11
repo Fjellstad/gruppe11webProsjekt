@@ -2,8 +2,6 @@
 include("config.php");
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,26 +49,65 @@ include("config.php");
             <p id="tittel">Tittel</p>
             <p id="gratis">Gratis</p>
         </div>
+
+        <?php
+        $sql = ("SELECT * FROM events ORDER BY starts_at");
+
+        $res = $connection->query($sql);
+
+        $isItFree = "";
+
+        $statement = $connection->prepare($sql);
+
+        $statement->execute();
+
+        while($row = $statement->fetch(PDO::FETCH_ASSOC)){
+
+        //printer
+        //echo nl2br( $row['starts_at']." ". $row['name']." ". $isItFree."\n");
+        $event[] = $row;
+        }
+
+
+        ?>
         
         
         <div id="eventMain">
-            <?php 
-            $sql = "SELECT name, starts_at, is_free FROM events ORDER BY starts_at";
-            $result = mysqli_query($connection,$sql);
-            
-            if(mysqli_num_rows($results) > 0){
-                while($row = mysqli_fetch_row($result)){
-                        foreach($result as $results) {
-            
-               
-            
-                echo $row['starts_at']." ". $row['name']." ". $row['is_free']; 
+            <div class="eventMainBoxSize eventPos1" id="box1">
+                <?php
                 
-                
-                } } }
-            
-            mysqli_close($connection);
-            ?>
+                foreach ($event as $item)
+                {
+                    echo nl2br($item['starts_at']."\n");
+                }
+
+                ?>
+            </div>
+            <div class="eventMainBoxSize eventPos2" id="box2">
+                <?php
+                foreach ($event as $item)
+                {
+                    echo nl2br($item['name']."\n");
+                }
+                ?>
+
+            </div>
+            <div class="eventMainBoxSize eventPos3" id="box3">
+                <?php
+                foreach ($event as $item)
+                {
+                    if($item['is_free'] == 1) {
+                        echo nl2br("Gratis"."\n");
+                    } else{
+                        echo nl2br("Ikke Gratis". "\n");
+                    }
+                }
+                ?>
+
+
+            </div>
+
+
         
         </div>
         

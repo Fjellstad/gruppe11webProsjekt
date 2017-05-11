@@ -286,17 +286,17 @@ a:link, a:visited, a:active, a:hover {
 
 #tittel {
     position: absolute;
-    left: 550px;
+    left: 485px;
 }
 
 #tid {
     position: absolute;
-    left: 225px;
+    left: 150px;
 }
 
 #gratis {
     position: absolute;
-    left: 900px;
+    left: 810px;
 }
 
 #eventobject {
@@ -320,4 +320,35 @@ a:link, a:visited, a:active, a:hover {
 #eventFree {
     position: absolute;
     left: 900px;
+}
+
+.eventMainBoxSize {
+    position: absolute;
+    width: 333px;
+    height: 550px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.eventPos1{
+    left: 0;
+}
+
+.eventPos2{
+    left: 333px;
+}
+.eventPos3{
+    left: 666px;
+}
+
+#box1{
+    background-color:rebeccapurple;
+}
+
+#box2{
+    background-color: chartreuse;
+}
+
+#box3{
+    background-color: darkgoldenrod;
 }
