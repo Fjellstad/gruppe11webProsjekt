@@ -1,8 +1,12 @@
 html, body{
     height: 1550px;
     margin: auto;
+<<<<<<< HEAD
     background-image: url(../bilder/busSign2.png);
     background-color: white;
+=======
+    background-image: url(../bilder/busSign.jpg);
+>>>>>>> origin/master
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
