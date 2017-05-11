@@ -1,7 +1,7 @@
 <?php
-include ("search.php");
+//include ("search.php");
 //include ("JSvariabler.php");
-require("phpsqlajax_dbinfo.php");
+//require("phpsqlajax_dbinfo.php");
 
 
 
@@ -78,89 +78,51 @@ require("phpsqlajax_dbinfo.php");
 
     <div id="mapContainer">
         <script>
-            var customLabel = {
-                restaurant: {
-                    label: 'R'
-                },
-                bar: {
-                    label: 'B'
-                }
-            };
 
+            var map;
 
             function initMap() {
-                var map = new google.maps.Map(document.getElementById('mapContainer'), {
-                    center: new google.maps.LatLng(-33.863276, 151.207977),
-                    zoom: 12
-                });
-                var infoWindow = new google.maps.InfoWindow;
-
-                // Change this depending on the name of your PHP or XML file
-                downloadUrl('search.php', function(data) {
-                    var xml = data.responseXML;
-                    var markers = xml.documentElement.getElementsByTagName('marker');
-                    Array.prototype.forEach.call(markers, function(markerElem) {
-                        var id = markerElem.getAttribute('id');
-                        var name = markerElem.getAttribute('name');
-                        var address = markerElem.getAttribute('address');
-                        var type = markerElem.getAttribute('type');
-                        var point = new google.maps.LatLng(
-                            parseFloat(markerElem.getAttribute('lat')),
-                            parseFloat(markerElem.getAttribute('lng')));
-
-                        var infowincontent = document.createElement('div');
-                        var strong = document.createElement('strong');
-                        strong.textContent = name
-                        infowincontent.appendChild(strong);
-                        infowincontent.appendChild(document.createElement('br'));
-
-                        var text = document.createElement('text');
-                        text.textContent = address
-                        infowincontent.appendChild(text);
-                        var icon = customLabel[type] || {};
-
-                        var marker = new google.maps.Marker({
-                            map: map,
-                            position: point,
-                            label: icon.label
-                        });
-                        marker.addListener('click', function() {
-                            infoWindow.setContent(infowincontent);
-                            infoWindow.open(map, marker);
-                        });
-                    });
-                });
-            }
-
-
-            /*function initMap() {
-                var map = new google.maps.Map(document.getElementById('mapContainer'), {
-                    zoom: 15,
-                    center: uluru
-                });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                });*/
 
 
 
-            }
-            function downloadUrl(search.php,callback) {
-                var request = window.ActiveXObject ?
-                    new ActiveXObject('Microsoft.XMLHTTP') :
-                    new XMLHttpRequest;
+                var myLatLng = new google.maps.LatLng(59.923382, 10.752486);
 
-                request.onreadystatechange = function() {
-                    if (request.readyState == 4) {
-                        request.onreadystatechange = doNothing;
-                        callback(request, request.status);
-                    }
+                var myOptions = {
+                    zoom: 19,
+                    center: myLatLng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-                request.open('GET', url, true);
-                request.send(null);
+
+               var map = new google.maps.Map(document.getElementById('mapContainer'), myOptions);
+
+
+               /* var marker = new google.maps.Marker({
+                    position: treningsMarkers,
+                    map: map,
+                    title: 'Hello World!'
+                });*/
+
+                var treningsMarkers =[ ['Sio Athletica Vulkan',59.923170, 10.752157,1],
+                    ['Fitness24seven',  59.921711, 10.757207,2],
+                    ['SATS Schous plass',59.919106, 10.760330,3],
+                    ['EVO Grunerløkka',59.920048, 10.759860, 4]
+                    ];
+
+                for (var i = 0; i < treningsMarkers.length; i++) {
+                    var treningsM = treningsMarkers [i]
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng (treningsM[1], treningsM[2]),
+                        map: map,
+                        title: treningsM[1],
+                        zIndex: treningsM[3]
+                    });
+                }
+
+
+
             }
+
 
         </script>
         <script async defer
