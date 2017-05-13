@@ -7,7 +7,6 @@
 
 
 
-
 ?>
 
 
@@ -22,7 +21,8 @@
     <link href="css/kart.css" type="text/css" rel="stylesheet">
 
     <title>Kart</title>
-
+    <script src="http://maps.google.com/maps/api/js?sensor=false"
+            type="text/javascript"></script>
 </head>
 <body>
 
@@ -76,58 +76,49 @@
 
     </form>
 
-    <div id="mapContainer">
-        <script>
+    <div id="map">
 
-            var map;
+        <script type="text/javascript">
 
-            function initMap() {
+            var locations = [
+                ['Sio Athletica Vulkan', 59.923170, 10.752157, 4],
+                ['Fitness24seven', 59.921711, 10.757207, 5],
+                ['SATS Schous plass', 59.919106, 10.760330, 3],
+                ['EVO Grunerløkka ',59.920048,10.759860, 2],
+                //['Maroubra Beach', -33.950198, 151.259302, 1]
+            ];
 
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: new google.maps.LatLng(-33.92, 151.25),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
 
+            var infowindow = new google.maps.InfoWindow();
 
-                var myLatLng = new google.maps.LatLng(59.923382, 10.752486);
+            var marker, i;
 
-                var myOptions = {
-                    zoom: 19,
-                    center: myLatLng,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                });
 
-
-               var map = new google.maps.Map(document.getElementById('mapContainer'), myOptions);
-
-
-               /* var marker = new google.maps.Marker({
-                    position: treningsMarkers,
-                    map: map,
-                    title: 'Hello World!'
-                });*/
-
-                var treningsMarkers =[ ['Sio Athletica Vulkan',59.923170, 10.752157,1],
-                    ['Fitness24seven',  59.921711, 10.757207,2],
-                    ['SATS Schous plass',59.919106, 10.760330,3],
-                    ['EVO Grunerløkka',59.920048, 10.759860, 4]
-                    ];
-
-                for (var i = 0; i < treningsMarkers.length; i++) {
-                    var treningsM = treningsMarkers [i]
-                    var marker = new google.maps.Marker({
-                        position: new google.maps.LatLng (treningsM[1], treningsM[2]),
-                        map: map,
-                        title: treningsM[1],
-                        zIndex: treningsM[3]
-                    });
-                }
-
-
-
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
             }
 
 
+
+
+
         </script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBywTFmLABBq-v9e2L5SJF0VKGJ9Ia3pxQ&callback=initMap">
-        </script>
+
+
 
     </div>
 
