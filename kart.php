@@ -72,9 +72,9 @@
         </a>-->
 
     </div>
-    <div id="buttonHelse" class="button"> <button onclick="click()">Helse</button> </div>
+    <div id="buttonHelse" class="button"> <button onclick="helseCords()">Helse</button> </div>
     <div id="buttonEvent" class="button"><button onclick="click()">Event</button></div>
-    <div id="buttonMat" class="button"><button onclick="click()">Mat</button></div>
+    <div id="buttonMat" class="button"><button onclick="matCords()">Mat</button></div>
     <div id="buttonTransport" class="button"><button onclick="click()">Transport</button></div>
     <div id="buttonBolig" class="button"><button onclick="click()">Bolig</button></div>
     <div id="map">
@@ -82,7 +82,7 @@
         <script>
             var map;
             var myLatLng ={lat: 59.923321,lng: 10.752427};
-            var cords = [
+            var Hcords = [
                 ['Vitusapotek Vulkan', 59.923526,10.750798, 4],
                 ['Apotek 1 Grünerløkka', 59.923496, 10.757125, 5],
                 ['Apotek 1 Legevakten', 59.917079,10.758761, 6],
@@ -93,10 +93,17 @@
                 ['legevakten grunerløkka ',59.917079,10.758761,11]
             ]
 
-            var bCords = [
-                ['b1',59.923393, 10.750128,7],
-                ['b2',59.922215, 10.749624,8]
-
+            var matcords = [
+                ['Mathallen',59.922098, 10.751949,12],
+                ['REMA 1000 Vulkan',59.923227, 10.751380,13],
+                ['Døgnvill Burger Vulkan',59.921854, 10.751396,14],
+                ['Lucky Bird',59.922239, 10.751517,7],
+                ['Vulkanfisk,Hitchhiker,Smelteverket, Pizzavino',59.922157, 10.752142,15],
+                ['Ristorante Ferro',59.922257, 10.750683,16],
+                ['Pokalen Sportsklubb',59.921813, 10.751786,17],
+                ['Stangeriet',59.922544, 10.752117,18],
+                ['BAR Vulkan',59.922249, 10.751495,19],
+                ['La Crêpe d’Elen',59.921813, 10.751743,20]
             ]
 
 
@@ -107,31 +114,33 @@
                 });
 
                 var marker,i;
-                document.getElementById("buttonHelse").addEventListener("click", click);
+                document.getElementById("buttonHelse").addEventListener("click", matCords);
+                document.getElementById("buttonMat").addEventListener("click", helseCords);
 
-                for (i = 0; i < bCords.length; i++) {
-                    marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(bCords[i][1], bCords[i][2]),
-                        map: map,
-                        visible: false
-                    })
+
+
+                function helseCords() {
+                    for (i = 0; i < matcords.length; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(matcords[i][1], matcords[i][2]),
+                            map: map,
+                            label: { text: 'M' },
+                            visible: true
+                        })
+                    }
+
+                    // marker.setVisible(true);
                 }
+                function matCords() {
+                    for (i = 0; i < Hcords.length; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(Hcords[i][1], Hcords[i][2]),
+                            map: map,
+                            label: { text: 'H' },
+                            visible: true
+                        })
+                    }
 
-                for (i = 0; i < cords.length; i++) {
-                    marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(cords[i][1], cords[i][2]),
-                        map: map,
-                        visible: false
-                    })
-                }
-
-                /*function click() {
-                 for (var j = 0; j < marker.length; j++)
-                 marker[i].onclick =  marker.visible(true);
-                 }*/
-                //fungerer på 1 marker
-                function click() {
-                    marker.setVisible(true);
                 }
             }
 
