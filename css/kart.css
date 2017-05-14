@@ -192,22 +192,23 @@ h2{
 
 /* Knappene som er brukt i menyen med plassering fra top */
 #buttonBolig{
-    top: 0px;
+    top: 800px;
+
 }
 
 #buttonTransport{
-    top: 80px;
+    top: 700px;
 }
 
 #buttonMat{
-    top: 160px;
+    top: 600px;
 }
 #buttonHelse{
-    top: 240px;
+    top: 500px;
 }
 
 #buttonEvent{
-    top: 320px;
+    top: 400px;
 }
 
 /* Klasse for hvordan knappene skal oppføre seg når man holder over dem */
