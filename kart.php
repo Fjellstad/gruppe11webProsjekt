@@ -39,7 +39,7 @@
     <div id="buttonEvent" class="button"><button onclick="eventCords()">Event</button></div>
     <div id="buttonMat" class="button"><button onclick="matCords()">Mat</button></div>
     <div id="buttonTransport" class="button"><button onclick="transportCords()">Transport</button></div>
-    <div id="buttonBolig" class="button"><button onclick="click()">Bolig</button></div>
+    <div id="buttonBolig" class="button"><button onclick="boligCords()">Bolig</button></div>
     <div id="map">
 
         <script>
@@ -79,6 +79,11 @@
                 ['Maridalsveien 23',59.912793, 10.759925,23]
             ]
 
+            var boligcords = [
+                ['anker',59.917535, 10.755437,22],
+                [' Blindern Studenterhjem',59.940924, 10.719201,23]
+            ]
+
             //Her opprettes google map kartet
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -92,6 +97,7 @@
                 document.getElementById("buttonMat").addEventListener("click", helseCords);
                 document.getElementById("buttonEvent").addEventListener("click", eventCords);
                 document.getElementById("buttonTransport").addEventListener("click", transportCords);
+                document.getElementById("buttonBolig").addEventListener("click", boligCords);
 
 
                 //function'ene setter marker på map og itererer igjennom arrayene.
@@ -137,6 +143,17 @@
                             position: new google.maps.LatLng(transportcords[i][1], transportcords[i][2]),
                             map: map,
                             label: { text: 'E' },
+                            visible: true
+                        })
+                    }
+                }
+                function boligCords() {
+                    initMap();
+                    for (i = 0; i < boligcords.length; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(boligcords[i][1], boligcords[i][2]),
+                            map: map,
+                            label: { text: 'B' },
                             visible: true
                         })
                     }
