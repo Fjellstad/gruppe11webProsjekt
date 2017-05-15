@@ -45,9 +45,31 @@ include("config.php");
             <p id="tittel">Tittel</p>
             <p id="gratis">Gratis</p>
         </div>
+        <script>
+            var int i = 1;
+            queuerys(i);
+            function queuerys(i) {
+                <?php
 
+                ?>
+            }
+
+
+        </script>
         <?php
-        $sql = ("SELECT * FROM events ORDER BY starts_at");
+        $sql1 = ("SELECT * FROM events ORDER BY starts_at ASC");
+        $sql2 = ("SELECT * FROM events ORDER BY starts_at DESC");
+        $sql3 = ("SELECT * FROM events ORDER BY name ASC");
+        $sql4 = ("SELECT * FROM events ORDER BY name DESC");
+        $sql5 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY starts_at ASC");
+        $sql6 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY starts_at DESC");
+        $sql7 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY name ASC");
+        $sql8 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY name DESC");
+        $sql9 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY starts_at ASC");
+        $sql10 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY starts_at DESC");
+        $sql11 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY name ASC");
+        $sql12 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY name DESC");
+        $sql = $sql1;
 
         $res = $connection->query($sql);
 
@@ -110,14 +132,17 @@ include("config.php");
             </div>
 
 
+
         
         </div>
         
         <div id="eventCritera">
             <p id="filter">Filter</p>
-            <div>
-                
+            <div id="filterBox1">
+
             </div>
+                
+
         
         </div>
     </div>
