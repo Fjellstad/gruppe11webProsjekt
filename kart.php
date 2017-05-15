@@ -54,7 +54,7 @@
     <div id="buttonHelse" class="button"> <button onclick="helseCords()">Helse</button> </div>
     <div id="buttonEvent" class="button"><button onclick="eventCords()">Event</button></div>
     <div id="buttonMat" class="button"><button onclick="matCords()">Mat</button></div>
-    <div id="buttonTransport" class="button"><button onclick="click()">Transport</button></div>
+    <div id="buttonTransport" class="button"><button onclick="transportCords()">Transport</button></div>
     <div id="buttonBolig" class="button"><button onclick="click()">Bolig</button></div>
     <div id="map">
 
@@ -86,7 +86,12 @@
             ]
 
             var eventcords = [
-                ['Blå',59.920144, 10.752756,13]
+                ['Blå',59.920144, 10.752756,21]
+            ]
+
+            var transportcords = [
+                ['Maridalsveien 23',59.924456, 10.750547,22],
+                ['Maridalsveien 23',59.912793, 10.759925,23]
             ]
 
 
@@ -100,6 +105,7 @@
                 document.getElementById("buttonHelse").addEventListener("click", matCords);
                 document.getElementById("buttonMat").addEventListener("click", helseCords);
                 document.getElementById("buttonEvent").addEventListener("click", eventCords);
+                document.getElementById("buttonTransport").addEventListener("click", transportCords);
 
 
 
@@ -132,6 +138,17 @@
                     for (i = 0; i < eventcords.length; i++) {
                         marker = new google.maps.Marker({
                             position: new google.maps.LatLng(eventcords[i][1], eventcords[i][2]),
+                            map: map,
+                            label: { text: 'E' },
+                            visible: true
+                        })
+                    }
+                }
+                function transportCords() {
+                    initMap();
+                    for (i = 0; i < transportcords.length; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(transportcords[i][1], transportcords[i][2]),
                             map: map,
                             label: { text: 'E' },
                             visible: true
