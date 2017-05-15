@@ -33,23 +33,7 @@
         </div>
     </div>
 
-    <!--<div id="navigatorContainer">
-        <a href="">
-
-        </a>
-        <a href="">
-
-        </a>
-        <a href="">
-
-        </a>
-        <a href="">
-
-        </a>
-        <a href="">
-
-        </a>-->
-
+    <!--Her opprettes onclick som tar inn funksjoner via javascript sånn at når knappen klikkes dukker scriptet opp-->
     </div>
     <div id="buttonHelse" class="button"> <button onclick="helseCords()">Helse</button> </div>
     <div id="buttonEvent" class="button"><button onclick="eventCords()">Event</button></div>
@@ -61,6 +45,7 @@
         <script>
             var map;
             var myLatLng ={lat: 59.923321,lng: 10.752427};
+            <!--Her opprettes Array hvor alle kordinatene blir hentet fra-->
             var Hcords = [
                 ['Vitusapotek Vulkan', 59.923526,10.750798, 4],
                 ['Apotek 1 Grünerløkka', 59.923496, 10.757125, 5],
@@ -94,7 +79,7 @@
                 ['Maridalsveien 23',59.912793, 10.759925,23]
             ]
 
-
+            //Her opprettes google map kartet
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: myLatLng,
@@ -102,13 +87,14 @@
                 });
 
                 var marker,i;
+                //Event listener som tar i mot function som gjør at onclick knappen
                 document.getElementById("buttonHelse").addEventListener("click", matCords);
                 document.getElementById("buttonMat").addEventListener("click", helseCords);
                 document.getElementById("buttonEvent").addEventListener("click", eventCords);
                 document.getElementById("buttonTransport").addEventListener("click", transportCords);
 
 
-
+                //function'ene setter marker på map og itererer igjennom arrayene.
                 function helseCords() {
                     initMap();
                     for (i = 0; i < matcords.length; i++) {
@@ -120,7 +106,7 @@
                         })
                     }
 
-                    // marker.setVisible(true);
+
                 }
                 function matCords() {
                     initMap();
@@ -158,6 +144,7 @@
             }
 
         </script>
+        <!--google map api settes-->
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvFzSBmeyXX-eBNAu-5hRcpXv2eH-clzc &callback=initMap">
         </script>
@@ -169,6 +156,5 @@
 
 <?php include 'footer.php';?>
 
-<!--<script src="JSvariabler.php"></script>-->
 </body>
 </html>
