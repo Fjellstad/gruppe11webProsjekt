@@ -21,19 +21,19 @@ include("config.php");
 <div id="container">
     
         <div id="header">
-            <a href="www.facebook.com"><img id="facebook" src="bilder/facebook.png"></a>
-            <a href="www.twitter.com"><img id="twitter" src="bilder/twitter.png"></a>
-            <a href="www.instagram.com"><img id="instagram" src="bilder/instagram.png"></a>
+            <a href="https://www.facebook.com"><img id="facebook" src="bilder/facebook.png"></a>
+            <a href="https://www.twitter.com"><img id="twitter" src="bilder/twitter.png"></a>
+            <a href="https://www.instagram.com"><img id="instagram" src="bilder/instagram.png"></a>
             <div id="menu" class="menuText">
                 <a href="boligproject.html"><p id="bolig">Bolig</p> </a>
                 <a href="kart.php"><p id="kart">Kart</p> </a>
                 <a href="transport.html"><p id="transport">Transport</p> </a>
-                <a href="index.html"><p id="mat">Mat og drikke</p> </a>
-                <a href="helse.html"><p id="helse">Helse</p> </a>
+                <a href="matogdrikke.html"><p id="mat">Mat og drikke</p> </a>
+                <a href="Helse.html"><p id="helse">Helse</p> </a>
                 <a href="events.html"><p id="eventer">Eventer</p> </a>
             </div>
             <div id="headerLogo">
-                <a href="index.html"><img id="wLogo" src="bilder/Logo150px.png"></a>
+                <a href="matogdrikke.html"><img id="wLogo" src="bilder/Logo150px.png"></a>
                    </div>
             
             

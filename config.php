@@ -9,12 +9,12 @@ $password = "root";
 $dbname = "events";
 //$dbname = "maps";
 >>>>>>> origin/master*/
-//$host = "localhost";
+$host = "localhost";
 $port = 8889;
 $username = 'root';
 $password = 'root';
-$database = 'kart_webprosjekt';
-//$dbname = "events";
+//$database = 'kart_webprosjekt';
+$dbname = "events";
 
 
 try{
