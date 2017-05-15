@@ -35,11 +35,7 @@ include("config.php");
             <div id="headerLogo">
                 <a href="matogdrikke.html"><img id="wLogo" src="bilder/Logo150px.png"></a>
                    </div>
-            
-            
-            
-            
-    
+
         </div>
         
     <div id="eventbox">
@@ -74,26 +70,31 @@ include("config.php");
         
         <div id="eventMain">
             <div class="eventMainBoxSize eventPos1" id="box1">
+                <p>
                 <?php
-                
+
                 foreach ($event as $item)
                 {
                     echo nl2br($item['starts_at']."\n");
                 }
 
                 ?>
+                </p>
             </div>
             <div class="eventMainBoxSize eventPos2" id="box2">
+                <p>
                 <?php
                 foreach ($event as $item)
                 {
                     echo nl2br($item['name']."\n");
                 }
                 ?>
-
+                </p>
             </div>
             <div class="eventMainBoxSize eventPos3" id="box3">
+                <p>
                 <?php
+
                 foreach ($event as $item)
                 {
                     if($item['is_free'] == 1) {
@@ -103,6 +104,7 @@ include("config.php");
                     }
                 }
                 ?>
+                </p>
 
 
             </div>
@@ -112,13 +114,21 @@ include("config.php");
         </div>
         
         <div id="eventCritera">
+            <p id="filter">Filter</p>
+            <div>
+                
+            </div>
         
         </div>
     </div>
     
     
     
-    <div id="footer"></div>
+    <?php
+    include 'footer.php';
+    ?>
+
+>
 </div>
 
 </body>
