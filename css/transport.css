@@ -1,15 +1,11 @@
 html, body{
     height: 1550px;
     margin: auto;
-<<<<<<< HEAD
     background-image: url(../bilder/busSign2.png);
     background-color: white;
-=======
-    background-image: url(../bilder/busSign.jpg);
->>>>>>> origin/master
     background-repeat: no-repeat;
-    background-position: center;
     background-attachment: fixed;
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -180,7 +176,7 @@ h3{
    -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     border-radius: 7px;
-    height: 1050px;
+    height: 900px;
     
 }
 
@@ -249,11 +245,11 @@ h3{
 }
 
 #billettKontroll{
-        position: absolute;
+    position: absolute;
     text-align: left;
     margin-left: 50px;
     width: 260px;
-    top: 750px; 
+    top: 600px; 
 }
 
 /* Hvordan linkene skal oppføre seg */

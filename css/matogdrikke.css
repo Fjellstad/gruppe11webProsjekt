@@ -1,5 +1,5 @@
 html, body{
-    height: 1400px;
+    height: 1250px;
     margin: auto;
     background-color: white;
     background-image: url(../bilder/4.png);
@@ -148,7 +148,7 @@ h2{
     top: 300px;
     width: 350px;
     background-color: rgba(0,0,0,0.8);
-   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(55,55,55,0.3);
+   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     border-radius: 7px;
     height: 750px;
