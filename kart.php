@@ -1,10 +1,4 @@
-<?php
-//include ("search.php");
-//include ("JSvariabler.php");
-//require("phpsqlajax_dbinfo.php");
 
-
-?>
 
 
 <!DOCTYPE html>
@@ -24,24 +18,9 @@
 </head>
 
 <body>
+<?php include 'header.php';?>
 
 
-<div id="header">
-    <div id="headerLogo">
-        <a href="index.html"><img id="wLogo" src="css/bilder/Logo150px.png"></a>
-    </div>
-    <a href="www.facebook.com"><img id="facebook" src="bilder/facebook.png"></a>
-    <a href="www.twitter.com"><img id="twitter" src="css/bilder/twitter.png"></a>
-    <a href="www.instagram.com"><img id="instagram" src="css/bilder/instagram.png"></a>
-    <div id="menu" class="menuText">
-        <a href="www.vg.no"><p id="bolig">Bolig</p></a>
-        <a href="www.facebook.no"><p id="kart">Kart</p></a>
-        <a href="www.vg.no"><p id="transport">Transport</p></a>
-        <a href="www.vg.no"><p id="mat">Mat og drikke</p></a>
-        <a href="www.vg.no"><p id="helse">Helse</p></a>
-        <a href="www.vg.no"><p id="eventer">Eventer</p></a>
-    </div>
-</div>
 
 <!-- Container -->
 <div class="container">
@@ -73,7 +52,7 @@
 
     </div>
     <div id="buttonHelse" class="button"> <button onclick="helseCords()">Helse</button> </div>
-    <div id="buttonEvent" class="button"><button onclick="click()">Event</button></div>
+    <div id="buttonEvent" class="button"><button onclick="eventCords()">Event</button></div>
     <div id="buttonMat" class="button"><button onclick="matCords()">Mat</button></div>
     <div id="buttonTransport" class="button"><button onclick="click()">Transport</button></div>
     <div id="buttonBolig" class="button"><button onclick="click()">Bolig</button></div>
@@ -106,6 +85,10 @@
                 ['La Crêpe d’Elen',59.921813, 10.751743,20]
             ]
 
+            var eventcords = [
+                ['Blå',59.920144, 10.752756,13]
+            ]
+
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -116,10 +99,12 @@
                 var marker,i;
                 document.getElementById("buttonHelse").addEventListener("click", matCords);
                 document.getElementById("buttonMat").addEventListener("click", helseCords);
+                document.getElementById("buttonEvent").addEventListener("click", eventCords);
 
 
 
                 function helseCords() {
+                    initMap();
                     for (i = 0; i < matcords.length; i++) {
                         marker = new google.maps.Marker({
                             position: new google.maps.LatLng(matcords[i][1], matcords[i][2]),
@@ -132,6 +117,7 @@
                     // marker.setVisible(true);
                 }
                 function matCords() {
+                    initMap();
                     for (i = 0; i < Hcords.length; i++) {
                         marker = new google.maps.Marker({
                             position: new google.maps.LatLng(Hcords[i][1], Hcords[i][2]),
@@ -140,7 +126,17 @@
                             visible: true
                         })
                     }
-
+                }
+                function eventCords() {
+                    initMap();
+                    for (i = 0; i < eventcords.length; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(eventcords[i][1], eventcords[i][2]),
+                            map: map,
+                            label: { text: 'E' },
+                            visible: true
+                        })
+                    }
                 }
             }
 
@@ -154,11 +150,7 @@
     <!-- Container avsluttes -->
 </div>
 
-
-<!-- Footer -->
-<div id="footer">
-    <!-- Footer avsluttes -->
-</div>
+<?php include 'footer.php';?>
 
 <!--<script src="JSvariabler.php"></script>-->
 </body>
