@@ -1,11 +1,13 @@
 html, body{
-    height: 1400px;
+    height: 1200px;
     margin: auto;
     background-color: white;
-    background-image: url(../bilder/navig.png);
+    background-image: url(../bilder/signs.png);
     background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     -webkit-background-size: cover;
-    -moz-background-size: cover; 
+    -moz-background-size: cover;
     -o-background-size: cover;
 
 }
@@ -44,6 +46,24 @@ html, body{
 
 
 
+
+/* En div som lager en horisontal hvit linje med tekst i */
+#welcomeWrapper{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    top: 30px;
+    border-bottom: white solid 1px;
+}
+
+/* Div til teksten i welcomeWrapper */
+#welcomeInfo{
+    top: 50px;
+    font-size: 1.3em;
+}
+
+
+
 p, .menuText{
     color: #FFF;
     font-family: sans-serif;
@@ -63,27 +83,15 @@ h2{
     color: white;
 }
 
-/* En div som lager en horisontal hvit linje med tekst i */
-#welcomeWrapper{
-    position: relative;
-    width: 100%;
-    height: 150px;
-    top: 30px;
-    border-bottom: white solid 1px;
-}
 
-/* Div til teksten i welcomeWrapper */
-#welcomeInfo{
-    top: 50px;
-    font-size: 1.3em;
-}
-
+/* TRENGS DENNE ?????*/
 /* Div som lager en meny til knapper relatert til kartet */
+/*
 #navigatorContainer{
     position: absolute;
     height: 400px;
     width: 250px;
-    left: 0px;
+    left: 500px;
     top: 300px;
     background-color: rgb(42, 42, 42);
    -webkit-box-shadow:  3px 3px 6px 3px rgba(0,0,0,0.3);
@@ -91,56 +99,77 @@ h2{
     border: solid black 0.1px;
     border-radius: 7px;
 }
+*/
 
 /* Div for kart */
 #map{
     position: absolute;
-    height: 850px;
-    width: 850px;
-    right: 0px;
-    top: 300px;
-    border: solid black 2px;
-    border-radius: 7px;
+    height: 750px;
+    width: 750px;
+    left: 0;
+
+    top: 200px;
+    border: solid white 1px;
    -webkit-box-shadow:  3px 3px 6px 3px rgba(0,0,0,0.3);
     box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
 }
+
+
 /* Klasse for hvordan knappene */
-.button{
+
+
+
+
+#buttonBox{
     position: absolute;
-    width: 250px;
-    height: 80px;
+    right: 200px;
+    top: 200px;
+    width: 200px;
+}
+
+
+button{
+    width: 100px;
+    height: 50px;
+    background-color: #eaeaea;
+    border: 0;
+    color: black;
     font-family: sans-serif;
-    color: white;
     font-size: 1em;
-    text-align: center;
-    line-height: 50px;
-    border-bottom: solid black 0.1px;
+    border-radius: 1px;
+    text-align: center; 
+    -webkit-box-shadow:  3px 3px 6px 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    margin-bottom: 5px;
 }
 
 /* Knappene som er brukt i menyen med plassering fra top */
+
+/*
 #buttonBolig{
-    top: 800px;
-
-}
-
-#buttonTransport{
-    top: 700px;
-}
-
-#buttonMat{
-    top: 600px;
-}
-#buttonHelse{
     top: 500px;
 }
 
-#buttonEvent{
-    top: 400px;
+#buttonTransport{
+    top: 450px;
 }
 
+#buttonMat{
+    top: 400px;
+}
+#buttonHelse{
+    top: 350px;
+}
+
+#buttonEvent{
+    top: 300px;
+}
+*/
+
 /* Klasse for hvordan knappene skal oppføre seg når man holder over dem */
-.button:hover {
-    background-color: rgb(21,21,21);
+button:hover {
+    background-color: white;
+
 }
 
 /* Klasse for hvordan linkene skal oppføre seg */

@@ -23,23 +23,22 @@
 
 
 <!-- Container -->
-<div class="container">
-
-    <div id="velkommenWrapper">
-        <div id="textWrapper">
-            <h1 id="kartTitle">KART - FÅ FULL OVERSIKT</h1>
-            <h2 id="kartInfo">
-                Trykk på knappene på siden for å finne steder.</h2>
+<div id="container">
+    
+            <div id="welcomeWrapper">
+            <h1>KART</h1>
+            <h2 id="welcomeInfo">Trykk på de ulike knappene for 
+            <br>å finne stedene</h2>  
         </div>
-    </div>
 
     <!--Her opprettes onclick som tar inn funksjoner via javascript sånn at når knappen klikkes dukker scriptet opp-->
+    <div id="buttonBox">
+        <div id="buttonHelse" class="button"> <button onclick="helseCords()">Helse</button> </div>
+        <div id="buttonEvent" class="button"><button onclick="eventCords()">Event</button></div>
+        <div id="buttonMat" class="button"><button onclick="matCords()">Mat</button></div>
+        <div id="buttonTransport" class="button"><button onclick="transportCords()">Transport</button></div>
+        <div id="buttonBolig" class="button"><button onclick="boligCords()">Bolig</button></div>
     </div>
-    <div id="buttonHelse" class="button"> <button onclick="helseCords()">Helse</button> </div>
-    <div id="buttonEvent" class="button"><button onclick="eventCords()">Event</button></div>
-    <div id="buttonMat" class="button"><button onclick="matCords()">Mat</button></div>
-    <div id="buttonTransport" class="button"><button onclick="transportCords()">Transport</button></div>
-    <div id="buttonBolig" class="button"><button onclick="boligCords()">Bolig</button></div>
     <div id="map">
 
         <script>
@@ -168,8 +167,8 @@
     </div>
 
 
-    <!-- Container avsluttes -->
-</div>
+   </div> <!-- Container avsluttes -->
+
 
 <?php include 'footer.php';?>
 
