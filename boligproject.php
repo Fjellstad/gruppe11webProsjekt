@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
     <head>
 
@@ -39,12 +39,11 @@
 
     <div id="container"> <!-- CONTAINER START -->
     
-        <div id="welcomeWrapper"> <!-- WELOMEWRAPPER START -->
+        <div id="weclomeWrapper"> <!-- WELOMEWRAPPER START -->
             <h1>BOLIG</h1>
-                <h2 id="boligInfo">bla bla bla bla bla bla bla
-                <br>bla bla bla bla bla bla bla bla</h2>
+                <h2 id="boligInfo">bla bla bla
+                <br>bla bla bla</h2>
         </div> <!-- WELCOMEWRAPPER END -->
-
         
     
         <div id="ankerBox" class="contentBox"> <!-- ANKERBOX START -->
