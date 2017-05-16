@@ -19,105 +19,6 @@ html, body{
     margin-right: auto;
 }
 
-/* Header */
-#header{
-    position: relative;
-    height: 200px;  
-    width: 100%;
-    background-color: rgb(42, 42, 42);
-    top: 0px;
-    box-shadow: 0px 1px 8px 2px #1f1f1f;
-}
-
-/* Headerlogo */
-#headerLogo{
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 0;
-}
-
-/* Footer */
-#footer{
-    position: fixed;
-    height: 50px;
-    width: 100%;
-    background-color: rgb(42, 42, 42);
-    bottom: 0px;
-    box-shadow: 0px 1px 8px 2px #1f1f1f;
-}
-
-#menu {
-    position: absolute;
-    width: 1200px;
-    height: 75px;
-    top: 75px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
-p, .menuText{
-    color: #FFF;
-    font-family: sans-serif; 
-}
-
-#bolig{
-    position: absolute;
-    left: 125px;
-}
-
-#kart{
-    position: absolute;
-    left: 250px;
-}
-
-#transport{
-    position: absolute;
-    left: 375px;
-}
-
-#eventer{
-    position: absolute;
-    right: 125px;
-}
-
-#helse{
-    position: absolute;
-    right: 260px;
-}
-#mat{
-    position: absolute;
-    right: 375px;
-}
-
-/* Linker/bilder til sosiale medier */
-#facebook{
-    position: absolute;
-    top: 15px;
-    right: 50px;
-    height: 25px;
-    width: 25px;
-}
-
-#instagram{
-    position: absolute;
-    top: 15px;
-    right: 105px;
-    height: 25px;
-    width: 25px;
-}
-
-#twitter{
-    position: absolute;
-    top: 11px;
-    right: 150px;
-    height: 32px;
-    width: 32px;
-}
 
 /* Utseende på overskrifter */
 h1{
@@ -177,7 +78,7 @@ h3{
     top: 300px;
     width: 350px;
     background-color: rgba(12,12,12,0.8);
-   -webkit-box-shadow: box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+   -webkit-box-shadow:  3px 3px 6px 3px rgba(0,0,0,0.3);
     box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
     height: 900px;   
 }

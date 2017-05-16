@@ -10,25 +10,7 @@
         
     </head>
 <body>
-            
-    <div id="header"> <!-- HEADER START-->
-        <div id="headerLogo">
-            <a href="index.html"><img id="wLogo" src="bilder/Logo150px.png"></a>
-        </div>
-        <a href="www.facebook.com"><img id="facebook" src="bilder/facebook.png"></a>
-        <a href="www.twitter.com"><img id="twitter" src="bilder/twitter.png"></a>
-        <a href="www.instagram.com"><img id="instagram" src="bilder/instagram.png"></a>
-        <div id="menu" class="menuText">
-            <a href="www.vg.no"><p id="bolig">Bolig</p> </a>
-            <a href="www.facebook.no"><p id="kart">Kart</p> </a>
-            <a href="www.vg.no"><p id="transport">Transport</p> </a>
-            <a href="www.vg.no"><p id="mat">Mat og drikke</p> </a>
-            <a href="www.vg.no"><p id="helse">Helse</p> </a>
-            <a href="www.vg.no"><p id="eventer">Eventer</p> </a> 
-            </div>
-    </div> <!-- HEADER END-->
-
-   
+<?php include 'header.php';?>
     <div id="container"> <!-- CONTAINER START -->
 
         <div id="welcomeWrapper"> <!-- velkommenWrapper -->
@@ -98,14 +80,6 @@
 
 
     </div> <!-- CONTAINER END -->
-    
-    
-        <!-- Footer -->
-        <div id="footer">
-        
-        </div>
-        <!-- Footer avsluttes -->
-
-
+<?php include 'footer.php';?>
 </body>
 </html>
