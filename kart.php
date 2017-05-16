@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,9 +16,6 @@
 
 <body>
 <?php include 'header.php';?>
-
-
-
 <!-- Container -->
 <div id="container">
     
@@ -165,12 +159,7 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvFzSBmeyXX-eBNAu-5hRcpXv2eH-clzc &callback=initMap">
         </script>
     </div>
-
-
-   </div> <!-- Container avsluttes -->
-
-
+</div> <!-- Container avsluttes -->
 <?php include 'footer.php';?>
-
 </body>
 </html>
