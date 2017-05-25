@@ -85,16 +85,16 @@ li a:hover {
 <div id="header">
         <div class="navbar">
             <ul class="nav-left">
-                <li>  <a href="http://www.vg.no">Transport</a></li>
-                <li>  <a href="http://www.vg.no">Kart</a></li>
-                <li>  <a href="http://www.vg.no">Bolig</a></li>
+                <li>  <a href="transport.php">Transport</a></li>
+                <li>  <a href="kart.php">Kart</a></li>
+                <li>  <a href="boligproject.php">Bolig</a></li>
             </ul>        <ul class="nav-middle">
-            <img src="bilder/Logo150px.png">
-       </ul>
+                <a href="forside.html"><img src="bilder/Logo150px.png"> </a>
+            </ul>
         <ul class="nav-right">
-            <li>  <a href="http://www.vg.no">Mat og drikke</a></li>
-            <li>  <a href="http://www.vg.no">Helse</a></li>
-            <li>  <a href="http://www.vg.no">Eventer</a></li>
+            <li>  <a href="matogdrikke.php">Mat og drikke</a></li>
+            <li>  <a href="Helse.php">Helse</a></li>
+            <li>  <a href="events.php">Eventer</a></li>
         </ul> 
         </div>
     </div>
