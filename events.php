@@ -36,6 +36,12 @@ include("config.php");
         querys("$sql1");
         function querys(sqlName) {
             document.addEventListener("click", sqlName);
+
+            $('.slq').click(function () {
+                $.ajax({
+
+                })
+            })
             <?php
             $cunt = $_GET['sqlName'];
             $sql1 = ("SELECT * FROM events ORDER BY starts_at ASC ");
@@ -120,7 +126,7 @@ include("config.php");
         <p id="filter">Filter</p>
         <p>Dato</p>
 
-        <button onclick="querys(sql1)">Asc</button>
+        <button class="slq" onclick="querys(sql1)">Asc</button>
         <button>Desc</button>
         <p>Tittel</p>
         <button>Asc</button>
