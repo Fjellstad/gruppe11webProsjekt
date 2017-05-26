@@ -12,24 +12,7 @@
     </head>
 <body>
 <?php include 'header.php';?>
-  <!--
-  <div id="header">
-        <div class="navbar">
-            <ul class="nav-left">
-                <li>  <a href="transport.php">Transport</a></li>
-                <li>  <a href="kart.php">Kart</a></li>
-                <li>  <a href="boligproject.php">Bolig</a></li>
-            </ul>        <ul class="nav-middle">
-            <img src="bilder/Logo150px.png">
-       </ul>
-        <ul class="nav-right">
-            <li>  <a href="matogdrikke.php">Mat og drikke</a></li>
-            <li>  <a href="Helse.php">Helse</a></li>
-            <li>  <a href="events.php">Eventer</a></li>
-        </ul> 
-        </div>
-    </div>
-    -->
+
     <div id="backgroundBox"> <!-- BACKGROUNDBOX START -->
         
         
@@ -116,12 +99,10 @@
 
 
     </div> <!-- CONTAINER END -->
-    
-    
-        
-    <div id="footer"> <!-- FOOTER START -->
-        
-    </div> <!-- FOOTER END -->
+
+
+
+<?php include 'footer.php';?>
 
 
 </body>
