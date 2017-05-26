@@ -32,12 +32,11 @@
             <?php
             $cunt = $_GET['sqlName'];
             $sql1 = ("SELECT events.name as navn, events.starts_at, events.description, events.place_id, place.id, place.name FROM events JOIN place ON events.place_id=place.id");
-
-            echo "slafs";
+            
             $statement = $connection->prepare($sql1);
-            echo "sht";
+
             $statement->execute();
-            echo "lul";
+
             while($row = $statement->fetch(PDO::FETCH_ASSOC)){
 
                 $event[] = $row;
