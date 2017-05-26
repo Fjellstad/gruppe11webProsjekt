@@ -26,8 +26,8 @@
     
         <div id="weclomeWrapper"> <!-- WELOMEWRAPPER START -->
             <h1>BOLIG</h1>
-                <h2 id="boligInfo">bla bla bla
-                <br>bla bla bla</h2>
+                <h2 id="boligInfo">Her finner du en oversikt over sider som hjelper
+                <br>deg å finne et sted og bo. Det finnes mange steder nær Campus Vulkan</h2>
         </div> <!-- WELCOMEWRAPPER END -->
         
     
