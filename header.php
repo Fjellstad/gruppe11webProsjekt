@@ -7,7 +7,7 @@
     top: 0px;
     box-shadow: 0px 1px 8px 2px #1f1f1f;
 }
-    
+    /*
 #headerLogo{
     position: absolute;
     height: 150px;
@@ -17,6 +17,32 @@
     margin: 0 auto;
     top: 0;
 }
+*/
+    
+#vulkanLogo{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0px;
+}
+    /*
+    
+#vulkanLogoDiv{
+    position: absolute;
+    height: 150px;
+    background-color: #ffd066;
+    width: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
+    z-index: 1;
+}
+    
+    */
 
 .navbar ul {
     list-style-type: none;
@@ -24,7 +50,6 @@
     padding: 0;
     display: inline-block;
     text-align: center;
-
 }
 
 .navbar li {
@@ -77,6 +102,21 @@ li a:hover {
 .nav-left li {
     float: right;
 }
+    
+    #vulkanLogoDiv:hover #vulkanLogo{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+        transition: all 0.1s linear 0s;
+    }
+    
+
+    
+    
+    
 
 
 </style>
@@ -89,7 +129,14 @@ li a:hover {
                 <li>  <a href="kart.php">Kart</a></li>
                 <li>  <a href="boligproject.php">Bolig</a></li>
             </ul>        <ul class="nav-middle">
-            <a href="forside.html"><img src="bilder/Logo150px.png"></a>
+            
+            <a href="forside.php">
+                <div id="vulkanLogoDiv">
+                    <img id="vulkanLogo" src="bilder/Logo150px.png">
+                </div>
+                
+            </a>
+            
         </ul>
         <ul class="nav-right">
             <li>  <a href="matogdrikke.php">Mat og drikke</a></li>

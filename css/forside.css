@@ -1,8 +1,8 @@
 html, body{
-    height: 1000px;
+    height: 800px;
     margin: auto;
     background-color: white;
-    background-image: url(../bilder/city.png);
+    background-image: url(../bilder/city.png); /*LINK TIL BILDE:https://www.pexels.com/photo/alone-buildings-city-cityscape-220444/ */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

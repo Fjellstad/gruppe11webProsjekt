@@ -1,7 +1,7 @@
 html, body{
     height: 1550px;
     margin: auto;
-    background-image: url(../bilder/busSign2.png);
+    background-image: url(../bilder/transportTicket.png); /* LINK TIL BILDE: https://www.colourbox.com/image/finnish-bus-stop-sign-image-1773116 */
     background-color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;

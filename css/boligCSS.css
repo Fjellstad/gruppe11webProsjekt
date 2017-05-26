@@ -2,7 +2,7 @@ html, body{
     height: 1400px;
     margin: auto;
     background-color: white;
-    background-image: url(../bilder/apartments.png);
+    background-image: url(../bilder/apartments.png); /* LINK TIL BILDE: https://www.pexels.com/photo/blue-high-rise-building-beside-brown-paint-building-71159/ */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

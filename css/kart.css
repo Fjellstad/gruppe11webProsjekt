@@ -2,7 +2,7 @@ html, body{
     height: 1200px;
     margin: auto;
     background-color: white;
-    background-image: url(../bilder/signs.png);
+    background-image: url(../bilder/signs.png); /* LINK TIL BILDE: https://www.pexels.com/photo/broad-st-to-the-left-and-wall-st-to-the-right-signboard-200749/ */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
