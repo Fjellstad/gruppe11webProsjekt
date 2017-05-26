@@ -1,0 +1,316 @@
+html, body{
+    height: 1600px;
+    margin: auto;
+    background-color: white;
+    background-image: url(../bilder/party.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.container{
+    position: relative;
+    height: 100%;
+    width: 1170px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+#footer{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    bottom: 0;
+    box-shadow: 0 1px 8px 2px #1f1f1f;
+}
+
+
+
+p, .menuText{
+    color: #FFF;
+    font-family: sans-serif;
+}
+
+
+
+/* Utseende på overskrifter */
+h1{
+    color: white;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+/* Utseende på mindre overskrifter */
+h2{
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+/* En div som lager en horisontal hvit linje med tekst i */
+#velkommenWrapper{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    border-bottom: white solid 1px;
+}
+
+#textWrapper{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 30px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+/* Undertekst til velkommenText */
+#vulkanInfo{
+    top: 50px;
+    font-size: 1.3em;
+}
+
+#list{
+    position: absolute;
+    bottom: 230px;
+    margin-left: 25px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 1em;
+}
+
+/* Klasse - Boks for informasjon */
+.contentBox{
+    position: absolute;
+    top: 300px;
+    width: 350px;
+    background-color: rgba(0,0,0,0.8);
+    -webkit-box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.3);
+    border: black solid 1px;
+    height: 750px;
+
+}
+
+/* Klasse for utseende på innholdstekst */
+.contentText{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: left;
+    margin-left: 50px;
+    width: 260px;
+    top: 120px;
+
+}
+
+/* Boksen for alt innhold i mathallen */
+#mathallenBox{
+    position: absolute;
+    left: 0;
+}
+
+#restuBarBox{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#dagligvareBox{
+    position: absolute;
+    right: 0;
+}
+
+.title{
+    position: absolute;
+    top: 45px;
+    left: 50px;
+}
+
+/* Mathallen overskrift */
+
+
+.pics{
+    position: absolute;
+    width: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+#eventbox {
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    top: 220px;
+    left:0;
+    right: 0;
+    margin:0 auto;
+}
+
+#eventMain {
+    position: absolute;
+    height: 550px;
+    width: 1000px;
+    left:200px;
+    background-color: black;
+    opacity: 0.8;
+}
+
+#eventTits {
+    position: relative;
+    height: 50px;
+    width: 1000px;
+    left:200px;
+    background-color: black;
+    opacity: 0.8;
+    text-align: center;
+}
+
+#eventCritera {
+    position: absolute;
+    width:200px;
+    height: 600px;
+    top: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+
+a:link, a:visited, a:active, a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+#tittel {
+    position: absolute;
+    left: 485px;
+}
+
+#tid {
+    position: absolute;
+    left: 150px;
+}
+
+#gratis {
+    position: absolute;
+    left: 810px;
+}
+
+#eventName {
+    position: relative;
+    left: 550px;
+
+}
+
+#eventTime {
+    position: absolute;
+    left: 225px;
+}
+
+#eventFree {
+    position: absolute;
+    left: 900px;
+}
+
+.eventMainBoxSize {
+    position: absolute;
+    width: 1000px;
+    height: 550px;
+    overflow: hidden;
+}
+
+.eventPos1{
+    left: 0;
+}
+
+.eventPos2{
+    left: 333px;
+}
+.eventPos3{
+    left: 666px;
+}
+
+.eventinfo{
+    position: relative;
+    height:125px;
+    width: 250px;
+    float: left;
+    border: dotted;
+    border-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.eventInfoTittel{
+    position: relative;
+    height: 100px;
+    width:100%;
+}
+
+.eventInfoNavn{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    top: 100px;
+
+
+}
+
+#box1{
+
+}
+
+#box2{
+
+}
+
+#div1{
+    position: absolute;
+    left: 400px;
+    height: 600px;
+    width:500px;
+}
+
+#box3{
+
+}
+
+#usynligAnchor{
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+#filter {
+    left: 100px;
+    position: relative;
+}
+
+#filterBox1 {
+    height:20px;
+    width: 20px;
+    position: relative;
+    background-color: white;
+}
+
+#txt1 {
+    position: relative;
+}
+
+#datoDesc {
+    position: relative;
+    top: 6px;
+    left: 22px;
+}

@@ -89,12 +89,21 @@ li a:hover {
                 <li>  <a href="kart.php">Kart</a></li>
                 <li>  <a href="boligproject.php">Bolig</a></li>
             </ul>        <ul class="nav-middle">
+<<<<<<< HEAD
             <a href="forside.html"><img src="bilder/Logo150px.png"></a>
        </ul>
         <ul class="nav-right">
             <li>  <a href="matogdrikke.php">Mat og drikke</a></li>
             <li>  <a href="Helse.php">Helse</a></li>
             <li>  <a href="http://www.vg.no">Eventer</a></li>
+=======
+                <a href="forside.html"><img src="bilder/Logo150px.png"> </a>
+            </ul>
+        <ul class="nav-right">
+            <li>  <a href="matogdrikke.php">Mat og drikke</a></li>
+            <li>  <a href="Helse.php">Helse</a></li>
+            <li>  <a href="events.php">Eventer</a></li>
+>>>>>>> origin/master
         </ul> 
         </div>
     </div>
