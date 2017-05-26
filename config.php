@@ -1,13 +1,13 @@
 <?php
 
-$host = "tek.westerdals.no";
+
 /*$host = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "events";
 $port = 8888;*/
 
-
+/*$host = "tek.westerdals.no";
 $port = 3306;
 $username = 'sarmad16';
 $password = 'Kolkin123';
@@ -22,15 +22,16 @@ try{
 }catch (PDOException $e){
     echo $e->getMessage();
 }
+*/
 
-
-/*$host = "tek.westerdals.no";
+$host = "tek.westerdals.no";
 $port = 3306;
 $username = "sarmad16";
 $password = "Kolkin123";
 $dbname = "sarmad16_Events";
 
 $conn = new mysqli($host, $username, $password, $dbname);
+mysqli_set_charset($conn, "utf8");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

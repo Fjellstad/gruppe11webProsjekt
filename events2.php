@@ -50,14 +50,13 @@
         <div class="eventMainBoxSize eventPos1">
 
                 <?php
-
+                $counter = 0;
                 foreach ($event as $item)
-                {
+                {$counter++;
                     ?>
-                    <input type="checkbox" id="btnControl"/>
-                    <label class="btn" for="btnControl">
                     <div class="eventinfo">
-
+                        <input type="checkbox" id="btnControl" <?php if($counter == 5){ echo "checked"; }   ?>/>
+                        <label class="btn" for="btnControl">
 
 
         <p>

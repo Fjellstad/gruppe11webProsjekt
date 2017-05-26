@@ -237,13 +237,6 @@ a:link, a:visited, a:active, a:hover {
     left: 0;
 }
 
-.eventPos2{
-    left: 333px;
-}
-.eventPos3{
-    left: 666px;
-}
-
 .eventinfo{
     position: static;
     height:125px;
@@ -255,7 +248,7 @@ a:link, a:visited, a:active, a:hover {
     padding: 10px;
     overflow: hidden;
     text-align: center;
-
+    z-index:1;
 }
 .eventInfoTittel{
     position: relative;
@@ -274,11 +267,13 @@ a:link, a:visited, a:active, a:hover {
 #btnControl{
     position: absolute;
     height:125px;
-    width: 224px;
+    width: 250px;
     float: left;
     border-radius: 10px;
     padding: 10px;
     opacity: 0;
+    border: ridge;
+    z-index:2;
 }
 
 #btnControl:checked + label > div {
@@ -291,6 +286,7 @@ a:link, a:visited, a:active, a:hover {
     position: relative;
     height:125px;
     width:224px;
+    z-index:3;
 }
 #box1{
 

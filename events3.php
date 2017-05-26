@@ -17,8 +17,8 @@ include("config.php");
     <title>Events</title>
 
 </head>
+<div>
 <body>
-
 <div id="container">
 
     <?php include 'header.php';?>
@@ -28,9 +28,7 @@ include("config.php");
 <div id="eventbox">
 
     <div id="eventTits">
-        <p id="tid">Tid</p>
-        <p id="tittel">Tittel</p>
-        <p id="gratis">Gratis</p>
+
     </div>
 
             <?php
@@ -64,17 +62,16 @@ include("config.php");
 			if(isset($_GET['selected'])){
 				//FORKLARING --> Hvis "selected" variablen er et tall som finnes i listen av mulige IDer så kjøres denne spørringen for å hente event med riktig id (la bare til description)
 				if(in_array($_GET['selected'], $availableIds)){
-					if ($stmt = $conn->prepare("SELECT * FROM events WHERE id = ? ")) {
+					if ($stmt = $conn->prepare("SELECT e.id, e.name, e.image_url, e.description, p.name FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
 						$stmt->bind_param("i", $_GET['selected']); 
 						$stmt->execute();
 						//på bind result velg hvilken variabel som skal oppdateres  i samme rekkefølge som resultatet kommer fra sql
-						$stmt->bind_result($selectedId, $selectedStarts_at, $selectedName, $selectedDescription);
+						$stmt->bind_result($selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName);
 						$stmt->fetch();
 						$stmt->close();
 					}
 				}
 			}
-			
 			$conn->close();
 			
             ?>
@@ -84,30 +81,55 @@ include("config.php");
 
     <div id="eventMain">
 		
-        <div class="eventMainBoxSize eventPos1" id="box2" <!--onclick="run(this)" {}"   --> >
+
 			<!-- FORKLARING: Legger til get variabler når man trykker på eventet   Siden åpnes på nytt, men denne gangen med variabler i url
 			<!-- En litt mer standard måte å sende en get variabel er å gjøre det via en FORM,
 			men for å gjøre det lettvint(med tanke på stilsetting) lager jeg heller bare en link med get verdiene på innsiden av <p> området du hadde laget per event-->
             <!--<form action="events2.php" method="get">  <button name="selected" type="submit" value="1">event nr 1</button>-->
                 <?php
+                if(!in_array($selectedId, $availableIds)) {
+                    foreach ($events as $event) {
+                        ?>
 
-                foreach ($events as $event)
-                {
-                ?>
-                <div class="eventinfo">
-					<p><a href="?selected=<?php echo $event['id']; ?>">
-					<?php
-						echo nl2br($event['starts_at']."\n".$event['name']."\n");
-                    ?>
-					</a></p>
-                </div>
-				<?php
+
+                            <a href="?selected=<?php echo $event['id']; ?>"><div class="eventinfo">
+                            <h1>
+                                <?php
+                                echo nl2br($event['name'])
+                                ?>
+                            </h1>
+
+                                    <p>
+                                    <?php
+                                    $aDateTime = "YYYY-MM-DD HH:MI:SS";
+
+                                    echo nl2br("Dato: ". timeFormatter($event['starts_at'], "date") ."\n");
+
+                                    echo nl2br("Klokkeslett: ". timeFormatter($event['starts_at'], "time"));
+                                    ?>
+                                </p>
+                                </div>
+                        </a>
+                        <?php
+                    }
                 }
+                if(in_array($selectedId, $availableIds)){
+                    ?>
+                    <div class="testing">
+                        <img  id="eventBilde" src="<?php echo $selectedPic ?>">
+                        <h2><?php echo $selectedName; ?></h2>
+                        <p><?php echo $selectedPlaceName; ?></p>
+                        <p><?php echo $selectedDescription; ?></p>
 
+                        <p><a href="events3.php">Return</a></p>
+                    </div>
+                    <?php
+                }
                 ?>
 
             <!-- </form>  -->
         </div>
+    </div>
     </div>
 <script>
     function run (){
@@ -128,16 +150,27 @@ include("config.php");
 	<!-- Er det her mer detaljert info skulle komme?? -->
 	<!-- FORKLARING: Dersom selected id finnes i listen over gyldige IDer så lag denne DIV med mer info -->
 	<?php
+    function timeFormatter($dateTime, $requestedValue){
+        $values = explode(" ", $dateTime);
+        $date = $values[0];
+        $time = $values[1];
+        if($requestedValue == "date"){
+            return $date;
+        }elseif($requestedValue == "time"){
+            return $time;
+        }
+    }
 	
-		if(in_array($selectedId, $availableIds)){
+		/*if(in_array($selectedId, $availableIds)){
 			?>
-			<div>
+			<div class="testing">
 				<h3><?php echo $selectedName; ?></h3>
-				<p><?php echo $selectedStarts_at; ?></p>
+				<p><?php echo $selectedPlaceName; ?></p>
 				<p><?php echo $selectedDescription; ?></p>
+                <p><a href="">close</a></p>
 			</div>
 			<?php
-		}
+		}*/
 	?>
 	
     <div id="eventCriteradd">
@@ -149,7 +182,7 @@ include("config.php");
 
 
 
-
+</div>
 <?php
 include 'footer.php';
 ?>

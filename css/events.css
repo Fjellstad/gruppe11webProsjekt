@@ -162,20 +162,13 @@ h2{
 
 #eventMain {
     position: absolute;
-    height: 550px;
-    width: 1000px;
-    left:200px;
+    height: 600px;
+    width: 1200px;
     background-color: black;
     opacity: 0.8;
-}
-
-#eventTits {
-    position: relative;
-    height: 50px;
-    width: 1000px;
-    left:200px;
-    background-color: black;
-    opacity: 0.8;
+    left:0;
+    right: 0;
+    margin: 0 auto;
 }
 
 #eventCritera {
@@ -208,10 +201,13 @@ a:link, a:visited, a:active, a:hover {
     left: 810px;
 }
 
+.testing{
+    text-align: left;
+}
+
 #eventName {
     position: relative;
     left: 550px;
-    
 }
 
 #eventTime {
@@ -231,6 +227,9 @@ a:link, a:visited, a:active, a:hover {
     overflow: hidden;
     text-align: center;
 }
+h1{
+  font-size: 1.2em;
+}
 
 .eventPos1{
     left: 0;
@@ -243,33 +242,10 @@ a:link, a:visited, a:active, a:hover {
     left: 666px;
 }
 
-#box1{
-
-}
-
-#box2{
-
-}
-
-#box3{
-
-}
-
 #usynligAnchor{
     position: relative;
     height: 20px;
     width: 100%;
-}
-#filter {
-    left: 100px;
-    position: relative;
-}
-
-#filterBox1 {
-    height:20px;
-    width: 20px;
-    position: relative;
-    background-color: white;
 }
 
 #txt1 {
@@ -280,4 +256,22 @@ a:link, a:visited, a:active, a:hover {
     position: relative;
     top: 6px;
     left: 22px;
+}
+
+.eventinfo{
+    position: relative;
+    height:125px;
+    width: 216px;
+    float: left;
+    text-align: center;
+    margin:10px;
+    border: 2px grey solid;
+}
+
+#eventBilde{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    width: 800px;
 }
