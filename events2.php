@@ -31,8 +31,8 @@
 
             <?php
             $cunt = $_GET['sqlName'];
-            $sql1 = ("SELECT events.name as navn, events.starts_at, events.description, events.place_id, place.id, place.name FROM events JOIN place ON events.place_id=place.id");
-            
+            $sql1 = ("SELECT events.name as navn, events.starts_at, events.description, events.place_id, place.id, place.name FROM events JOIN place ON events.place_id=place.id ORDER BY events.starts_at ASC ");
+
             $statement = $connection->prepare($sql1);
 
             $statement->execute();
@@ -48,13 +48,17 @@
 
     <div id="eventMain">
         <div class="eventMainBoxSize eventPos1">
-            <p>
+
                 <?php
 
                 foreach ($event as $item)
                 {
                     ?>
+                    <input type="checkbox" id="btnControl"/>
+                    <label class="btn" for="btnControl">
                     <div class="eventinfo">
+
+
 
         <p>
                 <?php
@@ -64,12 +68,13 @@
 
 
                 </div>
+                    </label>
             <?php
                     }
 
                 ?>
 
-            </p>
+
         </div>
     </div>
 <script>

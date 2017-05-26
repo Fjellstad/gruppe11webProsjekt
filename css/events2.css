@@ -245,14 +245,17 @@ a:link, a:visited, a:active, a:hover {
 }
 
 .eventinfo{
-    position: relative;
+    position: static;
     height:125px;
-    width: 250px;
+    width: 224px;
     float: left;
-    border: dotted;
-    border-color: white;
+    border: ridge;
+    border-color: yellow;
     border-radius: 10px;
     padding: 10px;
+    overflow: hidden;
+    text-align: center;
+
 }
 .eventInfoTittel{
     position: relative;
@@ -268,7 +271,27 @@ a:link, a:visited, a:active, a:hover {
 
 
 }
+#btnControl{
+    position: absolute;
+    height:125px;
+    width: 224px;
+    float: left;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0;
+}
 
+#btnControl:checked + label > div {
+    width:224px;
+    height:auto;
+    overflow: visible;
+}
+
+.btn{
+    position: relative;
+    height:125px;
+    width:224px;
+}
 #box1{
 
 }
