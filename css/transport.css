@@ -97,6 +97,7 @@ h3{
 }
 
 /* ID på klasseboksene(contentBox) /m separat plassering */
+
 #ruterBox{
     position: absolute;
     left: 0;    
@@ -120,7 +121,7 @@ h3{
     text-align: left;
     margin-left: 50px;
     width: 260px;
-    top: 280px; 
+    top: 280px;
 }
 
 #brukApp{

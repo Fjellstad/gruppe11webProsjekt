@@ -15,15 +15,16 @@
 
         <div id="welcomeWrapper"> <!-- velkommenWrapper -->
                 <h1>TRANSPORT</h1>
-                <h2 id="welcomeInfo">Transporttilbudet rundt Campus Vulkan er svært bra. <br>Du finner både buss, trikk og t-bane i nærheten.</h2>
-
+                <h2 id="welcomeInfo">Transporttilbudet rundt Campus Vulkan er svært bra. 
+                <br>Du finner både buss, trikk og t-bane i nærheten.</h2>
         </div>
 
             
         <div id="ruterBox" class="contentBox"> <!-- RUTERBOX START-->
             <h2 class="title">Ruter</h2>
             <img class="pics" src="bilder/ruter.png">
-            <div id="ruterBillett"> <!-- ruterBillett (tekstdiv) -->
+            
+            <div class="contentText" id="ruterBillett"> <!-- ruterBillett (tekstdiv) -->
                 <h3>Ruter Billett-App</h3>
                     <p>Last ned RuterBillett-appen på mobilen og kjøp billett hvor og når som helst. Dette er den enkleste måten å kjøpe billett på.</p>
             </div>
@@ -40,7 +41,7 @@
                 </div>     
             </div>
                 
-            <div id="reiseKort"> <!-- reiseKort (tekstdiv) -->
+            <div class="contentText" id="reiseKort"> <!-- reiseKort (tekstdiv) -->
                 <h3>Reisekort</h3>
                     <p>Reisekort er et plastkort du fyller med billetter eller reisepenger.</p>
             </div>
@@ -57,7 +58,7 @@
             <br> <br>Studenter under 30 år, lærlinger og lærekandidater kan få 40% rabatt på 30-dagersbilletten. Det samme gjelder elever på videregående skole som har fylt 20 år. Studentrabatten gjelder bare på 30-dagersbilletten, ikke enkeltbillett eller andre periodebilletter.
 
                 
-            <div id="billettKontroll"> <!-- billettKontroll (tekstdiv) -->
+            <div class="contentText" id="billettKontroll"> <!-- billettKontroll (tekstdiv) -->
                 <h3>Billettkontroll</h3>
                     <p>Du er selv ansvarlig for å ha gyldig billett når du reiser. Uten gyldig billett vil du få gebyr i en billettkontroll. Størrelsen på gebyret, eller pengebeløpet du da må betale, er fastsatt av Samferdselsdepartementet.
 

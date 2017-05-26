@@ -24,10 +24,10 @@
 
     <div id="container"> <!-- CONTAINER START -->
     
-        <div id="weclomeWrapper"> <!-- WELOMEWRAPPER START -->
+        <div id="welcomeWrapper"> <!-- WELOMEWRAPPER START -->
             <h1>BOLIG</h1>
-                <h2 id="boligInfo">Her finner du en oversikt over sider som hjelper
-                <br>deg å finne et sted og bo. Det finnes mange steder nær Campus Vulkan</h2>
+                <h2 id="boligInfo">Her finner du en oversikt over sider som hjelper deg å 
+                <br>finne et sted og bo. Det finnes mange steder nær Campus Vulkan</h2>
         </div> <!-- WELCOMEWRAPPER END -->
         
     

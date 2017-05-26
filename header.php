@@ -94,7 +94,7 @@ li a:hover {
         <ul class="nav-right">
             <li>  <a href="matogdrikke.php">Mat og drikke</a></li>
             <li>  <a href="Helse.php">Helse</a></li>
-            <li>  <a href="http://www.vg.no">Eventer</a></li>
+            <li>  <a href="events.php">Eventer</a></li>
             </ul>
 
         </div>

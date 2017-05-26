@@ -2,7 +2,7 @@ html, body{
     height: 1400px;
     margin: auto;
     background-color: white;
-    background-image: url(../bilder/house.jpg);
+    background-image: url(../bilder/apartments.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -10,6 +10,7 @@ html, body{
     -moz-background-size: cover;
     -o-background-size: cover;
 }
+
 /* Container */
 #container{
     position: relative;
