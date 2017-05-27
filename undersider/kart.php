@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="css/kart.css" type="text/css" rel="stylesheet">
+    <link href="/css/kart.css" type="text/css" rel="stylesheet">
 
     <title>Kart</title>
     <script src="http://maps.google.com/maps/api/js?sensor=false"
