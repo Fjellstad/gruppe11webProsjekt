@@ -315,3 +315,13 @@ h1{
 #liEvent{
     border-bottom: solid thin #ffd066;
 }
+
+#welcomeInfo{
+    font-size: 1.3em;
+}
+
+#welcomeWrapperTit{
+    color: white;
+    font-family: sans-serif;
+    font-size: 2em;
+}

@@ -111,8 +111,6 @@ li a:hover {
     }
 </style>
 
-<link href="css/header.css" type="text/css" rel="stylesheet">
-
 <div id="header">
         <div class="navbar">
             <ul class="nav-left">

@@ -25,7 +25,7 @@ include("config.php");
     </div>
 
     <div id="welcomeWrapper">
-        <h1>Eventer</h1>
+        <h1 id="welcomeWrapperTit">Eventer</h1>
         <h2 id="welcomeInfo">Oslo har mye morro å være med på
             <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
     </div>
