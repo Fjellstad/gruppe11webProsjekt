@@ -11,7 +11,7 @@
 
     </head>
 <body>
-<?php include 'undersider/header.php';?>
+<?php include 'header.php';?>
 
     <div id="backgroundBox"> <!-- BACKGROUNDBOX START -->
         
@@ -29,14 +29,14 @@
         </div>
             
         <div id="houseDiv">
-            <a href="undersider/boligproject.php">
+            <a href="boligproject.php">
             <img id="houseIcon" class="icons" src="bilder/hus.png">
             <p class="txt">Alt innen bolig</p>
             </a>
         </div>
         
         <div id="mapDiv">
-            <a href="undersider/kart.php">
+            <a href="kart.php">
             <img id="mapIcon" class="icons" src="bilder/kart.png">
             <p class="txt">Ligger i sentrum</p>
             </a>
@@ -44,28 +44,28 @@
         </div>
         
         <div id="transportDiv">
-            <a href="undersider/transport.php">
+            <a href="transport.php">
                 <img id="trasportIcon" class="icons" src="bilder/transport.png">
             <p class="txt">Kort vei til bussen</p>
             </a>
         </div>
         
         <div id="matDiv">
-            <a href="undersider/matogdrikke.php">
+            <a href="matogdrikke.php">
             <img id="matIcon" class="icons" src="bilder/mat.png">
             <p class="txt">Godt utvalg av mat</p>
             </a>
         </div>
         
         <div id="helseDiv">
-            <a href="undersider/Helse.php">
+            <a href="Helse.php">
             <img id="helseIcon" class="icons" src="bilder/helse.png">
             <p class="txt">Tren etter skolen</p>
             </a>
         </div>
         
         <div id="eventDiv">
-            <a href="undersider/events.php">
+            <a href="events.php">
             <img id="eventIcon" class="icons" src="bilder/event.png">
             <p class="txt">Bli med på livet</p>
             </a>
@@ -102,7 +102,7 @@
 
 
 
-<?php include 'undersider/footer.php';?>
+<?php include 'footer.php';?>
 
 
 </body>

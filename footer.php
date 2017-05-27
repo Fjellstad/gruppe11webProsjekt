@@ -58,7 +58,7 @@
 <div id="footer">
     <div id="footerContent">
         <p id=footerTelefon>Telefon: 22 05 75 50</p>
-        <a href="forside.php"><img id="footerLogo" src="/bilder/wlogologo.png"></a>
+        <a href="index.php"><img id="footerLogo" src="bilder/wlogologo.png"></a>
         <p id="footerEmail">Email: post@westerdals.no</p>
     
 

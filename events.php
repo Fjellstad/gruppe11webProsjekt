@@ -12,7 +12,7 @@ include("config.php");
     <meta name="author" content="">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="/css/events.css" type="text/css" rel="stylesheet">
+    <link href="css/events.css" type="text/css" rel="stylesheet">
 
     <title>Events</title>
 

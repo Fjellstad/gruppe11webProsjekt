@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Mads Kolkin Sarastuen(PHP og html/css) og Vilde Martine Ersdal(endret litt på html/css)"> <!-- author -->
-        <link href="/css/helse.css" type="text/css" rel="stylesheet">
+        <link href="css/helse.css" type="text/css" rel="stylesheet">
         <title>Helse - Westerdals</title>
 
 
@@ -30,7 +30,7 @@
         
         <div id="apotekBox" class="contentBox"> <!-- APOTEKBOX START -->
             <h2 class="title">Apoteker</h2>
-            <img class="pics" src="/bilder/cross.png">
+            <img class="pics" src="bilder/cross.png">
 
                 <div id="vitus"> <!-- vitus start -->
                     <h3>Vituapotek Vulkan</h3>
@@ -52,14 +52,14 @@
         
         <div id="legevaktBox" class="contentBox"> <!-- LEGEVAKTBOX START-->
             <h2 class="title">Legevakt</h2>
-            <img class="pics" src="/bilder/pulse.png">
+            <img class="pics" src="bilder/pulse.png">
                 <p class="contentText">Dersom du har behov for legevakt, ligger legevakten 5-10 minutter unna ved en spasertur. Den nærmeste legevaktenbefinner seg i Storgata 40 og du kan besøke siden dems <a href="https://www.oslo.kommune.no/dognapne-vakttjenester/legevakt-oslo/">her</a></p>
         </div> <!-- LEGEVAKT BOX END-->
 
 
         <div id="treningBox" class="contentBox"> <!-- TRENINGSBOX START -->
             <h2 class="title">Trening</h2>
-            <img class="pics" src="/bilder/weight.png">
+            <img class="pics" src="bilder/weight.png">
         
                 <div id="sio"> <!-- sio start -->
                     <h3>SiO Athletica Vulkan</h3>

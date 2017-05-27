@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Yerazik Khachatourian"> <!-- Author -->
-        <link href="/css/boligCSS.css" type="text/css" rel="stylesheet">
+        <link href="css/boligCSS.css" type="text/css" rel="stylesheet">
         <title>Bolig - Westerdals</title>
 
     <script>
@@ -33,7 +33,7 @@
     
         <div id="ankerBox" class="contentBox"> <!-- ANKERBOX START -->
             <h2 class="title">Anker Studentbolig</h2>
-            <img class="pics" src="/bilder/bolig.png">
+            <img class="pics" src="bilder/bolig.png">
                 <p class="contentText">Anker Studentbolig ligger midt i Oslo med nærhet til skoler, butikker, underholdning og kollektivtransport.</p>
 
             <div class="besok"> <!-- besok start -->
@@ -66,7 +66,7 @@
     
         <div id="blindernBox" class="contentBox"> <!-- BLINDERNBOX START -->
             <h2 class="title">Blindern Studenterhjem</h2>
-            <img class="pics" src="/bilder/bolig.png">
+            <img class="pics" src="bilder/bolig.png">
                 <p class="contentText">Blindern Studenterhjem er et hybelhus og bofellesskap for studenter i Oslo. Det ligger like ved Universitetet i Oslo.</p>
 
             <div class="besok"> <!-- besok start -->
@@ -99,7 +99,7 @@
 
         <div id="sioBox" class="contentBox"> <!-- SIOBOX START -->
             <h2 class="title">SiO</h2>
-            <img class="pics" src="/bilder/bolig.png">
+            <img class="pics" src="bilder/bolig.png">
                 <p class="contentText">SiO har over 8400 studentboliger, i Oslo, Lillestrøm og Kongsvinger. Søk bolig enten du er singel, par eller familie!</p>
 
             <div class="besok"> <!-- besok start-->
