@@ -76,11 +76,11 @@ include("config.php");
         if(isset($_GET['selected'])){
             //FORKLARING --> Hvis "selected" variablen er et tall som finnes i listen av mulige IDer så kjøres denne spørringen for å hente event med riktig id (la bare til description)
             if(in_array($_GET['selected'], $availableIds)){
-                if ($stmt = $conn->prepare("SELECT e.id, e.name, e.image_url, e.description, p.name, p.adresse, p.maplink FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
+                if ($stmt = $conn->prepare("SELECT p.website, e.id, e.name, e.image_url, e.description, p.name, p.adresse, p.maplink FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
                     $stmt->bind_param("i", $_GET['selected']);
                     $stmt->execute();
                     //på bind result velg hvilken variabel som skal oppdateres  i samme rekkefølge som resultatet kommer fra sql
-                    $stmt->bind_result($selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName, $selectedAdresse, $selectedMaplink);
+                    $stmt->bind_result($selectedLink, $selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName, $selectedAdresse, $selectedMaplink);
                     $stmt->fetch();
                     $stmt->close();
                 }
@@ -135,9 +135,12 @@ include("config.php");
                         <h2 id="hva"><b>Hva?</b></h2>
                         <h2><?php echo $selectedName; ?></h2>
                         <p class="pTitle"><b>Hvor?</b></p>
-                        <p><?php echo $selectedPlaceName.", ".$selectedAdresse; ?></p>
+                        <p><?php echo nl2br($selectedPlaceName."\n".$selectedAdresse); ?></p>
                         <P class="pTitle"><b>Kort Forklart:</b></P>
                         <p><?php echo $selectedDescription; ?></p>
+                        <a href="<?php $selectedLink ?>">
+                        <p><?php echo $selectedLink ?></p>
+                        </a>
 
                         <!-- <p class="pTitle" ><a href="events.php">Tilbake</a></p> -->
                         <a href="events.php"><img id="backArrow" src="bilder/backArrowWhite.png"></a>
