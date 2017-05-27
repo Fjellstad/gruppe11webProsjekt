@@ -18,134 +18,134 @@ include("config.php");
 
 </head>
 <div>
-<body>
-<div id="container">
+    <body>
+    <div id="container">
 
-    <?php include 'header.php';?>
-</div>
-
-<div id="welcomeWrapper">
-    <h1>Eventer</h1>
-    <h2 id="welcomeInfo">Oslo har mye morro å være med på
-        <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
-</div>
-
-
-<div id="eventbox">
-
-    <div id="eventTits">
-
+        <?php include 'header.php';?>
     </div>
 
-            <?php
-			//vet ikke hva dere ville med "$cunt = $_GET['sqlName'];"
-			
-			//FORKLARING  -->  Første spørringen som altid kjører henter liste over events med id, start tid og navn.
-			//så fyller jeg inn mulige IDer i en array.
-			
-			
-			
-			
-			$availableIds = array();
-			$events = array();
-			if ($stmt = $conn->prepare("SELECT id, starts_at, name FROM events ORDER BY starts_at ASC ")) {
-				//$stmt->bind_param("s", $string); kan sette inn ? i query så settes $string variabel inn (tryggere database spørring med variabler)
-				$stmt->execute();
-				$stmt->bind_result($id, $starts_at, $name);
-				while ($stmt->fetch()) {
-					$event = array();
-					$event['id'] = $id;
-					$event['starts_at'] = $starts_at;
-					$event['name'] = $name;
-					array_push($availableIds, $id);
-					array_push($events, $event);
-				}
-				$stmt->close();
-			}
-			
-			$selectedId = 0;
-			//FORKLARING  -->  Her sjekker man om vi har fått en "selected" get variabel ("?selected=2" på slutten av linken)
-			if(isset($_GET['selected'])){
-				//FORKLARING --> Hvis "selected" variablen er et tall som finnes i listen av mulige IDer så kjøres denne spørringen for å hente event med riktig id (la bare til description)
-				if(in_array($_GET['selected'], $availableIds)){
-					if ($stmt = $conn->prepare("SELECT e.id, e.name, e.image_url, e.description, p.name, p.adresse, p.maplink FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
-						$stmt->bind_param("i", $_GET['selected']); 
-						$stmt->execute();
-						//på bind result velg hvilken variabel som skal oppdateres  i samme rekkefølge som resultatet kommer fra sql
-						$stmt->bind_result($selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName, $selectedAdresse, $selectedMaplink);
-						$stmt->fetch();
-						$stmt->close();
-					}
-				}
-			}
-			$conn->close();
-			
-            ?>
+    <div id="welcomeWrapper">
+        <h1>Eventer</h1>
+        <h2 id="welcomeInfo">Oslo har mye morro å være med på
+            <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
+    </div>
+
+
+    <div id="eventbox">
+
+        <div id="eventTits">
+
+        </div>
+
+        <?php
+        //vet ikke hva dere ville med "$cunt = $_GET['sqlName'];"
+
+        //FORKLARING  -->  Første spørringen som altid kjører henter liste over events med id, start tid og navn.
+        //så fyller jeg inn mulige IDer i en array.
 
 
 
 
-    <div id="eventMain">
-		
+        $availableIds = array();
+        $events = array();
+        if ($stmt = $conn->prepare("SELECT id, starts_at, name FROM events ORDER BY starts_at ASC ")) {
+            //$stmt->bind_param("s", $string); kan sette inn ? i query så settes $string variabel inn (tryggere database spørring med variabler)
+            $stmt->execute();
+            $stmt->bind_result($id, $starts_at, $name);
+            while ($stmt->fetch()) {
+                $event = array();
+                $event['id'] = $id;
+                $event['starts_at'] = $starts_at;
+                $event['name'] = $name;
+                array_push($availableIds, $id);
+                array_push($events, $event);
+            }
+            $stmt->close();
+        }
 
-			<!-- FORKLARING: Legger til get variabler når man trykker på eventet   Siden åpnes på nytt, men denne gangen med variabler i url
-			<!-- En litt mer standard måte å sende en get variabel er å gjøre det via en FORM,
-			men for å gjøre det lettvint(med tanke på stilsetting) lager jeg heller bare en link med get verdiene på innsiden av <p> området du hadde laget per event-->
+        $selectedId = 0;
+        //FORKLARING  -->  Her sjekker man om vi har fått en "selected" get variabel ("?selected=2" på slutten av linken)
+        if(isset($_GET['selected'])){
+            //FORKLARING --> Hvis "selected" variablen er et tall som finnes i listen av mulige IDer så kjøres denne spørringen for å hente event med riktig id (la bare til description)
+            if(in_array($_GET['selected'], $availableIds)){
+                if ($stmt = $conn->prepare("SELECT e.id, e.name, e.image_url, e.description, p.name, p.adresse, p.maplink FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
+                    $stmt->bind_param("i", $_GET['selected']);
+                    $stmt->execute();
+                    //på bind result velg hvilken variabel som skal oppdateres  i samme rekkefølge som resultatet kommer fra sql
+                    $stmt->bind_result($selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName, $selectedAdresse, $selectedMaplink);
+                    $stmt->fetch();
+                    $stmt->close();
+                }
+            }
+        }
+        $conn->close();
+
+        ?>
+
+
+
+
+        <div id="eventMain">
+
+
+            <!-- FORKLARING: Legger til get variabler når man trykker på eventet   Siden åpnes på nytt, men denne gangen med variabler i url
+            <!-- En litt mer standard måte å sende en get variabel er å gjøre det via en FORM,
+            men for å gjøre det lettvint(med tanke på stilsetting) lager jeg heller bare en link med get verdiene på innsiden av <p> området du hadde laget per event-->
             <!--<form action="events2.php" method="get">  <button name="selected" type="submit" value="1">event nr 1</button>-->
-                <?php
-                if(!in_array($selectedId, $availableIds)) {
-                    foreach ($events as $event) {
-                        ?>
+            <?php
+            if(!in_array($selectedId, $availableIds)) {
+                foreach ($events as $event) {
+                    ?>
 
 
-                            <a href="?selected=<?php echo $event['id']; ?>"><div class="eventinfo">
+                    <a href="?selected=<?php echo $event['id']; ?>"><div class="eventinfo">
                             <h1>
                                 <?php
                                 echo nl2br($event['name'])
                                 ?>
                             </h1>
 
-                                    <p>
-                                    <?php
-                                    $aDateTime = "YYYY-MM-DD HH:MI:SS";
+                            <p>
+                                <?php
+                                $aDateTime = "YYYY-MM-DD HH:MI:SS";
 
-                                    echo nl2br("Dato: ". timeFormatter($event['starts_at'], "date") ."\n");
+                                echo nl2br("Dato: ". timeFormatter($event['starts_at'], "date") ."\n");
 
-                                    echo nl2br("Klokkeslett: ". timeFormatter($event['starts_at'], "time"));
-                                    ?>
-                                </p>
-                                </div>
-                        </a>
-                        <?php
-                    }
+                                echo nl2br("Klokkeslett: ". timeFormatter($event['starts_at'], "time"));
+                                ?>
+                            </p>
+                        </div>
+                    </a>
+                    <?php
                 }
-                if(in_array($selectedId, $availableIds)){
-                    ?>
-                    <div class="testing">
-                        <img id="eventBilde" src="<?php echo $selectedPic ?>">
-                        <div class="infotxt">
+            }
+            if(in_array($selectedId, $availableIds)){
+                ?>
+                <div class="testing">
+                    <img id="eventBilde" src="<?php echo $selectedPic ?>">
+                    <div class="infotxt">
                         <h2><u>Hva?</u></h2>
                         <h2><?php echo $selectedName; ?></h2>
                         <p><u>Hvor?</u></p>
                         <p><?php echo $selectedPlaceName.", ".$selectedAdresse; ?></p>
-                            <P><u>Kort Forklart</u></P>
+                        <P><u>Kort Forklart</u></P>
                         <p><?php echo $selectedDescription; ?></p>
 
-                        <p><a href="events3.php">Tilbake</a></p>
-                            <div id="map">
+                        <p><a href="events.php">Tilbake</a></p>
+                        <div id="map">
                             <?php echo $selectedMaplink ?>
-                            </div>
                         </div>
                     </div>
-                    <?php
-                }
-                ?>
+                </div>
+                <?php
+            }
+            ?>
 
             <!-- </form>  -->
         </div>
 
     </div>
-    </div>
+</div>
 <script>
     function run (){
 
@@ -162,38 +162,38 @@ include("config.php");
 
 
 
-	<!-- Er det her mer detaljert info skulle komme?? -->
-	<!-- FORKLARING: Dersom selected id finnes i listen over gyldige IDer så lag denne DIV med mer info -->
-	<?php
-    function timeFormatter($dateTime, $requestedValue){
-        $values = explode(" ", $dateTime);
-        $date = $values[0];
-        $time = $values[1];
-        if($requestedValue == "date"){
-            return $date;
-        }elseif($requestedValue == "time"){
-            return $time;
-        }
+<!-- Er det her mer detaljert info skulle komme?? -->
+<!-- FORKLARING: Dersom selected id finnes i listen over gyldige IDer så lag denne DIV med mer info -->
+<?php
+function timeFormatter($dateTime, $requestedValue){
+    $values = explode(" ", $dateTime);
+    $date = $values[0];
+    $time = $values[1];
+    if($requestedValue == "date"){
+        return $date;
+    }elseif($requestedValue == "time"){
+        return $time;
     }
-	
-		/*if(in_array($selectedId, $availableIds)){
-			?>
-			<div class="testing">
-				<h3><?php echo $selectedName; ?></h3>
-				<p><?php echo $selectedPlaceName; ?></p>
-				<p><?php echo $selectedDescription; ?></p>
-                <p><a href="">close</a></p>
-			</div>
-			<?php
-		}*/
-	?>
-	
-    <div id="eventCriteradd">
+}
 
-
-
-
+/*if(in_array($selectedId, $availableIds)){
+    ?>
+    <div class="testing">
+        <h3><?php echo $selectedName; ?></h3>
+        <p><?php echo $selectedPlaceName; ?></p>
+        <p><?php echo $selectedDescription; ?></p>
+        <p><a href="">close</a></p>
     </div>
+    <?php
+}*/
+?>
+
+<div id="eventCriteradd">
+
+
+
+
+</div>
 
 
 

@@ -131,7 +131,7 @@ include("config.php");
                         <P><u>Kort Forklart</u></P>
                         <p><?php echo $selectedDescription; ?></p>
 
-                        <p><a href="events3.php">Tilbake</a></p>
+                        <p><a href="events.php">Tilbake</a></p>
                         <div id="map">
                             <?php echo $selectedMaplink ?>
                         </div>
