@@ -140,7 +140,7 @@ include("config.php");
                         <p><?php echo $selectedDescription; ?></p>
 
                         <!-- <p class="pTitle" ><a href="events.php">Tilbake</a></p> -->
-                        <a href="events.php"><img id="backArrow" src="bilder/backArrow.png"></a>
+                        <a href="events.php"><img id="backArrow" src="bilder/gulPil.png"></a>
                         <div id="map">
                             <?php echo $selectedMaplink ?>
                         </div>

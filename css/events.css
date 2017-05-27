@@ -284,7 +284,7 @@ h1{
 
 .infotxt{
     position: absolute;
-    width: 400px;
+    width: 500px;
     top: -210px;
     left: 50px;
     height: 560px;
@@ -308,7 +308,7 @@ h1{
 }
 #map{
     position: absolute;
-    right: -750px;
+    left: 550px;
     top: -10px;
 
 }
@@ -328,11 +328,11 @@ h1{
 
 #backArrow{
     width: 60px;
-    height: 50px;
+    height: 60px;
     position: absolute;
     bottom: 0;
-    border-radius: 100px;
+    /*border-radius: 100px;*/
     padding: 4px;
-    border: solid 3px white;
-    filter: contrast(0%);
+    /*border: solid 3px white;*/
+    filter: saturate(0%);
 }
