@@ -162,3 +162,7 @@ a:link, a:visited, a:active, a:hover {
     color: white;
     text-decoration: underline;
 }
+
+#liTrans{
+    border-bottom: solid thin #ffd066;
+}

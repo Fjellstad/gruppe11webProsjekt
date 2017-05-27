@@ -178,6 +178,10 @@ a:link, a:visited, a:active, a:hover {
     text-decoration: underline;
 }
 
+#liKart{
+    border-bottom: solid thin #ffd066;
+}
+
 
 
 

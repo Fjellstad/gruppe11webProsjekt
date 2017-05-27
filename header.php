@@ -53,7 +53,7 @@
     margin-top: 80px;
     margin-left: 20px;
     margin-right: 20px;
-    border-bottom: solid thin #ffd066;
+    /*border-bottom: solid thin #ffd066;*/
 }
 
 .navbar li a {
@@ -65,9 +65,6 @@
 }
 
 li a:hover {
-    background-color: rgb(64, 64, 64);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     border-bottom: solid thin #ffd066;
 }
 
@@ -117,9 +114,9 @@ li a:hover {
 <div id="header">
         <div class="navbar">
             <ul class="nav-left">
-                <li>  <a href="transport.php">Transport</a></li>
-                <li>  <a href="kart.php">Kart</a></li>
-                <li>  <a href="boligproject.php">Bolig</a></li>
+                <li id="liTrans">  <a href="transport.php">Transport</a></li>
+                <li id="liKart">  <a href="kart.php">Kart</a></li>
+                <li id="liBolig">  <a href="boligproject.php">Bolig</a></li>
             </ul>        <ul class="nav-middle">
             
             <a href="index.php">
@@ -130,9 +127,9 @@ li a:hover {
             
         </ul>
         <ul class="nav-right">
-            <li>  <a href="matogdrikke.php">Mat og drikke</a></li>
-            <li>  <a href="Helse.php">Helse</a></li>
-            <li>  <a href="events.php">Eventer</a></li>
+            <li id="liMat">  <a href="matogdrikke.php">Mat og drikke</a></li>
+            <li id="liHelse">  <a href="Helse.php">Helse</a></li>
+            <li id="liEvent">  <a href="events.php">Eventer</a></li>
             </ul>
 
         </div>

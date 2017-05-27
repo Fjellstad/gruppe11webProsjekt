@@ -50,6 +50,10 @@ h3{
     margin: 0 auto;
 }
 
+#liBolig{
+    border-bottom: solid thin #ffd066;
+}
+
 /* Klasse for hvor bildene/ikonen skal plasseres */
 .pics{
     position: absolute;
