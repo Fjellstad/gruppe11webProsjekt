@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Aleksandra Chorna"> <!-- author -->
-        <link href="css/transport.css" type="text/css" rel="stylesheet">
+        <link href="/css/transport.css" type="text/css" rel="stylesheet">
         <title>Transport - Westerdals</title>
         
     </head>
@@ -22,7 +22,7 @@
             
         <div id="ruterBox" class="contentBox"> <!-- RUTERBOX START-->
             <h2 class="title">Ruter</h2>
-            <img class="pics" src="bilder/ruter.png">
+            <img class="pics" src="/bilder/ruter.png">
             
             <div class="contentText" id="ruterBillett"> <!-- ruterBillett (tekstdiv) -->
                 <h3>Ruter Billett-App</h3>
@@ -52,7 +52,7 @@
             
         <div id="billettOgStraffBox" class="contentBox"> <!-- BILLETTOGSTRAFF-BOX START-->
             <h2 class="title">Billett og straff</h2>
-            <img class="pics" src="bilder/ticket.png">
+            <img class="pics" src="/bilder/ticket.png">
             <p class="contentText">Alle billetter kan brukes på Ruters T-bane, trikker, busser og båter, og på NSBs tog i Oslo og Akershus. Det er mulighet å kjøpe enkeltbilett, 24-timer bilett, 7-dager, 30-dager, 365-dager bilett.
                     
             <br> <br>Studenter under 30 år, lærlinger og lærekandidater kan få 40% rabatt på 30-dagersbilletten. Det samme gjelder elever på videregående skole som har fylt 20 år. Studentrabatten gjelder bare på 30-dagersbilletten, ikke enkeltbillett eller andre periodebilletter.
@@ -70,7 +70,7 @@
             
         <div id="holdeplassBox" class="contentBox"> <!-- HOLDEPLASS-BOX START -->
             <h2 class="title">Nærmeste holdeplass</h2>
-            <img class="pics" src="bilder/buss.png">
+            <img class="pics" src="/bilder/buss.png">
             <p class="contentText">Campus Vulkan holder til Vulkan 19, 0178 Oslo
 
             <br><br>Nærmeste buss holdeplass er Telthusbakken, buss #34, #54.

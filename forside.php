@@ -30,7 +30,7 @@
             
         <div id="houseDiv">
             <a href="boligproject.php">
-            <img id="houseIcon" class="icons" src="bilder/hus.png">
+            <img id="houseIcon" class="icons" src="/gruppe11webProjekt/bilder/hus.png">
             <p class="txt">Alt innen bolig</p>
             </a>
         </div>

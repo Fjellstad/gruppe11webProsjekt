@@ -132,7 +132,7 @@ li a:hover {
             
             <a href="forside.php">
                 <div id="vulkanLogoDiv">
-                    <img id="vulkanLogo" src="bilder/Logo150px.png">
+                    <img id="vulkanLogo" src="/bilder/Logo150px.png">
                 </div>
                 
             </a>
