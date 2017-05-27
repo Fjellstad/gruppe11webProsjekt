@@ -9,12 +9,12 @@ include("config.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Andreas Kristoffer Fjellstad"> <!-- Author -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="css/events.css" type="text/css" rel="stylesheet">
 
-    <title>Events</title>
+    <title>Events - Westerdals</title>
 
 </head>
 
@@ -37,8 +37,8 @@ include("config.php");
     <div id="eventbox">
         <div id="welcomeWrapper">
             <h1 id="welcomeWrapperTit">Eventer</h1>
-            <h2 id="welcomeInfo">Oslo har mye morro å være med på
-                <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
+            <h2 id="welcomeInfo">Oslo har mye morro å by på.
+                <br>På denne siden kan du finne eventer som engasjerer deg.</h2>
         </div>
 
         <div id="eventTits">

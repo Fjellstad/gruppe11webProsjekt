@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Aleksandra Chorna"> <!-- author -->
+        <meta name="author" content="Aleksandra Chorna"> <!-- Author -->
         <link href="css/transport.css" type="text/css" rel="stylesheet">
         <title>Transport - Westerdals</title>
         
@@ -13,7 +13,7 @@
 <?php include 'header.php';?>
     <div id="container"> <!-- CONTAINER START -->
 
-        <div id="welcomeWrapper"> <!-- velkommenWrapper -->
+        <div id="welcomeWrapper"> <!-- WELCOMEWRAPPER START -->
                 <h1>TRANSPORT</h1>
                 <h2 id="welcomeInfo">Transporttilbudet rundt Campus Vulkan er svært bra. 
                 <br>Du finner både buss, trikk og t-bane i nærheten.</h2>
@@ -46,7 +46,7 @@
                     <p>Reisekort er et plastkort du fyller med billetter eller reisepenger.</p>
             </div>
       
-        </div> <!-- RUTERBOX END -->
+        </div>
             
 
             
@@ -65,7 +65,7 @@
                     <br>Kr 1150, eller kr 950 hvis du betaler på stedet.</p>
             </div>
 
-        </div> <!-- BILLETTOGSTRAFF-BOX END -->
+        </div>
         
             
         <div id="holdeplassBox" class="contentBox"> <!-- HOLDEPLASS-BOX START -->
@@ -76,7 +76,7 @@
             <br><br>Nærmeste buss holdeplass er Telthusbakken, buss #34, #54.
 
             <br><br>Nærmeste T-bane holdeplass er Grønland og Jernbanetorget.</p>
-        </div> <!-- HOLDEPLASS-BOX END -->
+        </div>
             
 
 

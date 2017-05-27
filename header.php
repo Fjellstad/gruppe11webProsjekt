@@ -1,4 +1,6 @@
 <style>
+    
+/* Header */
 #header{
     position: relative;
     height: 200px;
@@ -7,18 +9,7 @@
     top: 0;
     box-shadow: 0 1px 8px 2px #1f1f1f;
 }
-    /*
-#headerLogo{
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 0;
-}
-*/
-    
+/* Logo */
 #vulkanLogo{
     position: absolute;
     width: 150px;
@@ -28,19 +19,7 @@
     margin: 0 auto;
     top: 0;
 }
-    /*
-    #vulkanLogoDiv{
-    position: absolute;
-    height: 150px;
-    background-color: #ffd066;
-    width: 150px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 0;
-    z-index: 1;
-}*/
-
+/* Menyen */
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -68,13 +47,11 @@ li a:hover {
     border-bottom: solid thin #ffd066;
 }
 
-
 .navbar {
     width: 1270px;
     margin: 0 auto;
     font-family: sans-serif;
 }
-
 
 .nav-middle {
     width: 230px;
@@ -84,7 +61,6 @@ li a:hover {
     float: right;
     margin-top: 100px;
     width: 520px;
-
 } 
 
 .nav-right li {
@@ -99,38 +75,39 @@ li a:hover {
 .nav-left li {
     float: right;
 }
-    
-    #vulkanLogoDiv:hover #vulkanLogo{
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 180px;
-        height: 180px;
-        transition: all 0.1s linear 0s;
+
+/* Trigger - gjør logoen større ved hover */
+#vulkanLogoDiv:hover #vulkanLogo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+    transition: all 0.1s linear 0s;
     }
 </style>
 
 <div id="header">
-        <div class="navbar">
-            <ul class="nav-left">
-                <li id="liTrans">  <a href="transport.php">Transport</a></li>
-                <li id="liKart">  <a href="kart.php">Kart</a></li>
-                <li id="liBolig">  <a href="boligproject.php">Bolig</a></li>
-            </ul>        <ul class="nav-middle">
+    <div class="navbar">
+        <ul class="nav-left">
+            <li id="liTrans">  <a href="transport.php">Transport</a></li>
+            <li id="liKart">  <a href="kart.php">Kart</a></li>
+            <li id="liBolig">  <a href="boligproject.php">Bolig</a></li>
+        </ul>        <ul class="nav-middle">
             
-            <a href="index.php">
-                <div id="vulkanLogoDiv">
-                    <img id="vulkanLogo" src="bilder/Logo150px.png">
-                </div>
-            </a>
+        <a href="index.php">
+            <div id="vulkanLogoDiv">
+                <img id="vulkanLogo" src="bilder/Logo150px.png">
+            </div>
+        </a>
             
         </ul>
         <ul class="nav-right">
             <li id="liMat">  <a href="matogdrikke.php">Mat og drikke</a></li>
             <li id="liHelse">  <a href="Helse.php">Helse</a></li>
             <li id="liEvent">  <a href="events.php">Eventer</a></li>
-            </ul>
+        </ul>
 
-        </div>
     </div>
+</div>
