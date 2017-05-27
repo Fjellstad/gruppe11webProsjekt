@@ -4,8 +4,8 @@
     height: 200px;
     width: 100%;
     background-color: rgb(42, 42, 42);
-    top: 0px;
-    box-shadow: 0px 1px 8px 2px #1f1f1f;
+    top: 0;
+    box-shadow: 0 1px 8px 2px #1f1f1f;
 }
     /*
 #headerLogo{
@@ -26,11 +26,10 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    top: 0px;
+    top: 0;
 }
     /*
-    
-#vulkanLogoDiv{
+    #vulkanLogoDiv{
     position: absolute;
     height: 150px;
     background-color: #ffd066;
@@ -40,9 +39,7 @@
     margin: 0 auto;
     top: 0;
     z-index: 1;
-}
-    
-    */
+}*/
 
 .navbar ul {
     list-style-type: none;
@@ -68,7 +65,9 @@
 }
 
 li a:hover {
-    border-bottom: solid thin #ffd066;
+    background-color: rgb(64, 64, 64);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 
@@ -112,15 +111,7 @@ li a:hover {
         height: 180px;
         transition: all 0.1s linear 0s;
     }
-    
-
-    
-    
-    
-
-
 </style>
-
 
 <div id="header">
         <div class="navbar">
@@ -134,7 +125,6 @@ li a:hover {
                 <div id="vulkanLogoDiv">
                     <img id="vulkanLogo" src="bilder/Logo150px.png">
                 </div>
-                
             </a>
             
         </ul>

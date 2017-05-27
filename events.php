@@ -124,14 +124,14 @@ include("config.php");
                 <div class="testing">
                     <img id="eventBilde" src="<?php echo $selectedPic ?>">
                     <div class="infotxt">
-                        <h2><u>Hva?</u></h2>
+                        <h2 id="hva"><b>Hva?</b></h2>
                         <h2><?php echo $selectedName; ?></h2>
-                        <p><u>Hvor?</u></p>
+                        <p class="pTitle"><b>Hvor?</b></p>
                         <p><?php echo $selectedPlaceName.", ".$selectedAdresse; ?></p>
-                        <P><u>Kort Forklart</u></P>
+                        <P class="pTitle"><b>Kort Forklart:</b></P>
                         <p><?php echo $selectedDescription; ?></p>
 
-                        <p><a href="events.php">Tilbake</a></p>
+                        <p class="pTitle" ><a href="events.php">Tilbake</a></p>
                         <div id="map">
                             <?php echo $selectedMaplink ?>
                         </div>
