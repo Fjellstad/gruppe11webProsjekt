@@ -148,7 +148,7 @@ li a:hover {
     border-bottom: white solid 1px;
     
     animation-name: textAnim1;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-delay: 1s;
     animation-fill-mode: forwards; 
     
@@ -225,6 +225,7 @@ h2{
     height: 150px;
     top: 350px;
     left: 205px;
+    transition: all 15s linear 0s;
 }
 
 #transportDiv{
@@ -261,12 +262,17 @@ h2{
 
 @keyframes textAnim1{
     0%{
-        left: -2000px; 
+        opacity: 0;
     }
     
     100%{
-        left: 0;
+        opacity: 1;
     }
+}
+
+/* Trigger */
+#mapDiv:hover #mapIcon{
+    width: 200px;
 }
 
 
