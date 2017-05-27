@@ -116,12 +116,14 @@ include("config.php");
                 if(in_array($selectedId, $availableIds)){
                     ?>
                     <div class="testing">
-                        <img  id="eventBilde" src="<?php echo $selectedPic ?>">
+                        <img id="eventBilde" src="<?php echo $selectedPic ?>">
+                        <div class="infotxt">
                         <h2><?php echo $selectedName; ?></h2>
                         <p><?php echo $selectedPlaceName; ?></p>
                         <p><?php echo $selectedDescription; ?></p>
 
                         <p><a href="events3.php">Return</a></p>
+                        </div>
                     </div>
                     <?php
                 }
@@ -129,6 +131,7 @@ include("config.php");
 
             <!-- </form>  -->
         </div>
+
     </div>
     </div>
 <script>

@@ -203,6 +203,13 @@ a:link, a:visited, a:active, a:hover {
 
 .testing{
     text-align: left;
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    top: 220px;
+    left:0;
+    right: 0;
+    margin:0 auto;
 }
 
 #eventName {
@@ -268,9 +275,16 @@ h1{
     border: 2px grey solid;
 }
 
+.infotxt{
+    position: absolute;
+    width: 400px;
+    top: -220px;
+    left: 0;
+    height: 600px;
+}
 #eventBilde{
     position: absolute;
-    top: 0;
+    top: -220px;
     z-index: -1;
     right: 0;
     width: 800px;
