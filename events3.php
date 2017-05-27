@@ -62,11 +62,11 @@ include("config.php");
 			if(isset($_GET['selected'])){
 				//FORKLARING --> Hvis "selected" variablen er et tall som finnes i listen av mulige IDer så kjøres denne spørringen for å hente event med riktig id (la bare til description)
 				if(in_array($_GET['selected'], $availableIds)){
-					if ($stmt = $conn->prepare("SELECT e.id, e.name, e.image_url, e.description, p.name FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
+					if ($stmt = $conn->prepare("SELECT e.id, e.name, e.image_url, e.description, p.name, p.adresse FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
 						$stmt->bind_param("i", $_GET['selected']); 
 						$stmt->execute();
 						//på bind result velg hvilken variabel som skal oppdateres  i samme rekkefølge som resultatet kommer fra sql
-						$stmt->bind_result($selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName);
+						$stmt->bind_result($selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName, $selectedAdresse);
 						$stmt->fetch();
 						$stmt->close();
 					}
@@ -118,11 +118,14 @@ include("config.php");
                     <div class="testing">
                         <img id="eventBilde" src="<?php echo $selectedPic ?>">
                         <div class="infotxt">
+                        <h2><u>Hva?</u></h2>
                         <h2><?php echo $selectedName; ?></h2>
-                        <p><?php echo $selectedPlaceName; ?></p>
+                        <p><u>Hvor?</u></p>
+                        <p><?php echo $selectedPlaceName.", ".$selectedAdresse; ?></p>
+                            <P><u>Kort Forklart</u></P>
                         <p><?php echo $selectedDescription; ?></p>
 
-                        <p><a href="events3.php">Return</a></p>
+                        <p><a href="events3.php">Tilbake</a></p>
                         </div>
                     </div>
                     <?php
