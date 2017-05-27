@@ -226,7 +226,7 @@ h2{
     height: 150px;
     top: 350px;
     left: 205px;
-    transition: all 15s linear 0s;
+    
 }
 
 #transportDiv{
@@ -272,9 +272,35 @@ h2{
 }
 
 /* Trigger */
+
+#houseDiv:hover #houseIcon{
+    width: 100px;
+    top: 0;
+}
+
 #mapDiv:hover #mapIcon{
     width: 100px;
-    top: -5px;
+    top: 0;
+}
+
+#transportDiv:hover #transportIcon{
+    width: 100px;
+    top: 0;
+}
+
+#matDiv:hover #matIcon{
+    width: 100px;
+    top: 0;
+}
+
+#helseDiv:hover #helseIcon{
+    width: 100px;
+    top: 0;
+}
+
+#eventDiv:hover #eventIcon{
+    width: 100px;
+    top: 0;
 }
 
 

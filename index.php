@@ -45,7 +45,7 @@
         
         <div id="transportDiv">
             <a href="transport.php">
-                <img id="trasportIcon" class="icons" src="bilder/transport.png">
+                <img id="transportIcon" class="icons" src="bilder/transport.png">
             <p class="txt">Kort vei til bussen</p>
             </a>
         </div>
