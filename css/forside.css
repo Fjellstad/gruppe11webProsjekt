@@ -147,6 +147,11 @@ li a:hover {
     top: 30px;
     border-bottom: white solid 1px;
     
+    animation-name: textAnim1;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards; 
+    
 }
 
 /* Div til teksten i welcomeWrapper */
@@ -171,11 +176,6 @@ h2{
     color: white;
     text-align: center;
 }
-
-
-
-
-/* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE */ 
 
 
 
@@ -259,15 +259,17 @@ h2{
     right: 0;
 }
 
+@keyframes textAnim1{
+    0%{
+        left: -2000px; 
+    }
+    
+    100%{
+        left: 0;
+    }
+}
 
 
-
-
-
-
-
-
-/* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE /* /* WORKSPACE */
 
 
 
