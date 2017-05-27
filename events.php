@@ -17,137 +17,192 @@ include("config.php");
     <title>Events</title>
 
 </head>
-<body>
+<div>
+    <body>
+    <div id="container">
 
-<div id="container">
-
-    <?php include 'header.php';?>
-</div>
-
-
-<div id="eventbox">
-
-    <div id="eventTits">
-        <p id="tid">Tid</p>
-        <p id="tittel">Tittel</p>
-        <p id="gratis">Gratis</p>
+        <?php include 'header.php';?>
     </div>
-    <script>
-        querys("$sql1");
-        function querys(sqlName) {
-            document.addEventListener("click", sqlName);
 
-            $('.slq').click(function () {
-                $.ajax({
+    <div id="welcomeWrapper">
+        <h1>Eventer</h1>
+        <h2 id="welcomeInfo">Oslo har mye morro å være med på
+            <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
+    </div>
 
-                })
-            })
-            <?php
-            $cunt = $_GET['sqlName'];
-            $sql1 = ("SELECT * FROM events ORDER BY starts_at ASC ");
-            $sql2 = ("SELECT * FROM events ORDER BY starts_at DESC");
-            $sql3 = ("SELECT * FROM events ORDER BY name ASC");
-            $sql4 = ("SELECT * FROM events ORDER BY name DESC");
-            $sql5 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY starts_at ASC");
-            $sql6 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY starts_at DESC");
-            $sql7 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY name ASC");
-            $sql8 = ("SELECT * FROM events WHERE is_free = 1 ORDER BY name DESC");
-            $sql9 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY starts_at ASC");
-            $sql10 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY starts_at DESC");
-            $sql11 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY name ASC");
-            $sql12 = ("SELECT * FROM events WHERE is_free = 0 ORDER BY name DESC");
 
-            $res = $connection->query($sql1);
+    <div id="eventbox">
 
-            $isItFree = "";
+        <div id="eventTits">
 
-            $statement = $connection->prepare($sql1);
+        </div>
 
-            $statement->execute();
+        <?php
+        //vet ikke hva dere ville med "$cunt = $_GET['sqlName'];"
 
-            while($row = $statement->fetch(PDO::FETCH_ASSOC)){
+        //FORKLARING  -->  Første spørringen som altid kjører henter liste over events med id, start tid og navn.
+        //så fyller jeg inn mulige IDer i en array.
 
-                $event[] = $row;
+
+
+
+        $availableIds = array();
+        $events = array();
+        if ($stmt = $conn->prepare("SELECT id, starts_at, name FROM events ORDER BY starts_at ASC ")) {
+            //$stmt->bind_param("s", $string); kan sette inn ? i query så settes $string variabel inn (tryggere database spørring med variabler)
+            $stmt->execute();
+            $stmt->bind_result($id, $starts_at, $name);
+            while ($stmt->fetch()) {
+                $event = array();
+                $event['id'] = $id;
+                $event['starts_at'] = $starts_at;
+                $event['name'] = $name;
+                array_push($availableIds, $id);
+                array_push($events, $event);
             }
-            ?>
+            $stmt->close();
         }
 
-
-    </script>
-
-
-    <div id="eventMain">
-        <div class="eventMainBoxSize eventPos1" id="box1">
-            <p>
-                <?php
-
-                foreach ($event as $item)
-                {
-                    echo nl2br($item['starts_at']."\n");
+        $selectedId = 0;
+        //FORKLARING  -->  Her sjekker man om vi har fått en "selected" get variabel ("?selected=2" på slutten av linken)
+        if(isset($_GET['selected'])){
+            //FORKLARING --> Hvis "selected" variablen er et tall som finnes i listen av mulige IDer så kjøres denne spørringen for å hente event med riktig id (la bare til description)
+            if(in_array($_GET['selected'], $availableIds)){
+                if ($stmt = $conn->prepare("SELECT e.id, e.name, e.image_url, e.description, p.name, p.adresse, p.maplink FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
+                    $stmt->bind_param("i", $_GET['selected']);
+                    $stmt->execute();
+                    //på bind result velg hvilken variabel som skal oppdateres  i samme rekkefølge som resultatet kommer fra sql
+                    $stmt->bind_result($selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName, $selectedAdresse, $selectedMaplink);
+                    $stmt->fetch();
+                    $stmt->close();
                 }
+            }
+        }
+        $conn->close();
 
-                ?>
-            </p>
-        </div>
-        <div class="eventMainBoxSize eventPos2" id="box2">
-            <p>
-                <?php
-                foreach ($event as $item)
-                {
-                    echo nl2br($item['name']."\n");
+        ?>
+
+
+
+
+        <div id="eventMain">
+
+
+            <!-- FORKLARING: Legger til get variabler når man trykker på eventet   Siden åpnes på nytt, men denne gangen med variabler i url
+            <!-- En litt mer standard måte å sende en get variabel er å gjøre det via en FORM,
+            men for å gjøre det lettvint(med tanke på stilsetting) lager jeg heller bare en link med get verdiene på innsiden av <p> området du hadde laget per event-->
+            <!--<form action="events2.php" method="get">  <button name="selected" type="submit" value="1">event nr 1</button>-->
+            <?php
+            if(!in_array($selectedId, $availableIds)) {
+                foreach ($events as $event) {
+                    ?>
+
+
+                    <a href="?selected=<?php echo $event['id']; ?>"><div class="eventinfo">
+                            <h1>
+                                <?php
+                                echo nl2br($event['name'])
+                                ?>
+                            </h1>
+
+                            <p>
+                                <?php
+                                $aDateTime = "YYYY-MM-DD HH:MI:SS";
+
+                                echo nl2br("Dato: ". timeFormatter($event['starts_at'], "date") ."\n");
+
+                                echo nl2br("Klokkeslett: ". timeFormatter($event['starts_at'], "time"));
+                                ?>
+                            </p>
+                        </div>
+                    </a>
+                    <?php
                 }
+            }
+            if(in_array($selectedId, $availableIds)){
                 ?>
-            </p>
-        </div>
-        <div class="eventMainBoxSize eventPos3" id="box3">
-            <p>
+                <div class="testing">
+                    <img id="eventBilde" src="<?php echo $selectedPic ?>">
+                    <div class="infotxt">
+                        <h2><u>Hva?</u></h2>
+                        <h2><?php echo $selectedName; ?></h2>
+                        <p><u>Hvor?</u></p>
+                        <p><?php echo $selectedPlaceName.", ".$selectedAdresse; ?></p>
+                        <P><u>Kort Forklart</u></P>
+                        <p><?php echo $selectedDescription; ?></p>
+
+                        <p><a href="events3.php">Tilbake</a></p>
+                        <div id="map">
+                            <?php echo $selectedMaplink ?>
+                        </div>
+                    </div>
+                </div>
                 <?php
+            }
+            ?>
 
-                foreach ($event as $item)
-                {
-                    if($item['is_free'] == 1) {
-                        echo nl2br("Gratis"."\n");
-                    } else{
-                        echo nl2br("Ikke Gratis". "\n");
-                    }
-                }
-                ?>
-            </p>
-
-
+            <!-- </form>  -->
         </div>
-
-
-
 
     </div>
+</div>
+<script>
+    function run (){
 
-    <div id="eventCritera">
-        <p id="filter">Filter</p>
-        <p>Dato</p>
+        var div = document.createElement("div");  //create new div
+        div.addEventListener("click", run);       //bind click to new div
+        this.appendChild(div);                    //append the new div to clicked div
+        this.removeEventListener("click", run);   //remove the original click event
 
-        <button class="slq" onclick="querys(sql1)">Asc</button>
-        <button>Desc</button>
-        <p>Tittel</p>
-        <button>Asc</button>
-        <button>Desc</button>
-        <p>Gratis</p>
-        <button>Ja</button>
-        <button>Nei</button>
-        <button>Begge</button>
+    }
+    document.getElementById("start").addEventListener("click", run);
+</script>
 
 
+
+
+
+<!-- Er det her mer detaljert info skulle komme?? -->
+<!-- FORKLARING: Dersom selected id finnes i listen over gyldige IDer så lag denne DIV med mer info -->
+<?php
+function timeFormatter($dateTime, $requestedValue){
+    $values = explode(" ", $dateTime);
+    $date = $values[0];
+    $time = $values[1];
+    if($requestedValue == "date"){
+        return $date;
+    }elseif($requestedValue == "time"){
+        return $time;
+    }
+}
+
+/*if(in_array($selectedId, $availableIds)){
+    ?>
+    <div class="testing">
+        <h3><?php echo $selectedName; ?></h3>
+        <p><?php echo $selectedPlaceName; ?></p>
+        <p><?php echo $selectedDescription; ?></p>
+        <p><a href="">close</a></p>
     </div>
+    <?php
+}*/
+?>
+
+<div id="eventCriteradd">
+
+
+
+
 </div>
 
 
 
+</div>
 <?php
 include 'footer.php';
 ?>
 
->
-</div>
+
 
 </body>
 </html>
