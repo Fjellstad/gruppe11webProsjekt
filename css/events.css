@@ -284,10 +284,11 @@ h1{
 }
 #eventBilde{
     position: absolute;
-    top: -220px;
+    top: 80px;
     z-index: -1;
     right: 0;
-    width: 800px;
+    height: 300px;
+    width: 600px;
 }
 
 #welcomeWrapper{
@@ -297,4 +298,10 @@ h1{
     height: 150px;
     top: 30px;
     border-bottom: white solid 1px;
+}
+#map{
+    position: absolute;
+    left: 600px;
+    top: 0px;
+
 }
