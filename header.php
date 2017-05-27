@@ -68,6 +68,7 @@ li a:hover {
     background-color: rgb(64, 64, 64);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom: solid thin #ffd066;
 }
 
 
