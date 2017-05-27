@@ -23,12 +23,6 @@ include("config.php");
     <div id="container">
 
         <?php include 'header.php';?>
-       <!-- <div id="welcomeWrapper">
-            <h1 id="welcomeWrapperTit">Eventer</h1>
-            <h2 id="welcomeInfo">Oslo har mye morro å være med på
-                <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
-        </div>
-        -->
     </div>
 
 
@@ -46,18 +40,10 @@ include("config.php");
         </div>
 
         <?php
-        //vet ikke hva dere ville med "$cunt = $_GET['sqlName'];"
-
-        //FORKLARING  -->  Første spørringen som altid kjører henter liste over events med id, start tid og navn.
-        //så fyller jeg inn mulige IDer i en array.
-
-
-
 
         $availableIds = array();
         $events = array();
         if ($stmt = $conn->prepare("SELECT id, starts_at, name FROM events ORDER BY starts_at ASC ")) {
-            //$stmt->bind_param("s", $string); kan sette inn ? i query så settes $string variabel inn (tryggere database spørring med variabler)
             $stmt->execute();
             $stmt->bind_result($id, $starts_at, $name);
             while ($stmt->fetch()) {
@@ -72,14 +58,11 @@ include("config.php");
         }
 
         $selectedId = 0;
-        //FORKLARING  -->  Her sjekker man om vi har fått en "selected" get variabel ("?selected=2" på slutten av linken)
         if(isset($_GET['selected'])){
-            //FORKLARING --> Hvis "selected" variablen er et tall som finnes i listen av mulige IDer så kjøres denne spørringen for å hente event med riktig id (la bare til description)
             if(in_array($_GET['selected'], $availableIds)){
                 if ($stmt = $conn->prepare("SELECT p.website, e.id, e.name, e.image_url, e.description, p.name, p.adresse, p.maplink FROM events e JOIN place p on e.place_id = p.id WHERE e.id = ? ")) {
                     $stmt->bind_param("i", $_GET['selected']);
                     $stmt->execute();
-                    //på bind result velg hvilken variabel som skal oppdateres  i samme rekkefølge som resultatet kommer fra sql
                     $stmt->bind_result($selectedLink, $selectedId, $selectedName, $selectedPic, $selectedDescription, $selectedPlaceName, $selectedAdresse, $selectedMaplink);
                     $stmt->fetch();
                     $stmt->close();
@@ -94,12 +77,6 @@ include("config.php");
 
 
         <div id="eventMain">
-
-
-            <!-- FORKLARING: Legger til get variabler når man trykker på eventet   Siden åpnes på nytt, men denne gangen med variabler i url
-            <!-- En litt mer standard måte å sende en get variabel er å gjøre det via en FORM,
-            men for å gjøre det lettvint(med tanke på stilsetting) lager jeg heller bare en link med get verdiene på innsiden av <p> området du hadde laget per event-->
-            <!--<form action="events2.php" method="get">  <button name="selected" type="submit" value="1">event nr 1</button>-->
             <?php
             if(!in_array($selectedId, $availableIds)) {
                 foreach ($events as $event) {
@@ -138,7 +115,10 @@ include("config.php");
                         <p><?php echo nl2br($selectedPlaceName."\n".$selectedAdresse); ?></p>
                         <P class="pTitle"><b>Kort Forklart:</b></P>
                         <p><?php echo $selectedDescription; ?></p>
-                        <a href="<?php $selectedLink ?>">
+                        <a href="<?php
+                        $link = $selectedLink;
+                        echo $link;
+                        ?>">
                         <p><?php echo $selectedLink ?></p>
                         </a>
 
@@ -171,11 +151,6 @@ include("config.php");
 </script>
 
 
-
-
-
-<!-- Er det her mer detaljert info skulle komme?? -->
-<!-- FORKLARING: Dersom selected id finnes i listen over gyldige IDer så lag denne DIV med mer info -->
 <?php
 function timeFormatter($dateTime, $requestedValue){
     $values = explode(" ", $dateTime);
