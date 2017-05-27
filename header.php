@@ -53,7 +53,7 @@
     margin-top: 80px;
     margin-left: 20px;
     margin-right: 20px;
-
+    border-bottom: solid thin #ffd066;
 }
 
 .navbar li a {
