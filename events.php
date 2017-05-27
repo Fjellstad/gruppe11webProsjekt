@@ -17,21 +17,29 @@ include("config.php");
     <title>Events</title>
 
 </head>
-<div>
+
     <body>
+    <div>
     <div id="container">
 
         <?php include 'header.php';?>
+       <!-- <div id="welcomeWrapper">
+            <h1 id="welcomeWrapperTit">Eventer</h1>
+            <h2 id="welcomeInfo">Oslo har mye morro å være med på
+                <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
+        </div>
+        -->
     </div>
 
-    <div id="welcomeWrapper">
-        <h1 id="welcomeWrapperTit">Eventer</h1>
-        <h2 id="welcomeInfo">Oslo har mye morro å være med på
-            <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
-    </div>
+
 
 
     <div id="eventbox">
+        <div id="welcomeWrapper">
+            <h1 id="welcomeWrapperTit">Eventer</h1>
+            <h2 id="welcomeInfo">Oslo har mye morro å være med på
+                <br>Her vil du kunne lese litt om hva Oslo har å by på.</h2>
+        </div>
 
         <div id="eventTits">
 

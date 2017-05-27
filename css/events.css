@@ -161,7 +161,7 @@ h2{
     position: absolute;
     width: 1200px;
     height: 600px;
-    top: 450px;
+    top: 320px;
     left:0;
     right: 0;
     margin:0 auto;
@@ -301,9 +301,9 @@ h1{
 #welcomeWrapper{
     position: relative;
     width: 1200px;
-    left: 352px;
+    left: 0;
     height: 150px;
-    top: 30px;
+    top: -75px;
     border-bottom: white solid 1px;
 }
 #map{
