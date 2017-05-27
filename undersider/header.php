@@ -125,12 +125,12 @@ li a:hover {
 <div id="header">
         <div class="navbar">
             <ul class="nav-left">
-                <li>  <a href="transport.php">Transport</a></li>
-                <li>  <a href="kart.php">Kart</a></li>
-                <li>  <a href="boligproject.php">Bolig</a></li>
+                <li>  <a href="/undersider/transport.php">Transport</a></li>
+                <li>  <a href="/undersider/kart.php">Kart</a></li>
+                <li>  <a href="/undersider/boligproject.php">Bolig</a></li>
             </ul>        <ul class="nav-middle">
             
-            <a href="forside.php">
+            <a href="/forside.php">
                 <div id="vulkanLogoDiv">
                     <img id="vulkanLogo" src="/bilder/Logo150px.png">
                 </div>
@@ -139,9 +139,9 @@ li a:hover {
             
         </ul>
         <ul class="nav-right">
-            <li>  <a href="matogdrikke.php">Mat og drikke</a></li>
-            <li>  <a href="Helse.php">Helse</a></li>
-            <li>  <a href="events.php">Eventer</a></li>
+            <li>  <a href="/undersider/matogdrikke.php">Mat og drikke</a></li>
+            <li>  <a href="/undersider/Helse.php">Helse</a></li>
+            <li>  <a href="/undersider/events.php">Eventer</a></li>
             </ul>
 
         </div>
