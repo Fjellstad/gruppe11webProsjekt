@@ -279,6 +279,29 @@ a:link, a:visited, a:active, a:hover {
     text-decoration: underline;
 }
 
+#liKart{
+    border-bottom: solid thin #ffd066;
+}
+
+#liMat{
+    border-bottom: solid thin #ffd066;
+}
+
+#liHelse{
+    border-bottom: solid thin #ffd066;
+}
+
+#liEvent{
+    border-bottom: solid thin #ffd066;
+}
+
+#liBolig{
+    border-bottom: solid thin #ffd066;
+}
+
+#liTrans{
+    border-bottom: solid thin #ffd066;
+}
 
 
 
