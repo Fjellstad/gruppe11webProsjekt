@@ -131,7 +131,8 @@ include("config.php");
                         <P class="pTitle"><b>Kort Forklart:</b></P>
                         <p><?php echo $selectedDescription; ?></p>
 
-                        <p class="pTitle" ><a href="events.php">Tilbake</a></p>
+                        <!-- <p class="pTitle" ><a href="events.php">Tilbake</a></p> -->
+                        <a href="events.php"><img id="backArrow" src="bilder/backArrow.png"></a>
                         <div id="map">
                             <?php echo $selectedMaplink ?>
                         </div>
