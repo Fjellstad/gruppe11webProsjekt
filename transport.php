@@ -16,7 +16,7 @@
         <div id="welcomeWrapper"> <!-- WELCOMEWRAPPER START -->
                 <h1>TRANSPORT</h1>
                 <h2 id="welcomeInfo">Transporttilbudet rundt Campus Vulkan er svært bra. 
-                <br>Du finner både buss, trikk og t-bane i nærheten.</h2>
+                <br>Du finner både buss, trikk og t-bane ikke altfor langt unna campus</h2>
         </div>
 
             
@@ -76,6 +76,8 @@
             <br><br>Nærmeste buss holdeplass er Telthusbakken, buss #34, #54.
 
             <br><br>Nærmeste T-bane holdeplass er Grønland og Jernbanetorget.</p>
+            
+            <img class="buss" src="bilder/bussHoldePlass.png">
         </div>
             
 

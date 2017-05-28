@@ -53,7 +53,18 @@
         <div id="legevaktBox" class="contentBox"> <!-- LEGEVAKTBOX START-->
             <h2 class="title">Legevakt</h2>
             <img class="pics" src="bilder/pulse.png">
-                <p class="contentText">Dersom du har behov for legevakt, ligger legevakten 5-10 minutter unna ved en spasertur. Den nærmeste legevaktenbefinner seg i Storgata 40 og du kan besøke siden dems <a href="https://www.oslo.kommune.no/dognapne-vakttjenester/legevakt-oslo/">her</a></p>
+                <p class="contentText">Dersom du har behov for legevakt, ligger legevakten 5-10 minutter unna ved en spasertur. Den nærmeste legevaktenbefinner seg i Storgata 40 og du kan besøke siden dems <a href="https://www.oslo.kommune.no/dognapne-vakttjenester/legevakt-oslo/">her</a>
+                <br><br>Legevakten ligger i enden av Storgata, vis a vis Anker Hotel.
+                Åpent 24 timer alle dager.
+
+                Behandler akutt skade, akutt sykdom, akutt krise, voldtekt/overgrep og akutt psykiatrisk sykdom.
+                    
+                <br><br>Medisinsk nødtelefon: 113
+                Legevaktsentral - medisinske spørsmål: 116117
+            
+            
+            </p>
+                
         </div>
 
 

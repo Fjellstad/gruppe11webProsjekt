@@ -7,7 +7,7 @@
     width: 100%;
     background-color: rgb(42, 42, 42);
     top: 0;
-    box-shadow: 0 1px 8px 2px #1f1f1f;
+    box-shadow: 0 2px 17px 2px #141414;
 }
 /* Logo */
 #vulkanLogo{

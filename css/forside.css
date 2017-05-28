@@ -39,10 +39,10 @@ html, body{
     border-bottom: white solid 1px;
     opacity: 0;
     
-    animation-name: textAnim1;
-    animation-duration: 4s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards; 
+    -webkit-animation-name: textAnim1;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards; 
 }
 
 /* Div til teksten i welcomeWrapper */

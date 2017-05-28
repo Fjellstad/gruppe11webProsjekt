@@ -157,6 +157,16 @@ h3{
     top: 600px; 
 }
 
+.buss {
+    position: absolute;
+    bottom: 35px;
+    width: 280px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    
+}
+
 /* Hvordan linkene skal oppføre seg */
 a:link, a:visited, a:active, a:hover {
     color: white;
